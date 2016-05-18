@@ -57,13 +57,13 @@ public class RunAnalysis {
     public static void main(String[] args) throws FileNotFoundException, IOException{
         LexiconLoader loader = new LexiconLoader();
         
-        Lexicon zwei = loader.loadFromFile("/Users/swalter/Downloads/ResultsJanuary2016/dbpedia2014_DE_Full_beforeTraining.ttl");
+        Lexicon zwei = loader.loadFromFile("dbpedia2014_DE_Full_beforeTraining.ttl");
         System.out.println("Loaded first lexicon: ");
-        Lexicon eins = loader.loadFromFile("/Users/swalter/Downloads/ResultsJanuary2016/dbpedia2014Full_new_beforeTraining.ttl");
-//        System.out.println("Loaded second lexicon");
+        Lexicon eins = loader.loadFromFile("dbpedia2014Full_new_beforeTraining.ttl");
+        System.out.println("Loaded second lexicon");
         zwei.setBaseURI("http://localhost:8080/");
-        Lexicon drei = loader.loadFromFile("/Users/swalter/Downloads/ResultsJanuary2016/dbpedia2014_ES_Full_beforeTraining.ttl");
-//        System.out.println("Loaded third lexicon");//System.out.println(eins.getEntries().size());
+        Lexicon drei = loader.loadFromFile("dbpedia2014_ES_Full_beforeTraining.ttl");
+        System.out.println("Loaded third lexicon");//System.out.println(eins.getEntries().size());
 //        System.out.println(zwei.getEntries().size());
         //System.out.println(drei.getEntries().size());
 //        
@@ -151,7 +151,7 @@ public class RunAnalysis {
             }
             PrintWriter writer;
             try {
-                    writer = new PrintWriter(path+"CSV/"+x.getID()+"_"+Integer.toString(min)+"_"+Integer.toString(max)+".csv");
+                    writer = new PrintWriter(path+"TSV/"+x.getID()+"_"+Integer.toString(min)+"_"+Integer.toString(max)+".tsv");
                     writer.println("#Eintrag\t#Semantik\t#CannonicalForm\t#Preposition\t#URI\t#Sentence1\t#Sentence2\t#Sentence3\t#Sentence4\t#Sentence5\t#name\t#Frame");
                     writer.println(output);
                     writer.close();
@@ -168,7 +168,7 @@ public class RunAnalysis {
                 output+=s+"\n";
             }
             try {
-                    writer = new PrintWriter(path+"CSV/"+x.getID()+"_"+Integer.toString(min)+"_"+Integer.toString(max)+".csv");
+                    writer = new PrintWriter(path+"TSV/"+x.getID()+"_"+Integer.toString(min)+"_"+Integer.toString(max)+".tsv");
                     writer.println("#Eintrag\t#Semantik\t#CannonicalForm\t#Preposition\t#URI\t#Sentence1\t#Sentence2\t#Sentence3\t#Sentence4\t#Sentence5\t#name\t#Frame");
                     writer.println(output);
                     writer.close();
@@ -184,7 +184,7 @@ public class RunAnalysis {
                 output+=s+"\n";
             }
             try {
-                    writer = new PrintWriter(path+"CSV/"+x.getID()+"_"+Integer.toString(min)+"_"+Integer.toString(max)+".csv");
+                    writer = new PrintWriter(path+"TSV/"+x.getID()+"_"+Integer.toString(min)+"_"+Integer.toString(max)+".tsv");
                     writer.println("#Eintrag\t#Semantik\t#CannonicalForm\t#Preposition\t#URI\t#Sentence1\t#Sentence2\t#Sentence3\t#Sentence4\t#Sentence5\t#name\t#Frame");
                     writer.println(output);
                     writer.close();
@@ -201,7 +201,7 @@ public class RunAnalysis {
                 output+=s+"\n";
             }
             try {
-                    writer = new PrintWriter(path+"CSV/"+x.getID()+"_"+Integer.toString(min)+"_"+Integer.toString(max)+".csv");
+                    writer = new PrintWriter(path+"TSV/"+x.getID()+"_"+Integer.toString(min)+"_"+Integer.toString(max)+".tsv");
                     writer.println("#Eintrag\t#Semantik\t#CannonicalForm\t#Preposition\t#URI\t#Sentence1\t#Sentence2\t#Sentence3\t#Sentence4\t#Sentence5\t#name\t#Frame");
                     writer.println(output);
                     writer.close();

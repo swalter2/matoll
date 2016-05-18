@@ -14,7 +14,11 @@ import de.citec.sc.matoll.core.SimpleReference;
 import de.citec.sc.matoll.core.SyntacticArgument;
 import de.citec.sc.matoll.core.SyntacticBehaviour;
 import de.citec.sc.matoll.evaluation.LemmaBasedEvaluation;
+import de.citec.sc.matoll.io.LexiconLoader;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 
@@ -37,7 +41,8 @@ public class TestVerySimpleLexiconEvaluation {
         
         String subj = "http://lemon-model.net/lemon#subjOfProp";
         String obj = "http://lemon-model.net/lemon#objOfProp";
-
+        List<String> uris = new ArrayList<>();
+//        uris.add("http://dbpedia.org/ontology/spouse");
         Lexicon gold = new Lexicon();
         getNounWithPrep(gold, "wife", subj, obj, "of", "http://dbpedia.org/ontology/spouse", EN);
         getNounWithPrep(gold, "husband", subj, obj, "to", "http://dbpedia.org/ontology/spouse", EN);
@@ -47,9 +52,10 @@ public class TestVerySimpleLexiconEvaluation {
         
         Lexicon lex = new Lexicon();
         getNounWithPrep(lex, "wife", subj, obj, "of", "http://dbpedia.org/ontology/spouse", EN);
-        getNounWithPrep(lex, "husband", subj, obj, "to", "http://dbpedia.org/ontology/spouse", EN);
-        getAdjective(lex,"married", subj, obj, "to","http://dbpedia.org/ontology/spouse",EN);
-        getTransitiveVerb(lex, "cross", subj,obj, "http://dbpedia.org/ontology/crossing", EN);
+        getNounWithPrep(lex, "husband1", subj, obj, "to", "http://dbpedia.org/ontology/spouse", EN);
+        getAdjective(lex,"married1", subj, obj, "to","http://dbpedia.org/ontology/spouse",EN);
+        getTransitiveVerb(lex, "cross1", subj,obj, "http://dbpedia.org/ontology/crossing", EN);
+        getTransitiveVerb(lex, "cross2", subj,obj, "http://dbpedia.org/ontology/crossing", EN);
         
         List<Double> result = LemmaBasedEvaluation.evaluate(lex, gold,true,true);
         System.out.println("----------");
@@ -60,6 +66,57 @@ public class TestVerySimpleLexiconEvaluation {
         System.out.println("----------");
         System.out.println("Micro  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
         System.out.println("----------");
+        
+        result = LemmaBasedEvaluation.evaluate(lex, gold,true,uris,true);
+        System.out.println("----------");
+        System.out.println("Macro  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
+        System.out.println("----------");
+        
+        result = LemmaBasedEvaluation.evaluate(lex, gold,true,uris,false);
+        System.out.println("----------");
+        System.out.println("Micro  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
+        System.out.println("----------");
+        
+        
+        
+        
+        LexiconLoader loader = new LexiconLoader();
+        
+        Lexicon lexicon_automatic = loader.loadFromFile("../lexica/dbpedia_en.rdf");
+        Lexicon lexicon_gold = loader.loadFromFile("wordnet_approach_classes_properties.ttl");
+        Set<String> uris_tmp = new HashSet<>();
+//        List<String> uris = new ArrayList<>();
+//        for(LexicalEntry entry:lexicon_gold.getEntries()){
+//            try{
+//                for(Sense sense:entry.getSenseBehaviours().keySet()){
+//                    uris_tmp.add(sense.getReference().getURI());
+//                }
+//            }
+//            catch(Exception e){}
+//        }
+//        for(String x: uris_tmp)uris.add(x);
+//        uris.clear();
+        uris.add("http://dbpedia.org/ontology/spouse");
+        result = LemmaBasedEvaluation.evaluate(lexicon_automatic, lexicon_gold,true,uris,true);
+        System.out.println("----------");
+        System.out.println("Macro  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
+        System.out.println("----------");
+        
+        result = LemmaBasedEvaluation.evaluate(lexicon_automatic, lexicon_gold,true,uris,false);
+        System.out.println("----------");
+        System.out.println("Micro  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
+        System.out.println("----------");
+        
+        
+//        result = LemmaBasedEvaluation.evaluate(lexicon_automatic, lexicon_gold,false,true);
+//        System.out.println("----------");
+//        System.out.println("Macro (with classes)  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
+//        System.out.println("----------");
+//        
+//        result = LemmaBasedEvaluation.evaluate(lexicon_automatic, lexicon_gold,false,false);
+//        System.out.println("----------");
+//        System.out.println("Micro (with classes) P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
+//        System.out.println("----------");
         
     }
     

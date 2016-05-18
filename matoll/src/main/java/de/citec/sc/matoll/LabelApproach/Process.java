@@ -106,12 +106,16 @@ public class Process {
                 
                 final StanfordLemmatizer sl = new StanfordLemmatizer(EN);
 	
-                String path_to_input_file = "../dbpedia_2014.owl";
-//                String path_to_input_file = "test.txt";
+//                String path_to_input_file = "../dbpedia_2014.owl";
+                String path_to_input_file = "test.txt";
                 Set<String> properties = new HashSet<>();
                 Set<String> classes = new HashSet<>();
                 if(path_to_input_file.endsWith(".txt")){
                     properties = loadPropertyList(path_to_input_file);
+                    /*
+                    Do not committ this
+                    */
+                    classes = properties;
                 }
                 else{
                     OntologyImporter importer = new OntologyImporter(path_to_input_file,"RDF/XML");
@@ -188,8 +192,8 @@ public class Process {
 
                
 
-                runWornetPropertyApproach(properties,lexicon,wordnet,sl);
-		runAdjectiveApproach(properties,adjectiveExtractor,posAdj,pos,label_3,label_2, prediction,tagger, lexicon, mp,path_to_objects);
+                //runWornetPropertyApproach(properties,lexicon,wordnet,sl);
+//		runAdjectiveApproach(properties,adjectiveExtractor,posAdj,pos,label_3,label_2, prediction,tagger, lexicon, mp,path_to_objects);
                 
 		runWornetClassApproach(classes,lexicon,wordnet,"/Users/swalter/Downloads/EnglishIndexReduced");
 		
@@ -420,6 +424,8 @@ public class Process {
     }
 
     private static void runWornetClassApproach(Set<String> classes, Lexicon lexicon, Wordnet wordnet, String pathToIndex) throws FileNotFoundException, IOException, ParseException {
+        System.out.println("in runWornetClassApproach");
+        System.out.println(classes.size());
         List<String> stopwords = new ArrayList<>();
         String everything = "";
         FileInputStream inputStream = new FileInputStream("resources/englishST.txt");
@@ -774,9 +780,14 @@ public class Process {
     private static Set<String> wordnetDisambiguation(String uri, String inputLabel, Wordnet wordnet,List<String> stopwords, IndexSearcher searcher,Analyzer analyzer) throws ParseException, IOException {
         
         Set<String> wordnetLabels = wordnet.getAllSynonyms(inputLabel);
+        System.out.println("Input:");
+        for(String l : wordnetLabels){
+            System.out.println(l);
+        }
         if(wordnetLabels.size()<=3){
             return wordnetLabels;
         }
+        
         else{
             String queryString = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?label WHERE{?res <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <"+uri+">. ?res rdfs:label ?label. FILTER (lang(?label) = 'en') } LIMIT 100";
             Query query = QueryFactory.create(queryString);
@@ -824,6 +835,11 @@ public class Process {
             for(String x:tmp_terms.keySet()){
                 if(tmp_terms.get(x)>0.6)terms.add(x);
             }
+            System.out.println("Output:");
+            for(String l : terms){
+                System.out.println(l);
+            }
+        
             return terms;
         }
         

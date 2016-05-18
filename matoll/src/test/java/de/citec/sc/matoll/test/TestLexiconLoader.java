@@ -4,6 +4,7 @@ package de.citec.sc.matoll.test;
 import de.citec.sc.matoll.core.LexicalEntry;
 import de.citec.sc.matoll.core.Lexicon;
 import de.citec.sc.matoll.core.Provenance;
+import de.citec.sc.matoll.core.Reference;
 import de.citec.sc.matoll.core.Sense;
 import de.citec.sc.matoll.core.Sentence;
 import de.citec.sc.matoll.io.LexiconLoader;
@@ -32,22 +33,27 @@ public class TestLexiconLoader {
     public static void main(String[] args) throws FileNotFoundException, IOException{
         LexiconLoader loader = new LexiconLoader();
         
-        Lexicon lexicon = loader.loadFromFile("spouse.ttl");
+        Lexicon lexicon = loader.loadFromFile("/Users/swalter/Git/matoll/lexica/dbpedia_en.rdf");
         
         System.out.println("Loaded "+lexicon.size()+" entries");
         for(LexicalEntry entry : lexicon.getEntries()){
             for(Sense sense: entry.getSenseBehaviours().keySet()){
-                Provenance provenance = entry.getProvenance(sense);
-                for (Sentence s: provenance.getSentences()) {
-                    System.out.println(s.getSentence());
-                    System.out.println(s.getSubjOfProp());
-                    System.out.println(s.getObjOfProp());
-                    System.out.println();
+                Reference ref = sense.getReference();
+                try{
+                    String uri = ref.getURI();
+                    if(uri.equals("http://dbpedia.org/ontology/spouse")){
+                        System.out.println(entry.getCanonicalForm());
+                        System.out.println(entry.getPreposition().getCanonicalForm());
+                        System.out.println();
+                    }
                 }
+                catch(Exception e){
+                    
+                }
+                
             }
-            System.out.println(entry.toString());
-            System.out.println("#################");
-            System.out.println();
+//            System.out.println("#################");
+//            System.out.println();
         }
         
         LexiconSerialization serial = new LexiconSerialization(true);

@@ -15,7 +15,9 @@ import org.apache.commons.io.IOUtils;
 public class GenerateArff {
 	
 	
-	
+	/*
+    TODO: Add some new feature, for example which is the range of the property, and also create a bag of words for all terms in the object, in order to learn some "context"
+    */
 	
 	
 	public static void run(String path_annotatedFiles,String path_normalPath,String path_to_write,
@@ -81,32 +83,32 @@ public class GenerateArff {
 			HashSet<String> posAdjPatternList) throws FileNotFoundException {
 		PrintWriter writer = new PrintWriter(path_to_write);
 		String first_line =""
-			+"@relation adjectives\n"
-			+"@attribute 'normalizedFrequency' numeric\n"
-			+"@attribute 'JJ' {0,1}\n"
-			+"@attribute 'normalizedObjectFrequency' numeric\n"
-			+"@attribute 'normalizedObjectOccourences' numeric\n"
-			+"@attribute 'ratio' numeric\n"
-			+"@attribute 'ratioPattern' numeric\n"
-			+"@attribute 'ratioPosPattern' numeric\n"
-			//+"@attribute 'entropy' numeric\n"
-			+"@attribute 'position' numeric\n"
-			+"@attribute 'firstPosition' {0,1}\n"
-			+"@attribute 'lastPosition' {0,1}\n"
-			+"@attribute 'nld' numeric\n";
+			+"@relation adjectives\n";
+//			+"@attribute 'normalizedFrequency' numeric\n";
+//			+"@attribute 'JJ' {0,1}\n"
+//			+"@attribute 'normalizedObjectFrequency' numeric\n";
+//			+"@attribute 'normalizedObjectOccourences' numeric\n";
+//			+"@attribute 'ratio' numeric\n";
+//			+"@attribute 'ratioPattern' numeric\n";
+//			+"@attribute 'ratioPosPattern' numeric\n";
+//			//+"@attribute 'entropy' numeric\n"
+//			+"@attribute 'position' numeric\n";
+//			+"@attribute 'firstPosition' {0,1}\n";
+//			+"@attribute 'lastPosition' {0,1}\n";
+//			+"@attribute 'nld' numeric\n";
 		int counter=0;
-		for(String label:subLabelList){
-			counter+=1;
-			first_line+="@attribute 'l"+Integer.toString(counter)+"' {0,1}\n";
-		}
-		for(String label:subLabelList_2){
-			counter+=1;
-			first_line+="@attribute 'l2"+Integer.toString(counter)+"' {0,1}\n";
-		}
-		for(String label:posPatternList){
-			counter+=1;
-			first_line+="@attribute 'p"+Integer.toString(counter)+"' {0,1}\n";
-		}
+//		for(String label:subLabelList){
+//			counter+=1;
+//			first_line+="@attribute 'l"+Integer.toString(counter)+"' {0,1}\n";
+//		}
+//		for(String label:subLabelList_2){
+//			counter+=1;
+//			first_line+="@attribute 'l2"+Integer.toString(counter)+"' {0,1}\n";
+//		}
+//		for(String label:posPatternList){
+//			counter+=1;
+//			first_line+="@attribute 'p"+Integer.toString(counter)+"' {0,1}\n";
+//		}
 		for(String label:posAdjPatternList){
 			counter+=1;
 			first_line+="@attribute 'pa"+Integer.toString(counter)+"' {0,1}\n";
@@ -146,36 +148,41 @@ public class GenerateArff {
 			if(tagger.tagString(adjectiveobject.getAdjectiveTerm().toLowerCase()).contains("JJ")){
 				jj=1;
 			}
-			String line = Double.toString(adjectiveobject.getNormalizedFrequency())
-					+","+Integer.toString(jj)
-					+","+Double.toString(adjectiveobject.getNormalizedObjectFrequency())
-					+","+Double.toString(adjectiveobject.getNormalizedObjectOccurrences())
-					+","+Double.toString(adjectiveobject.getRatio())
-					+","+Double.toString(adjectiveobject.getRatio_pattern())
-					+","+Double.toString(adjectiveobject.getRatio_pos_pattern())
-					//+","+Double.toString(adjectiveobject.getEntropy())
-					+","+Integer.toString(adjectiveobject.getPosition());
-			if(adjectiveobject.isFirstPosition())line+=","+"1";
-			else line+=","+"0";
-			if(adjectiveobject.isLastPosition())line+=","+"1";
-			else line+=","+"0";
-			line+=","+Double.toString(adjectiveobject.getNld());
-			for(String label:subLabelList){
-				if(adjectiveobject.getSublabel().equals(label))line+=","+"1";
-				else line+=","+"0";
-			}
-			for(String label:subLabelList_2){
-				if(adjectiveobject.getSublabel_2().equals(label))line+=","+"1";
-				else line+=","+"0";
-			}
-			for(String pospattern:posPatternList){
-				if(adjectiveobject.getPos_Pattern().equals(pospattern))line+=","+"1";
-				else line+=","+"0";
-			}
+//			String line = Double.toString(adjectiveobject.getNormalizedFrequency());
+//					+","+Integer.toString(jj)
+//				String line =Double.toString(adjectiveobject.getNormalizedObjectFrequency());
+//					String line = Double.toString(adjectiveobject.getNormalizedObjectOccurrences());
+//					String line = Double.toString(adjectiveobject.getRatio());
+//					String line = Double.toString(adjectiveobject.getRatio_pattern());
+//					String line = Double.toString(adjectiveobject.getRatio_pos_pattern());
+//					//+","+Double.toString(adjectiveobject.getEntropy())
+//					String line = Integer.toString(adjectiveobject.getPosition());
+                        String line = "";
+//			if(adjectiveobject.isFirstPosition())line+=","+"1";
+//			else line+=","+"0";
+//			if(adjectiveobject.isLastPosition())line+=","+"1";
+//			else line+=","+"0";
+//			line+=","+Double.toString(adjectiveobject.getNld());
+//			for(String label:subLabelList){
+//				if(adjectiveobject.getSublabel().equals(label))line+=","+"1";
+//				else line+=","+"0";
+//			}
+//			for(String label:subLabelList_2){
+//				if(adjectiveobject.getSublabel_2().equals(label))line+=","+"1";
+//				else line+=","+"0";
+//			}
+//                                                
+
+//			for(String pospattern:posPatternList){
+//				if(adjectiveobject.getPos_Pattern().equals(pospattern))line+=","+"1";
+//				else line+=","+"0";
+//			}
+                        
 			for(String posadjpattern:posAdjPatternList){
 				if(adjectiveobject.getPos_adj_Pattern().equals(posadjpattern))line+=","+"1";
 				else line+=","+"0";
 			}
+                        line = line.replaceFirst(",", "");
 			line+=","+adjectiveobject.getAnnotation();
 			lines.add(line);
 		}
