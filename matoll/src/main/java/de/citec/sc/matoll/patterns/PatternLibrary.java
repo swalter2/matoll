@@ -60,13 +60,17 @@ public class PatternLibrary {
          * @param lexicon Lexicon
          * @param pattern_counter
          */
-	public void extractLexicalEntries(Model model, Lexicon lexicon, Map<String,Integer> pattern_counter)
+	public boolean extractLexicalEntries(Model model, Lexicon lexicon, Map<String,Integer> pattern_counter)
 	{
+                boolean matched_pattern = false;
 		for (SparqlPattern pattern: Patterns)
 		{
 			if (Lemmatizer != null)
 				pattern.setLemmatizer(Lemmatizer);
 			int value = pattern.extractLexicalEntries(model, lexicon);
+                        if(value>0){
+                            matched_pattern = true;
+                        }
                         if(pattern_counter.containsKey(pattern.getID())){
                             pattern_counter.put(pattern.getID(), pattern_counter.get(pattern.getID()) + value);
                         }
@@ -75,6 +79,7 @@ public class PatternLibrary {
                         }
                         
 		}
+                return matched_pattern;
 		
 	}
 

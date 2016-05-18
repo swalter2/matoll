@@ -28,13 +28,11 @@ import de.citec.sc.matoll.io.LexiconSerialization;
 import de.citec.sc.matoll.patterns.PatternLibrary;
 import de.citec.sc.matoll.preprocessor.ModelPreprocessor;
 import de.citec.sc.matoll.utils.StanfordLemmatizer;
-import de.citec.sc.matoll.classifiers.WEKAclassifier;
 import de.citec.sc.matoll.core.Language;
 import de.citec.sc.matoll.core.Provenance;
 import de.citec.sc.matoll.core.Restriction;
 import de.citec.sc.matoll.core.Sense;
 import de.citec.sc.matoll.core.SimpleReference;
-import de.citec.sc.matoll.utils.Learning;
 import de.citec.sc.matoll.utils.Stopwords;
 import java.io.PrintWriter;
 
@@ -265,9 +263,12 @@ public class Matoll {
                             reference = getReference(sentence);
                             if(!reference.equals("http://dbpedia.org/ontology/type")&&!reference.equals("http://dbpedia.org/ontology/isPartOf")){
                                 preprocessor.preprocess(sentence,subj,obj,language);
-                                freq.adjustOrPutValue(reference, 1, 1);
+                                
                                 sentence_counter+=1;
-                                library.extractLexicalEntries(sentence, automatic_lexicon,pattern_counter);
+                                boolean result = library.extractLexicalEntries(sentence, automatic_lexicon,pattern_counter);
+                                if(result){
+                                    freq.adjustOrPutValue(reference, 1, 1);
+                                }
                             }
                         }
                     }
