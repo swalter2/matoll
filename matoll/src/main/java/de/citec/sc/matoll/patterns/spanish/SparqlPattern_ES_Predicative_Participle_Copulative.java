@@ -266,7 +266,7 @@ public class SparqlPattern_ES_Predicative_Participle_Copulative extends SparqlPa
 	}
 
 	@Override
-	public void extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon) {
 				
 		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
                 ResultSet rs = qExec.execSelect() ;
@@ -276,6 +276,7 @@ public class SparqlPattern_ES_Predicative_Participle_Copulative extends SparqlPa
                 String participle = null;
                 String lemma = null;
                 int number = 0;
+                int updated_entry = 0;
 
 
                 while ( rs.hasNext() ) {
@@ -298,13 +299,19 @@ public class SparqlPattern_ES_Predicative_Participle_Copulative extends SparqlPa
     
 		if(participle!=null && e1_arg!=null && e2_arg!=null && preposition!=null && number==1) {
                     Sentence sentence = this.returnSentence(model);
-                    Templates.getAdjective(model, lexicon, sentence, participle, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
-                                
-                    if(preposition.equals("por"))
-                            Templates.getTransitiveVerb(model, lexicon, sentence, lemma, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                    if(preposition.equals("por")){
+                        Templates.getTransitiveVerb(model, lexicon, sentence, lemma, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                        updated_entry += 1;
+                    }
+                    else{
+                        Templates.getAdjective(model, lexicon, sentence, participle, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                        updated_entry += 1;   
+                    }
+                            
                     
 		
 		}
+                return updated_entry;
 		
 	}
 

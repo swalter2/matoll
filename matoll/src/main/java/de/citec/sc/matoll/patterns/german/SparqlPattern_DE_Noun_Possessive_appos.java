@@ -45,13 +45,14 @@ public class SparqlPattern_DE_Noun_Possessive_appos extends SparqlPattern{
 	}
 
 	@Override
-	public void extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon) {
 
 		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
                 ResultSet rs = qExec.execSelect() ;
                 String noun = null;
                 String e1_arg = null;
                 String e2_arg = null;
+                int updated_entry = 0;
 
                 while ( rs.hasNext() ) {
                     QuerySolution qs = rs.next();
@@ -63,6 +64,7 @@ public class SparqlPattern_DE_Noun_Possessive_appos extends SparqlPattern{
                             if(noun!=null && e1_arg!=null && e2_arg!=null) {
                                 Sentence sentence = this.returnSentence(model);
                                 Templates.getNounPossessive(model, lexicon, sentence,noun, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.DE,getID());
+                                updated_entry += 1;
                             }
                     }
                     catch(Exception e){
@@ -71,7 +73,7 @@ public class SparqlPattern_DE_Noun_Possessive_appos extends SparqlPattern{
                 }
 
                 qExec.close() ;
-    
+                return updated_entry;
 
 		
 	}

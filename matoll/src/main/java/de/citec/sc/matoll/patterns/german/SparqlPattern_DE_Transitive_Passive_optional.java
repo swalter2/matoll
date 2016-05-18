@@ -45,7 +45,7 @@ public class SparqlPattern_DE_Transitive_Passive_optional extends SparqlPattern{
 	}
 
 	@Override
-	public void extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon) {
 
 //                model.enterCriticalSection(Lock.READ) ;
 //		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
@@ -81,6 +81,7 @@ public class SparqlPattern_DE_Transitive_Passive_optional extends SparqlPattern{
 //                    Sentence sentence = this.returnSentence(model);
 //                    Templates.getTransitiveVerb(model, lexicon, sentence,verb, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.DE,getID());*/
 //            } 
+            return 0;
 		
 	}
 

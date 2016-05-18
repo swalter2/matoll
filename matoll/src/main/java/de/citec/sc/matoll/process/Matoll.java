@@ -243,6 +243,9 @@ public class Matoll {
                 }
 		                
                 int sentence_counter = 0;
+                int sentence_counter_input = 0;
+                Map<String,Integer> pattern_counter = new HashMap<>();
+                
                 TObjectIntHashMap<String> freq = new TObjectIntHashMap<String>();
                 
                 
@@ -251,6 +254,7 @@ public class Matoll {
                     sentences.clear();
                     sentences = getSentences(model);
                     for(Model sentence: sentences){
+                        sentence_counter_input +=1 ;
                         obj = getObject(sentence);
                         subj = getSubject(sentence);
                         if (!stopwords.isStopword(obj, language) 
@@ -263,7 +267,7 @@ public class Matoll {
                                 preprocessor.preprocess(sentence,subj,obj,language);
                                 freq.adjustOrPutValue(reference, 1, 1);
                                 sentence_counter+=1;
-                                library.extractLexicalEntries(sentence, automatic_lexicon);
+                                library.extractLexicalEntries(sentence, automatic_lexicon,pattern_counter);
                             }
                         }
                     }
@@ -284,9 +288,14 @@ public class Matoll {
                 }
                 
                 
-                System.out.println("Calculate normalized confidence");
-                calculateConfidence(automatic_lexicon,freq);  
-                normalizeConfidence(automatic_lexicon);
+                //System.out.println("Calculate normalized confidence");
+               //calculateConfidence(automatic_lexicon,freq);  
+               //normalizeConfidence(automatic_lexicon);
+                
+                System.out.println("Absolut numbers for each pattern:");
+                for(String key : pattern_counter.keySet()){
+                    System.out.println(key+":"+Integer.toString(pattern_counter.get(key)));
+                }
                 
 		
 //		logger.info("Extracted all entries \n");
@@ -306,6 +315,7 @@ public class Matoll {
                 
                 out.close();
 		
+                System.out.println("Number of Sentences from input:"+Integer.toString(sentence_counter_input));
                 System.out.println("Actual number used sentences:"+Integer.toString(sentence_counter));
                 
                 

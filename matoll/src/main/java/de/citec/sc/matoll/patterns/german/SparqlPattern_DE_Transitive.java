@@ -76,7 +76,7 @@ sentence::
 	}
 
 	@Override
-	public void extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon) {
 
 		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
                 ResultSet rs = qExec.execSelect() ;
@@ -85,6 +85,7 @@ sentence::
                 String e2_arg = null;
                 String additional_lemma = null;
                 String avz = null;
+                int updated_entry = 0;
 
                 while ( rs.hasNext() ) {
                     QuerySolution qs = rs.next();
@@ -107,13 +108,16 @@ sentence::
                                 Sentence sentence = this.returnSentence(model);
                                 if(additional_lemma!=null){
                                     Templates.getTransitiveVerb(model, lexicon, sentence, additional_lemma +" "+verb, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.DE,getID());
+                                    updated_entry += 1;
                                 }
                                 if(avz!=null){
                                     Templates.getTransitiveVerb(model, lexicon, sentence, avz+verb, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.DE,getID());
+                                    updated_entry += 1;
                                 }
 
                                 if(avz==null && additional_lemma==null)
                                     Templates.getTransitiveVerb(model, lexicon, sentence,verb, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.DE,getID());
+                                    updated_entry += 1;
                             }
                     }
                     catch(Exception e){
@@ -122,6 +126,7 @@ sentence::
                 }
 
                 qExec.close() ;
+                return updated_entry;
 
 	}
 

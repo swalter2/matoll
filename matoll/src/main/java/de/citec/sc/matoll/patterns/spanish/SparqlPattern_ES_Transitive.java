@@ -69,7 +69,7 @@ x verb y - ohne preposition
 	}
 
 	@Override
-	public void extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon) {
 		
 		
 		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
@@ -77,6 +77,7 @@ x verb y - ohne preposition
                 String verb = null;
                 String e1_arg = null;
                 String e2_arg = null;
+                int updated_entry = 0;
 
                 while ( rs.hasNext() ) {
                     QuerySolution qs = rs.next();
@@ -88,6 +89,7 @@ x verb y - ohne preposition
                         if(verb!=null && e1_arg!=null && e2_arg!=null) {
                             Sentence sentence = this.returnSentence(model);
                             Templates.getTransitiveVerb(model, lexicon, sentence, verb, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                            updated_entry += 1;
                         }
                     }
                     catch(Exception e){
@@ -96,7 +98,7 @@ x verb y - ohne preposition
                     }
 
                 qExec.close() ;
-    
+                return updated_entry;
 
 		
 		

@@ -145,7 +145,7 @@ public class SparqlPattern_ES_Noun_PP_appos extends SparqlPattern{
 	}
 
 	@Override
-	public void extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon) {
 		
 		
 		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
@@ -157,6 +157,7 @@ public class SparqlPattern_ES_Noun_PP_appos extends SparqlPattern{
                 String adjective_lemma = null;
                 int adjective_wordnumber = 0;
                 int lemma_wordnumber = 0;
+                int updated_entry = 0;
                 while ( rs.hasNext() ) {
                     QuerySolution qs = rs.next();
 
@@ -175,12 +176,21 @@ public class SparqlPattern_ES_Noun_PP_appos extends SparqlPattern{
                                 Sentence sentence = this.returnSentence(model);
                                 if(adjective_lemma!=null){
                                     if(lemma_wordnumber<adjective_wordnumber)
+                                    {
                                         Templates.getNounWithPrep(model, lexicon, sentence, noun+" "+adjective_lemma, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                                        updated_entry += 1;
+                                    }
                                     else
+                                    {
                                         Templates.getNounWithPrep(model, lexicon, sentence, adjective_lemma+" "+noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                                        updated_entry += 1;
+                                    }
                                 }
                                 else
+                                {
                                     Templates.getNounWithPrep(model, lexicon, sentence, noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                                    updated_entry += 1;
+                                }
                             }
                      }
                     catch(Exception e){
@@ -189,7 +199,7 @@ public class SparqlPattern_ES_Noun_PP_appos extends SparqlPattern{
                 }
 
                 qExec.close() ;
-    
+                return updated_entry;
 
 		
 	}

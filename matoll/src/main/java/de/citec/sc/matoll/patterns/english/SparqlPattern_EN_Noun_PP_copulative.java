@@ -107,7 +107,7 @@ sentence:Professor Janet Beer is the Vice-Chancellor of Oxford Brookes Universit
 		
 
         @Override
-	public void extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon) {
 
 		
 		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
@@ -117,6 +117,7 @@ sentence:Professor Janet Beer is the Vice-Chancellor of Oxford Brookes Universit
                 String e2_arg = null;
                 String preposition = null;
                 String modifier = "";
+                int updated_entry = 0;
                 while ( rs.hasNext() ) {
                         QuerySolution qs = rs.next();
                         try{
@@ -134,8 +135,12 @@ sentence:Professor Janet Beer is the Vice-Chancellor of Oxford Brookes Universit
                                     Sentence sentence = this.returnSentence(model);
                                     if (!modifier.equals("")){
                                         Templates.getNounWithPrep(model, lexicon, sentence, modifier +" "+noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+                                        updated_entry += 1;
                                     }
-                                    else Templates.getNounWithPrep(model, lexicon, sentence, noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+                                    else {
+                                        Templates.getNounWithPrep(model, lexicon, sentence, noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+                                        updated_entry += 1;
+                                    }
                                 }
                         }
                         catch(Exception e){
@@ -144,7 +149,7 @@ sentence:Professor Janet Beer is the Vice-Chancellor of Oxford Brookes Universit
                     }
                 qExec.close() ;
     
-
+                return updated_entry;
 		
 	     
 	}

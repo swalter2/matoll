@@ -73,7 +73,7 @@ sentence:Ludicorp es la empresa creadora de Flickr , sitio web de organizacin de
 	}
 
 	@Override
-	public void extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon) {
 		
 		
 		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
@@ -85,6 +85,7 @@ sentence:Ludicorp es la empresa creadora de Flickr , sitio web de organizacin de
                 String adjective_lemma = null;
                 int adjective_wordnumber = 0;
                 int lemma_wordnumber = 0;
+                int updated_entry = 0;
                 
                 while ( rs.hasNext() ) {
                     QuerySolution qs = rs.next();
@@ -105,11 +106,20 @@ sentence:Ludicorp es la empresa creadora de Flickr , sitio web de organizacin de
                                 Sentence sentence = this.returnSentence(model);
                                 if(adjective_lemma!=null)
                                     if(lemma_wordnumber<adjective_wordnumber)
+                                    {
                                         Templates.getNounWithPrep(model, lexicon, sentence, noun+" "+adjective_lemma, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                                        updated_entry += 1;
+                                    }
                                     else
+                                    {
                                         Templates.getNounWithPrep(model, lexicon, sentence, adjective_lemma+" "+noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                                        updated_entry += 1;
+                                    }
                                 else
+                                {
                                     Templates.getNounWithPrep(model, lexicon, sentence, noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                                    updated_entry += 1;
+                                }
                             }
                     }
                     catch(Exception e){
@@ -118,7 +128,7 @@ sentence:Ludicorp es la empresa creadora de Flickr , sitio web de organizacin de
                 }
 
                 qExec.close() ;
-    
+                return updated_entry;
 
 		
 	}

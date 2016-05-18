@@ -78,7 +78,7 @@ sentence::
 
 	
         @Override
-	public void extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon) {
 		
                 
                 QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
@@ -88,6 +88,7 @@ sentence::
                 String e2_arg = null;
                 String preposition = null;
                 String modifier = "";
+                int updated_entry = 0;
 
                 while ( rs.hasNext() ) {
                         QuerySolution qs = rs.next();
@@ -105,8 +106,12 @@ sentence::
                                     Sentence sentence = this.returnSentence(model);
                                     if (!modifier.equals("")){
                                         Templates.getNounWithPrep(model, lexicon, sentence, modifier +" "+noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+                                        updated_entry += 1;
                                     }
-                                    else Templates.getNounWithPrep(model, lexicon, sentence, noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+                                    else{
+                                        Templates.getNounWithPrep(model, lexicon, sentence, noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+                                        updated_entry += 1;
+                                    }
                                 }
 
                          }
@@ -115,7 +120,7 @@ sentence::
                        }
                     }
                 qExec.close() ;
-    
+                return updated_entry;
 
                 
 				

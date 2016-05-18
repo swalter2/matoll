@@ -86,7 +86,7 @@ public class SparqlPattern_EN_Transitive_Verb extends SparqlPattern {
 
 	
         @Override
-	public void extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon) {
 		
                 QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
                 ResultSet rs = qExec.execSelect() ;
@@ -94,6 +94,7 @@ public class SparqlPattern_EN_Transitive_Verb extends SparqlPattern {
                 String e1_arg = null;
                 String e2_arg = null;
                 String prt_form = null;
+                int updated_entry = 0;
                 while ( rs.hasNext() ) {
                         QuerySolution qs = rs.next();
                         try{
@@ -109,9 +110,11 @@ public class SparqlPattern_EN_Transitive_Verb extends SparqlPattern {
                                 Sentence sentence = this.returnSentence(model);
                                 if(prt_form!=null){
                                     Templates.getTransitiveVerb(model, lexicon, sentence, verb+" "+prt_form, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+                                    updated_entry += 1;
                                 }
                                 else
                                     Templates.getTransitiveVerb(model, lexicon, sentence, verb, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+                                    updated_entry += 1;
                             } 
 
                          }
@@ -122,7 +125,7 @@ public class SparqlPattern_EN_Transitive_Verb extends SparqlPattern {
                 
 
                 qExec.close() ;
-    
+                return updated_entry;
 		
 		
 

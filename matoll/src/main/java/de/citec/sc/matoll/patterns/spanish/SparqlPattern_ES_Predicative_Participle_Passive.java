@@ -214,7 +214,7 @@ public class SparqlPattern_ES_Predicative_Participle_Passive extends SparqlPatte
 	}
 
 	@Override
-	public void extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon) {
 		
 		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
                 ResultSet rs = qExec.execSelect() ;
@@ -223,7 +223,7 @@ public class SparqlPattern_ES_Predicative_Participle_Passive extends SparqlPatte
                 String e2_arg = null;
                 String preposition = null;
                 String lemma = null;
-
+                int updated_entry = 0;
                 while ( rs.hasNext() ) {
                     QuerySolution qs = rs.next();
 
@@ -235,11 +235,16 @@ public class SparqlPattern_ES_Predicative_Participle_Passive extends SparqlPatte
                         preposition = qs.get("?prep").toString();
                         if(participle!=null && e1_arg!=null && e2_arg!=null) {
                             Sentence sentence = this.returnSentence(model);
-                            Templates.getAdjective(model, lexicon, sentence, participle, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
 
                             if (preposition!=null)
-                            {   if(preposition.equals("por"))
-                                Templates.getTransitiveVerb(model, lexicon, sentence, lemma, e2_arg, e1_arg, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                            {   if(preposition.equals("por")){
+                                    Templates.getTransitiveVerb(model, lexicon, sentence, lemma, e2_arg, e1_arg, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                                    updated_entry += 1;
+                                }
+                            }
+                            else{
+                                Templates.getAdjective(model, lexicon, sentence, participle, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                                updated_entry += 1;
                             }
                         }
                     }
@@ -250,7 +255,7 @@ public class SparqlPattern_ES_Predicative_Participle_Passive extends SparqlPatte
 
                 qExec.close() ;
     
-
+                return updated_entry;
 		
 	}
 

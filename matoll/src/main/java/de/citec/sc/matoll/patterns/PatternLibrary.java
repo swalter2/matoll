@@ -58,14 +58,22 @@ public class PatternLibrary {
          * and adds the generated entry to the overall lexicon
          * @param model Model, containing a parsed sentence
          * @param lexicon Lexicon
+         * @param pattern_counter
          */
-	public void extractLexicalEntries(Model model, Lexicon lexicon)
+	public void extractLexicalEntries(Model model, Lexicon lexicon, Map<String,Integer> pattern_counter)
 	{
 		for (SparqlPattern pattern: Patterns)
 		{
 			if (Lemmatizer != null)
 				pattern.setLemmatizer(Lemmatizer);
-			pattern.extractLexicalEntries(model, lexicon);
+			int value = pattern.extractLexicalEntries(model, lexicon);
+                        if(pattern_counter.containsKey(pattern.getID())){
+                            pattern_counter.put(pattern.getID(), pattern_counter.get(pattern.getID()) + value);
+                        }
+                        else{
+                            pattern_counter.put(pattern.getID(),value);
+                        }
+                        
 		}
 		
 	}
