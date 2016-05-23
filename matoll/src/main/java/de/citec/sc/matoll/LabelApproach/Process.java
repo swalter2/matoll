@@ -113,10 +113,6 @@ public class Process {
                 Set<String> classes = new HashSet<>();
                 if(path_to_input_file.endsWith(".txt")){
                     properties = loadPropertyList(path_to_input_file);
-                    /*
-                    Do not committ this
-                    */
-                    classes = properties;
                 }
                 else{
                     OntologyImporter importer = new OntologyImporter(path_to_input_file,"RDF/XML");
