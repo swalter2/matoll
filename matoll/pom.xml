@@ -68,7 +68,8 @@
         <dependency>
                 <groupId>nz.ac.waikato.cms.weka</groupId>
                 <artifactId>weka-stable</artifactId>
-                <version>3.6.12</version>
+                <!--<version>3.6.12</version>-->
+                <version>3.8.0</version>
         </dependency>
   	<dependency>
   		<groupId>edu.mit</groupId>

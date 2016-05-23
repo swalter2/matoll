@@ -72,8 +72,9 @@ import org.apache.lucene.store.FSDirectory;
 
 
 import weka.classifiers.Classifier;
-import weka.classifiers.functions.SMO;
+//import weka.classifiers.functions.SMO;
 //import weka.classifiers.trees.J48;
+import weka.classifiers.trees.RandomForest;
 import weka.core.Instance;
 import weka.core.Instances;
 import weka.core.converters.ArffLoader;
@@ -99,15 +100,15 @@ public class Process {
 		
 		//String path_to_tagger_model ="resources/english-left3words/english-caseless-left3words-distsim.tagger";
                 String path_to_tagger_model ="resources/english-caseless-left3words-distsim.tagger";
-		SMO smo = new SMO();
+		RandomForest smo = new RandomForest();
 //                J48 smo = new J48();
-                smo.setOptions(weka.core.Utils.splitOptions("-M"));
+                //smo.setOptions(weka.core.Utils.splitOptions("-M"));
                 Classifier cls = smo; 
                 
                 final StanfordLemmatizer sl = new StanfordLemmatizer(EN);
 	
-//                String path_to_input_file = "../dbpedia_2014.owl";
-                String path_to_input_file = "test.txt";
+                String path_to_input_file = "../dbpedia_2014.owl";
+//                String path_to_input_file = "test.txt";
                 Set<String> properties = new HashSet<>();
                 Set<String> classes = new HashSet<>();
                 if(path_to_input_file.endsWith(".txt")){
@@ -193,9 +194,9 @@ public class Process {
                
 
                 //runWornetPropertyApproach(properties,lexicon,wordnet,sl);
-//		runAdjectiveApproach(properties,adjectiveExtractor,posAdj,pos,label_3,label_2, prediction,tagger, lexicon, mp,path_to_objects);
+		runAdjectiveApproach(properties,adjectiveExtractor,posAdj,pos,label_3,label_2, prediction,tagger, lexicon, mp,path_to_objects);
                 
-		runWornetClassApproach(classes,lexicon,wordnet,"/Users/swalter/Downloads/EnglishIndexReduced");
+//		runWornetClassApproach(classes,lexicon,wordnet,"/Users/swalter/Downloads/EnglishIndexReduced");
 		
 		Model model = ModelFactory.createDefaultModel();
 		
@@ -389,7 +390,7 @@ public class Process {
                               */
                              HashMap<Integer, Double> result = prediction.predict(current);
                              for(int key : result.keySet()){
-                                if(key==1 && result.get(key)>0.99){
+                                if(key==1 && result.get(key)>0.80){
                                      counter+=1;
                                      try{
                                          createRestrictionClassEntry(lexicon,adjectiveObject.getAdjectiveTerm(),adjectiveObject.getObjectURI(),uri, adjectiveObject.getFrequency(),result.get(key));
@@ -402,6 +403,7 @@ public class Process {
 //                                    System.out.println("Predicted 0 for "+adjectiveObject.getAdjectiveTerm());
 //                                    System.out.println();
                                 }
+
                             }
 
 
