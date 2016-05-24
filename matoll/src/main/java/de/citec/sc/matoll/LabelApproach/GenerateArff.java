@@ -21,7 +21,7 @@ public class GenerateArff {
 	
 	
 	public static void run(String path_annotatedFiles,String path_normalPath,String path_to_write,
-			HashSet<String> subLabelList,HashSet<String> subLabelList_2,HashSet<String> posPatternList,HashSet<String> posAdjPatternList,MaxentTagger tagger) throws FileNotFoundException{
+			HashSet<String> subLabelList,HashSet<String> subLabelList_2,HashSet<String> posPatternList,HashSet<String> posAdjPatternList,MaxentTagger tagger,LabelFeature label_feature) throws FileNotFoundException{
 		
 		
 		List<AdjectiveObject> annotated = readCSV(path_annotatedFiles);
@@ -33,7 +33,7 @@ public class GenerateArff {
 		generatePosAdjPatternList(adjectives,posAdjPatternList);
 		
 		
-		createArrf(subLabelList,subLabelList_2,posPatternList,posAdjPatternList,adjectives,path_to_write,tagger);
+		createArrf(subLabelList,subLabelList_2,posPatternList,posAdjPatternList,adjectives,path_to_write,tagger,label_feature);
 		
 	}
 	
@@ -60,18 +60,18 @@ public class GenerateArff {
 
 	private static void createArrf(HashSet<String> subLabelList,HashSet<String> subLabelList_2,
 			HashSet<String> posPatternList, HashSet<String> posAdjPatternList,
-			List<AdjectiveObject> adjectives, String path_to_write,MaxentTagger tagger) throws FileNotFoundException {
+			List<AdjectiveObject> adjectives, String path_to_write,MaxentTagger tagger,LabelFeature label_feature) throws FileNotFoundException {
 		List<AdjectiveObject> correctAdjectives = new ArrayList<AdjectiveObject>();
 		List<AdjectiveObject> wrongAdjectives = new ArrayList<AdjectiveObject>();
 		getRightWrongEntries(correctAdjectives,wrongAdjectives,adjectives);
 		System.out.println("#correct entries"+correctAdjectives.size());
 		System.out.println("#wrong entries"+wrongAdjectives.size());
 		List<String> lines = new ArrayList<String>();
-		getCsvLine(lines,correctAdjectives,subLabelList,subLabelList_2,posPatternList,posAdjPatternList,tagger);
+		getCsvLine(lines,correctAdjectives,subLabelList,subLabelList_2,posPatternList,posAdjPatternList,tagger,label_feature);
 		//List<AdjectiveObject> randomised_wrongAdjectives = new ArrayList<AdjectiveObject>();
 		//getRandomisedWrongEntries(randomised_wrongAdjectives,wrongAdjectives,correctAdjectives.size());
-		getCsvLine(lines,wrongAdjectives,subLabelList,subLabelList_2,posPatternList,posAdjPatternList,tagger);
-		writeArff(lines,path_to_write,subLabelList,subLabelList_2,posPatternList,posAdjPatternList);
+		getCsvLine(lines,wrongAdjectives,subLabelList,subLabelList_2,posPatternList,posAdjPatternList,tagger,label_feature);
+		writeArff(lines,path_to_write,subLabelList,subLabelList_2,posPatternList,posAdjPatternList,label_feature);
 		System.out.println("wrote #"+lines.size()+" lines");
 		System.out.println();
 		
@@ -85,36 +85,45 @@ public class GenerateArff {
         */
 	public static void writeArff(List<String> lines, String path_to_write,
 			HashSet<String> subLabelList, HashSet<String> subLabelList_2, HashSet<String> posPatternList,
-			HashSet<String> posAdjPatternList) throws FileNotFoundException {
+			HashSet<String> posAdjPatternList,LabelFeature label_feature) throws FileNotFoundException {
 		PrintWriter writer = new PrintWriter(path_to_write);
 		String first_line =""
 			+"@relation adjectives\n";
-			first_line += "@attribute 'normalizedFrequency' numeric\n";
-//			first_line += "@attribute 'normalizedObjectFrequency' numeric\n";
-			first_line += "@attribute 'ratio' numeric\n";
-			first_line += "@attribute 'ratioPattern' numeric\n";
-			first_line += "@attribute 'ratioPosPattern' numeric\n";
-//			first_line += "@attribute 'position' numeric\n";
-//			first_line += "@attribute 'firstPosition' {0,1}\n";
-//			first_line += "@attribute 'lastPosition' {0,1}\n";
-//			first_line += "@attribute 'nld' numeric\n";
+		if(label_feature.isNAF()) first_line += "@attribute 'normalizedFrequency' numeric\n";
+		if(label_feature.isNOF()) first_line += "@attribute 'normalizedObjectFrequency' numeric\n";
+		if(label_feature.isAR()) first_line += "@attribute 'ratio' numeric\n";
+                if(label_feature.isPR()) first_line += "@attribute 'ratioPattern' numeric\n";
+		if(label_feature.isPOSPR()) first_line += "@attribute 'ratioPosPattern' numeric\n";
+		if(label_feature.isAP()) first_line += "@attribute 'position' numeric\n";
+		if(label_feature.isAFP()) first_line += "@attribute 'firstPosition' {0,1}\n";
+		if(label_feature.isALP()) first_line += "@attribute 'lastPosition' {0,1}\n";
+		if(label_feature.isNLD()) first_line += "@attribute 'nld' numeric\n";
 		int counter=0;
-		for(String label:subLabelList){
-			counter+=1;
-			first_line+="@attribute 'l"+Integer.toString(counter)+"' {0,1}\n";
-		}
-		for(String label:subLabelList_2){
+                if(label_feature.isTrigrams()){
+                    for(String label:subLabelList){
+                            counter+=1;
+                            first_line+="@attribute 'l"+Integer.toString(counter)+"' {0,1}\n";
+                    }
+                }
+                if(label_feature.isBigrams()){
+                    for(String label:subLabelList_2){
 			counter+=1;
 			first_line+="@attribute 'l2"+Integer.toString(counter)+"' {0,1}\n";
-		}
-//		for(String label:posPatternList){
-//			counter+=1;
-//			first_line+="@attribute 'p"+Integer.toString(counter)+"' {0,1}\n";
-//		}
-		for(String label:posAdjPatternList){
+                    }
+                }
+		if(label_feature.isPP()){
+                    for(String label:posPatternList){
+			counter+=1;
+			first_line+="@attribute 'p"+Integer.toString(counter)+"' {0,1}\n";
+                    }
+                }
+		if(label_feature.isPAP()){
+                    for(String label:posAdjPatternList){
 			counter+=1;
 			first_line+="@attribute 'pa"+Integer.toString(counter)+"' {0,1}\n";
-		}
+                    }
+                }
+		
 ////		
 		first_line+="@attribute 'class' {0,1}\n"
 				+"@data\n";
@@ -161,41 +170,54 @@ public class GenerateArff {
         
         */
 	public static void getCsvLine(List<String> lines,
-			List<AdjectiveObject> adjectives_imput, HashSet<String> subLabelList,HashSet<String> subLabelList_2, HashSet<String> posPatternList, HashSet<String> posAdjPatternList,MaxentTagger tagger) {
-		// TODO Auto-generated method stub
+			List<AdjectiveObject> adjectives_imput, HashSet<String> subLabelList,HashSet<String> subLabelList_2, 
+                        HashSet<String> posPatternList, HashSet<String> posAdjPatternList,MaxentTagger tagger,
+                        LabelFeature label_feature) {
 		for(AdjectiveObject adjectiveobject : adjectives_imput){
 
 
                         String line = "";
-                                line += Double.toString(adjectiveobject.getNormalizedFrequency());
-//				line += ","+Double.toString(adjectiveobject.getNormalizedObjectFrequency());
-				line += ","+Double.toString(adjectiveobject.getRatio());
-				line += ","+Double.toString(adjectiveobject.getRatio_pattern());
-				line += ","+Double.toString(adjectiveobject.getRatio_pos_pattern());
-//				line += ","+Integer.toString(adjectiveobject.getPosition());
-////                                
-//
-//			if(adjectiveobject.isFirstPosition())line+=","+"1";
-//			else line+=","+"0";
-//			if(adjectiveobject.isLastPosition())line+=","+"1";
-//			else line+=","+"0";
-//			line+=","+Double.toString(adjectiveobject.getNld());
-			for(String label:subLabelList){
+                        if(label_feature.isNAF()) line += Double.toString(adjectiveobject.getNormalizedFrequency());
+                        if(label_feature.isNOF()) line += ","+Double.toString(adjectiveobject.getNormalizedObjectFrequency());
+			if(label_feature.isAR()) line += ","+Double.toString(adjectiveobject.getRatio());
+			if(label_feature.isPR()) line += ","+Double.toString(adjectiveobject.getRatio_pattern());
+			if(label_feature.isPOSPR()) line += ","+Double.toString(adjectiveobject.getRatio_pos_pattern());
+			if(label_feature.isAP()) line += ","+Integer.toString(adjectiveobject.getPosition());
+                        if(label_feature.isAFP()){
+                            if(adjectiveobject.isFirstPosition())line+=","+"1";
+                            else line+=","+"0";
+                        }
+                        if(label_feature.isALP()){
+                            if(adjectiveobject.isLastPosition())line+=","+"1";
+                            else line+=","+"0";
+                        }
+
+                        if(label_feature.isNLD()) line+=","+Double.toString(adjectiveobject.getNld());
+                        if(label_feature.isTrigrams()){
+                            for(String label:subLabelList){
 				if(adjectiveobject.getSublabel().equals(label))line+=","+"1";
 				else line+=","+"0";
-			}
-			for(String label:subLabelList_2){
+                            }
+                        }
+			if(label_feature.isBigrams()){
+                            for(String label:subLabelList_2){
 				if(adjectiveobject.getSublabel_2().equals(label))line+=","+"1";
 				else line+=","+"0";
-			}
-//			for(String pospattern:posPatternList){
-//				if(adjectiveobject.getPos_Pattern().equals(pospattern))line+=","+"1";
-//				else line+=","+"0";
-//			}
-			for(String posadjpattern:posAdjPatternList){
+                            }
+                        }
+    			if(label_feature.isPP()){
+                            for(String pospattern:posPatternList){
+				if(adjectiveobject.getPos_Pattern().equals(pospattern))line+=","+"1";
+				else line+=","+"0";
+                            }
+                        }
+                        if(label_feature.isPAP()){
+                            for(String posadjpattern:posAdjPatternList){
 				if(adjectiveobject.getPos_adj_Pattern().equals(posadjpattern))line+=","+"1";
 				else line+=","+"0";
-			}
+                            }
+                        }
+			
 
                         
 			line+=","+adjectiveobject.getAnnotation();
