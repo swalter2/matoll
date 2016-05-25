@@ -21,6 +21,7 @@ import java.util.Set;
 
 import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
+import weka.classifiers.functions.SMO;
 import weka.classifiers.trees.J48;
 import weka.classifiers.trees.RandomForest;
 import weka.core.Instances;
@@ -34,7 +35,13 @@ public class Experimentor {
 		String path_raw_files = "resources/plainAdjectives/";
 		String path_to_write_arff = "adjective.arff";
                 String path_to_tagger_model ="resources/english-caseless-left3words-distsim.tagger";
+                
+                //classifier
 		RandomForest classifier = new RandomForest();
+                //J48 classifier = new J48();
+                //SMO classifier = new SMO();
+                
+                String classifier_name = classifier.getClass().toString().replace("class ", "");
                 Set<String> feature_list = new HashSet<String>();
                 feature_list.add("NAF");
                 feature_list.add("Trigrams");
@@ -109,7 +116,7 @@ public class Experimentor {
                 }
             PrintWriter writer;
             try {
-                    writer = new PrintWriter("results_feature_combinations.tsv");
+                    writer = new PrintWriter(classifier_name+"_results_feature_combinations.tsv");
                     for(String s : output){
                         writer.write(s+"\n");
                     }
