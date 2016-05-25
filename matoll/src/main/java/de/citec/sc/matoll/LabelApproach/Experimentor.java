@@ -89,6 +89,7 @@ public class Experimentor {
                     System.out.println("create "+counter+"/"+number_combinations);
                     
                 }
+                counter = 0;
                 for(Set<String> combination : combinations_feature){
                     counter+=1;
                     LabelFeature label_feature = new LabelFeature();
@@ -105,12 +106,12 @@ public class Experimentor {
 
                         Evaluation eval=new Evaluation(train);
                         eval.crossValidateModel(classifier, train, 10, new Random(1));
-                        System.out.println("evaluated "+combination.toString()+":"+Double.toString(eval.pctCorrect()));
+                        System.out.println(counter+"/"+number_combinations+"  evaluated "+combination.toString()+":"+Double.toString(eval.pctCorrect()));
                         output.add(combination.toString()+"\t"+Double.toString(eval.pctCorrect()));
 
                     } catch (Exception e) {
                             // TODO Auto-generated catch block
-                            e.printStackTrace();
+                            //e.printStackTrace();
 
                     }
                 }
@@ -124,16 +125,7 @@ public class Experimentor {
             } catch (FileNotFoundException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
-            }
-
-		
-		
-		
-		
-		
-		 
-		 
-		 
+            }  
 		
 	}
 
@@ -151,60 +143,6 @@ public class Experimentor {
 
             return inputReader;
         }
-        
-	private static void generateModel(Classifier cls,String path_to_arff) throws FileNotFoundException, IOException {
-		 Instances inst = new Instances(new BufferedReader(new FileReader(path_to_arff)));
-                 
-                 try{
-//                     J48 c1 = new J48();
-//                        Evaluation eval = new Evaluation(inst);
-//                    eval.crossValidateModel(c1, inst, 10, new Random(1));
-                    
-                    BufferedReader bReader = readDataFile(path_to_arff);
-                    Instances train = new Instances(bReader);
-                    train.setClassIndex(train.numAttributes() -1); //last attribute is the class attribute
 
-                    J48 myTree = new J48();
-                    myTree.setUnpruned(true);
-
-                    Evaluation eval=new Evaluation(train);
-             //first supply the classifier
-             //then the training data
-             //number of folds
-             //random seed
-             eval.crossValidateModel(myTree, train, 10, new Random(1));
-             System.out.println("Percent correct: "+
-                                Double.toString(eval.pctCorrect()));
-
-             myTree.buildClassifier(train);
-             System.out.print(myTree.graph());
-             
-                    System.out.println("Estimated Accuracy: "+Double.toString(eval.pctCorrect()));
-                 }
-                 catch(Exception e){
-                    e.printStackTrace();
-                 }
-                 
-    
-		 inst.setClassIndex(inst.numAttributes() - 1);
-		 try {
-			cls.buildClassifier(inst);
-			// serialize model
-			 ObjectOutputStream oos = new ObjectOutputStream(
-			                            new FileOutputStream(path_to_arff.replace(".arff", ".model")));
-			 oos.writeObject(cls);
-			 oos.flush();
-			 oos.close();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		 
-		 
-		
-	}
-
-    
-    
     
 }
