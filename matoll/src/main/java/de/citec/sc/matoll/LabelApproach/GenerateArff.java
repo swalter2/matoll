@@ -64,16 +64,16 @@ public class GenerateArff {
 		List<AdjectiveObject> correctAdjectives = new ArrayList<AdjectiveObject>();
 		List<AdjectiveObject> wrongAdjectives = new ArrayList<AdjectiveObject>();
 		getRightWrongEntries(correctAdjectives,wrongAdjectives,adjectives);
-		System.out.println("#correct entries"+correctAdjectives.size());
-		System.out.println("#wrong entries"+wrongAdjectives.size());
+		//System.out.println("#correct entries"+correctAdjectives.size());
+		//System.out.println("#wrong entries"+wrongAdjectives.size());
 		List<String> lines = new ArrayList<String>();
 		getCsvLine(lines,correctAdjectives,subLabelList,subLabelList_2,posPatternList,posAdjPatternList,tagger,label_feature);
 		//List<AdjectiveObject> randomised_wrongAdjectives = new ArrayList<AdjectiveObject>();
 		//getRandomisedWrongEntries(randomised_wrongAdjectives,wrongAdjectives,correctAdjectives.size());
 		getCsvLine(lines,wrongAdjectives,subLabelList,subLabelList_2,posPatternList,posAdjPatternList,tagger,label_feature);
 		writeArff(lines,path_to_write,subLabelList,subLabelList_2,posPatternList,posAdjPatternList,label_feature);
-		System.out.println("wrote #"+lines.size()+" lines");
-		System.out.println();
+		//System.out.println("wrote #"+lines.size()+" lines");
+		//System.out.println();
 		
 	}
 
@@ -130,7 +130,7 @@ public class GenerateArff {
 		writer.println(first_line);
 		for(String line:lines)writer.println(line);
 
-//		System.out.println("Wrote to "+path_to_write);
+//		//System.out.println("Wrote to "+path_to_write);
 		
 		writer.close();
 		
@@ -146,7 +146,7 @@ public class GenerateArff {
 		else{
 			for(int i=0;i<size;i++)randomised_wrongAdjectives.add(wrongAdjectives.get(i));
 		}
-		System.out.println("Change getRandomisedWrongEntries()");
+		//System.out.println("Change getRandomisedWrongEntries()");
 	}*/
 
 
@@ -294,11 +294,11 @@ public class GenerateArff {
 
 
 	private static List<AdjectiveObject> readCSV(String path_normalPath2) {
-		System.out.println(path_normalPath2);
+		//System.out.println(path_normalPath2);
 		List<AdjectiveObject> adj_list = new ArrayList<AdjectiveObject>();
 		for(File file : listFilesForFolder(new File(path_normalPath2))){
 			try {
-				System.out.println(file.toString());
+				//System.out.println(file.toString());
 				adj_list.addAll(readCSV(file));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -354,8 +354,8 @@ public class GenerateArff {
 			}
 			
 			adj_list.add(adjectiveobject);
-			//System.out.println("Annotation:"+adjectiveobject.getAnnotation());
-			//System.out.println();
+			////System.out.println("Annotation:"+adjectiveobject.getAnnotation());
+			////System.out.println();
 		}
 		return adj_list;
 	}

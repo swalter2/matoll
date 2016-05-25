@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.HashSet;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
+import java.io.File;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,39 +51,54 @@ public class Experimentor {
                 feature_list.add("ALP");
                 List<String> output = new ArrayList<>();
                 Set<Set<String>> combinations_feature = Sets.powerSet(feature_list);
+                int counter = 0;
+                int number_combinations = combinations_feature.size();
+                MaxentTagger tagger = new MaxentTagger(path_to_tagger_model);
                 for(Set<String> combination : combinations_feature){
+                    counter+=1;
                     LabelFeature label_feature = new LabelFeature();
                     label_feature.setFeature(combination);
+                    String feature_name = "feature";
+                    for(String s: combination) feature_name += "_"+s;
 
+                    File f = new File("resources/arff_combinations/"+feature_name+".arff");
+                    if(!f.exists()) { 
+                        /*
+                         * Overall Feature
+                         */
+                        HashSet<String> posAdj = new HashSet<String>();
+                        HashSet<String> pos = new HashSet<String>();
+                        HashSet<String> label_3 = new HashSet<String>();
+                        HashSet<String> label_2 = new HashSet<String>();
 
-                    MaxentTagger tagger = new MaxentTagger(path_to_tagger_model);
-
-
-                    /*
-                     * Overall Feature
-                     */
-                    HashSet<String> posAdj = new HashSet<String>();
-                    HashSet<String> pos = new HashSet<String>();
-                    HashSet<String> label_3 = new HashSet<String>();
-                    HashSet<String> label_2 = new HashSet<String>();
-
-                    try {
-                            GenerateArff.run(path_annotatedFiles, path_raw_files, path_to_write_arff,label_3,label_2,pos,posAdj,tagger,label_feature);
-                    } catch (FileNotFoundException e) {
-                            // TODO Auto-generated catch block
-                            e.printStackTrace();
+                        try {
+                                GenerateArff.run(path_annotatedFiles, path_raw_files, "resources/arff_combinations/"+feature_name+".arff",label_3,label_2,pos,posAdj,tagger,label_feature);
+                        } catch (FileNotFoundException e) {
+                                // TODO Auto-generated catch block
+                                e.printStackTrace();
+                        }
                     }
-
+                    
+                    System.out.println("create "+counter+"/"+number_combinations);
+                    
+                }
+                for(Set<String> combination : combinations_feature){
+                    counter+=1;
+                    LabelFeature label_feature = new LabelFeature();
+                    label_feature.setFeature(combination);
+                    String feature_name = "feature";
+                    for(String s: combination) feature_name += "_"+s;
+                    
                     try {
 
-                        BufferedReader bReader = readDataFile(path_to_write_arff);
+                        BufferedReader bReader = readDataFile("resources/arff_combinations/"+feature_name+".arff");
                         Instances train = new Instances(bReader);
                         train.setClassIndex(train.numAttributes() -1); //last attribute is the class attribute
 
 
                         Evaluation eval=new Evaluation(train);
                         eval.crossValidateModel(classifier, train, 10, new Random(1));
-                        System.out.println(combination.toString()+":"+Double.toString(eval.pctCorrect()));
+                        System.out.println("evaluated "+combination.toString()+":"+Double.toString(eval.pctCorrect()));
                         output.add(combination.toString()+"\t"+Double.toString(eval.pctCorrect()));
 
                     } catch (Exception e) {
