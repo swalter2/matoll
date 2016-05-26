@@ -58,10 +58,17 @@ public class Experimentor {
                 feature_list.add("ALP");
                 List<String> output = new ArrayList<>();
                 Set<Set<String>> combinations_feature = Sets.powerSet(feature_list);
+                int set_min = 6;
+                
+                Set<Set<String>> combinations_feature_new = new HashSet<>();
+                for(Set<String> s : combinations_feature){
+                    if(s.size()>=set_min) combinations_feature_new.add(s);
+                }
+                
                 int counter = 0;
-                int number_combinations = combinations_feature.size();
+                int number_combinations = combinations_feature_new.size();
                 MaxentTagger tagger = new MaxentTagger(path_to_tagger_model);
-                for(Set<String> combination : combinations_feature){
+                for(Set<String> combination : combinations_feature_new){
                     counter+=1;
                     LabelFeature label_feature = new LabelFeature();
                     label_feature.setFeature(combination);
@@ -90,7 +97,8 @@ public class Experimentor {
                     
                 }
                 counter = 0;
-                for(Set<String> combination : combinations_feature){
+                
+                for(Set<String> combination : combinations_feature_new){
                     counter+=1;
                     LabelFeature label_feature = new LabelFeature();
                     label_feature.setFeature(combination);
@@ -117,7 +125,7 @@ public class Experimentor {
                 }
             PrintWriter writer;
             try {
-                    writer = new PrintWriter(classifier_name+"_results_feature_combinations.tsv");
+                    writer = new PrintWriter(classifier_name+"_"+set_min+"_results_feature_combinations.tsv");
                     for(String s : output){
                         writer.write(s+"\n");
                     }
