@@ -108,6 +108,21 @@ public class Process {
                 feature_list.add("AR");
                 feature_list.add("PAP");
 
+//                feature_list.add("NAF");
+//                feature_list.add("Trigrams");
+//                feature_list.add("Bigrams");
+//                feature_list.add("PR");
+//                feature_list.add("POSPR");
+//                feature_list.add("AR");
+//                feature_list.add("PAP");
+//                feature_list.add("NOF");
+//                feature_list.add("PP");
+//                feature_list.add("NLD");
+//                feature_list.add("AP");
+//                feature_list.add("AFP");
+//                feature_list.add("ALP");
+                        
+
                 LabelFeature label_feature = new LabelFeature();
                 label_feature.setFeature(feature_list);
                 
@@ -412,7 +427,7 @@ public class Process {
                               */
                              HashMap<Integer, Double> result = prediction.predict(current);
                              for(int key : result.keySet()){
-                                if(key==1 && result.get(key)>0.80){
+                                if(key==1 && result.get(key)>0.70){
                                      counter+=1;
                                      try{
                                          createRestrictionClassEntry(lexicon,adjectiveObject.getAdjectiveTerm(),adjectiveObject.getObjectURI(),uri, adjectiveObject.getFrequency(),result.get(key));
