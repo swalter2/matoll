@@ -176,7 +176,7 @@ public class ExtractData {
             int counter = 0;
 	    for(String x:entities_raw.split("\n")){
                 counter+=1;
-                if(counter < 10000){
+                if(counter < 20000){
                     String obj = x.split("\t")[2];
                     String obj_uri = x.split("\t")[3];
                     //System.out.println("obj_uri:"+obj_uri);
