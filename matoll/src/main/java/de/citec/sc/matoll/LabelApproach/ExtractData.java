@@ -173,22 +173,27 @@ public class ExtractData {
 	    } finally {
 	        inputStream.close();
 	    }
+            int counter = 0;
 	    for(String x:entities_raw.split("\n")){
-	    	String obj = x.split("\t")[2];
-	    	String obj_uri = x.split("\t")[3];
-	    	//System.out.println("obj_uri:"+obj_uri);
-	    	//System.out.println("obj:"+obj);
-	    	obj = cleanEntity(obj);
-                if(obj_uri.contains("^^")){
-                    obj_uri = obj_uri.split("\\^\\^")[0];
+                counter+=1;
+                if(counter < 10000){
+                    String obj = x.split("\t")[2];
+                    String obj_uri = x.split("\t")[3];
+                    //System.out.println("obj_uri:"+obj_uri);
+                    //System.out.println("obj:"+obj);
+                    obj = cleanEntity(obj);
+                    if(obj_uri.contains("^^")){
+                        obj_uri = obj_uri.split("\\^\\^")[0];
+                    }
+                    obj_uri = obj_uri.replace("\"","");
+
+
+                    List<String> tmp_entity = new ArrayList<String>();
+                    tmp_entity.add(obj);
+                    tmp_entity.add(obj_uri);
+                    entities.add(tmp_entity);
                 }
-                obj_uri = obj_uri.replace("\"","");
-                
-                
-                List<String> tmp_entity = new ArrayList<String>();
-                tmp_entity.add(obj);
-                tmp_entity.add(obj_uri);
-                entities.add(tmp_entity);
+	    	
 
 	    }
 		
