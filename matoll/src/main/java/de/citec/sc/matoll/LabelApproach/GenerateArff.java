@@ -319,8 +319,11 @@ public class GenerateArff {
 		}
 		    
 		String[] adjectives = everything.split("\n");
+                int counter = 0;
 		for(String line: adjectives){
-			String[] tmp = line.split("\t");
+                    counter +=1;
+                    if(counter<20000){
+                        String[] tmp = line.split("\t");
 			AdjectiveObject adjectiveobject = new AdjectiveObject();
 			adjectiveobject.setAnnotation(tmp[0]);
 			adjectiveobject.setAdjectiveTerm(tmp[1]);
@@ -356,6 +359,8 @@ public class GenerateArff {
 			adj_list.add(adjectiveobject);
 			////System.out.println("Annotation:"+adjectiveobject.getAnnotation());
 			////System.out.println();
+                    }
+			
 		}
 		return adj_list;
 	}
