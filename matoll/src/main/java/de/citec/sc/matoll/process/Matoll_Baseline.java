@@ -27,6 +27,10 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.xml.parsers.ParserConfigurationException;
+import org.apache.jena.query.QueryExecution;
+import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.query.QuerySolution;
+import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.RDFNode;
@@ -158,27 +162,47 @@ public class Matoll_Baseline {
                         && !obj.contains(subj)) {
                     reference = getReference(sentence);
                     
-//                    String str = "ZZZZL <%= dsn %> AFFF <%= AFG %>";
-                    String str = sentenceObject.getSentence();
+//                    String plain_sentence = "ZZZZL <%= dsn %> AFFF <%= AFG %>";
+//                    String plain_sentence = sentenceObject.getSentence();
+                    String pos_plain_sentence = getPosPlainSentence(sentence);
+                    Map<String,String> mapping = new HashMap<>();
+                    for(String x : pos_plain_sentence.split(" ")){
+                        if(x.contains("_")){
+                            String[] x_tmp = x.split("_");
+                            mapping.put(x_tmp[0], x_tmp[1]);
+                        }
+                    }
+                    String pos_subj = subj.toLowerCase();
+                    for(String x: subj.toLowerCase().split(" ")){
+                        pos_subj = pos_subj.replace(x, x+"_"+mapping.get(x));
+                    }
+                    String pos_obj = obj.toLowerCase();
+                    for(String x: obj.toLowerCase().split(" ")){
+                        pos_obj = pos_obj.replace(x, x+"_"+mapping.get(x));
+                    }
+
                     doShortestPathExtraction(sentence,subj,obj,shortestpatterns,fragments,reference,stopwords,pattern_sentence,sentenceObject);
-                    Pattern pattern = Pattern.compile(subj.toLowerCase()+"(.*?)"+obj.toLowerCase());
-                    Matcher matcher = pattern.matcher(str.toLowerCase());
+                    Pattern pattern = Pattern.compile(pos_subj+"(.*?)"+pos_obj);
+                    Matcher matcher = pattern.matcher(pos_plain_sentence);
+
                     while (matcher.find()) {
+
+                        /*
+                        take only adjectives an nouns
+                        */
                         String tmp = matcher.group(1);
-                        tmp = firstClean(tmp);
-                        
-                        if(tmp.length()>2 && tmp.split(" ").length <3 && !stopwords.isStopword(tmp, language)){
-                            for(String s:stopwords.getStopwords()) tmp = tmp.replace(s," ");
-                            tmp = secondClean(tmp);
-                            results.add(tmp+" "+reference);
-                            /*
-                            TODO:
-                            + Identify posTags from each term in pattern (use information of depedency graph)
-                            + Only accept those terms which are noun, verbs etc (similar to the patterns)
-                            + Create entry based on pos tag
-                            */
+                        String result = "";
+                        for(String x: tmp.split(" ")){
+                            if(x.contains("_NN")){
+                                result += " "+x.split("_")[0];
+                                results.add(x.split("_")[0]+" "+reference);
+                            }
+                            if(x.contains("_V")){
+                                result += " "+x.split("_")[0];
+                                results.add(x.split("_")[0]+" "+reference);
                             }
                         }
+                    }
                     }        
                 }       
                 
@@ -676,6 +700,34 @@ public class Matoll_Baseline {
             tmp = tmp2.trim();
         }
         return tmp;
+    }
+
+    private static String getPosPlainSentence(Model sentence) {
+        String query = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "
+                + "SELECT ?number ?form ?pos WHERE {"
+                + "?sentence <conll:wordnumber> ?number . "
+                + "?sentence <conll:form> ?form ."
+                + "?sentence <conll:cpostag> ?pos ."
+                + "} ORDER BY ASC(xsd:integer(?number))";
+        QueryExecution qExec = QueryExecutionFactory.create(query, sentence) ;
+        ResultSet rs = qExec.execSelect() ;
+        String result = "";
+        Map<Integer,String> bla = new HashMap<>();
+
+        while ( rs.hasNext() ) {
+                QuerySolution qs = rs.next();
+                try{
+                        result+= qs.get("?form").toString()+"_"+qs.get("?pos").toString()+" ";
+
+                 }
+                catch(Exception e){
+               e.printStackTrace();
+               }
+            }
+
+        qExec.close() ;
+//        for(int i : bla.keySet()) System.out.println(i);
+       return result;
     }
     
     
