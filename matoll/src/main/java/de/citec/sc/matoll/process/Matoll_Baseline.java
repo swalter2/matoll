@@ -181,7 +181,7 @@ public class Matoll_Baseline {
                         pos_obj = pos_obj.replace(x, x+"_"+mapping.get(x));
                     }
 
-                    doShortestPathExtraction(sentence,subj,obj,shortestpatterns,fragments,reference,stopwords,pattern_sentence,sentenceObject);
+                    //doShortestPathExtraction(sentence,subj,obj,shortestpatterns,fragments,reference,stopwords,pattern_sentence,sentenceObject);
                     Pattern pattern = Pattern.compile(pos_subj+"(.*?)"+pos_obj);
                     Matcher matcher = pattern.matcher(pos_plain_sentence);
 
@@ -202,6 +202,7 @@ public class Matoll_Baseline {
                                 results.add(x.split("_")[0]+" "+reference);
                             }
                         }
+                        results.add(result.replaceFirst(" ", "")+" "+reference);
                     }
                     }        
                 }       
