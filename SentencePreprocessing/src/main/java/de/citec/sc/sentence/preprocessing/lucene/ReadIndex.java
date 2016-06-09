@@ -72,7 +72,7 @@ public class ReadIndex {
                     booleanQuery.add(new QueryParser("plain", analyzer).parse(obj.toLowerCase()), BooleanClause.Occur.MUST);
                 }
                 
-                System.out.println(booleanQuery.toString());
+                //System.out.println(booleanQuery.toString());
                     
                 
                 int hitsPerPage = 99;
@@ -89,9 +89,9 @@ public class ReadIndex {
 	          ArrayList<String> result = new ArrayList<>();
 	          String sentence = d.get("parsed");
                   String plain_sentence = getPlainSentence(sentence);
-                  //System.out.println(plain_sentence);
-                  //System.out.println(subj);
-                  //System.out.println(obj);
+                  ////System.out.println(plain_sentence);
+                  ////System.out.println(subj);
+                  ////System.out.println(obj);
                   //if(!cache.contains(plain_sentence+subj+obj) && plain_sentence.contains(subj) && plain_sentence.contains(obj)
                   //        && !subj.contains(obj) && !obj.contains(subj) && !subj.equals(obj)){
                   if(!cache.contains(plain_sentence+subj+obj)){
@@ -109,7 +109,7 @@ public class ReadIndex {
 	        }
 		}
 		catch(Exception e){
-			System.out.println("Error in term: "+subj+" "+obj);
+			//System.out.println("Error in term: "+subj+" "+obj);
 		}
 		
 		return results;
@@ -150,7 +150,7 @@ public class ReadIndex {
 			}
             });
 		
-		System.out.println(Integer.toString(sentences.size())+" #sentences");
+		//System.out.println(Integer.toString(sentences.size())+" #sentences");
 		return sentences;
 	}
 
