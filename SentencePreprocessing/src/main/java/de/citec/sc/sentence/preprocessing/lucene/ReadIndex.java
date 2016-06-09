@@ -75,7 +75,7 @@ public class ReadIndex {
                 //System.out.println(booleanQuery.toString());
                     
                 
-                int hitsPerPage = 99;
+                int hitsPerPage = 999;
 		    
 		    
 	        TopScoreDocCollector collector = TopScoreDocCollector.create(hitsPerPage);
