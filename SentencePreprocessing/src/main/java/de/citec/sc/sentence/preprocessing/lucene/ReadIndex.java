@@ -92,9 +92,9 @@ public class ReadIndex {
                   ////System.out.println(plain_sentence);
                   ////System.out.println(subj);
                   ////System.out.println(obj);
-                  //if(!cache.contains(plain_sentence+subj+obj) && plain_sentence.contains(subj) && plain_sentence.contains(obj)
-                  //        && !subj.contains(obj) && !obj.contains(subj) && !subj.equals(obj)){
-                  if(!cache.contains(plain_sentence+subj+obj)){
+                  if(!cache.contains(plain_sentence+subj+obj) && plain_sentence.contains(subj) && plain_sentence.contains(obj)
+                          && !subj.contains(obj) && !obj.contains(subj) && !subj.equals(obj)){
+//                  if(!cache.contains(plain_sentence+subj+obj)){
                       result.add(sentence);
                       result.add(subj);
                       result.add(obj);
