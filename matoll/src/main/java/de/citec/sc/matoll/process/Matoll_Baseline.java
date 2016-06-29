@@ -142,7 +142,7 @@ public class Matoll_Baseline {
         }
 
 
-        Set<String> results = new HashSet<>();
+        Map<String,Integer> results = new HashMap<>();
         Map<String,Integer> shortestpatterns = new HashMap<>();
         Map<String,Set<String>> pattern_sentence = new HashMap<>();
         Set<String> fragments = new HashSet<>();
@@ -195,18 +195,35 @@ public class Matoll_Baseline {
                         for(String x: tmp.split(" ")){
                             if(x.contains("_NN")){
                                 result += " "+x.split("_")[0];
-                                results.add(x.split("_")[0]+" "+reference);
+                                String value = x.split("_")[0]+" "+reference;
+                                if(results.containsKey(value)){
+                                    results.put(value, results.get(value)+1);
+                                }
+                                else{
+                                    results.put(value, 1);
+                                }
                             }
                             if(x.contains("_V")){
                                 result += " "+x.split("_")[0];
-                                results.add(x.split("_")[0]+" "+reference);
+                                String value = x.split("_")[0]+" "+reference;
+                                if(results.containsKey(value)){
+                                    results.put(value, results.get(value)+1);
+                                }
+                                else{
+                                    results.put(value, 1);
+                                }
                             }
                         }
-                        results.add(result.replaceFirst(" ", "")+" "+reference);
-                    }
+                        String value = result.replaceFirst(" ", "")+" "+reference;
+                        if(results.containsKey(value)){
+                            results.put(value, results.get(value)+1);
+                        }
+                        else{
+                            results.put(value, 1);
+                        }
                     }        
                 }       
-                
+                }
                 catch(Exception e){
                     
                 
@@ -219,7 +236,7 @@ public class Matoll_Baseline {
         
         
        PrintWriter writer = new PrintWriter("baseline_plainSentence.txt");
-       for(String r:results) writer.write(r+"\n");
+       for(String r:results.keySet()) writer.write(r+"\t"+results.get(r)+"\n");
        writer.close();
        
        writer = new PrintWriter("baseline_shortestPath.txt");
@@ -237,7 +254,7 @@ public class Matoll_Baseline {
             for(String g: gold_entries){
                 if(g.contains(uri)){
                     overall_entries+=1;
-                    for(String r:results){
+                    for(String r:results.keySet()){
                         if(g.equals(r)){
                             correct_entries+=1;
                             break;
@@ -255,7 +272,7 @@ public class Matoll_Baseline {
         correct_entries = 0;
         for(String g: gold_entries){
             overall_entries+=1;
-            for(String r:results){
+            for(String r:results.keySet()){
                 if(g.equals(r)){
                     correct_entries+=1;
                     break;
@@ -305,7 +322,7 @@ public class Matoll_Baseline {
         System.out.println("Baseline2b: "+(correct_entries+0.0)/overall_entries);
         
         
-        for(String r: results) fragments.add(r);
+        for(String r: results.keySet()) fragments.add(r);
         overall_entries = 0;
         correct_entries = 0;
         for(String uri:uris){
