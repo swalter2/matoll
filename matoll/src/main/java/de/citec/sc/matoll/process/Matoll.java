@@ -676,13 +676,16 @@ public class Matoll {
         Map<String,Double> hm_double = new HashMap<>();
         Map<String,Integer> hm_int = new HashMap<>();
         for(LexicalEntry entry : lexicon.getEntries()){
+            String pos = entry.getPOS();
+            pos = pos.replace("http://www.lexinfo.net/ontology/2.0/lexinfo#noun","http://www.lexinfo.net/ontology/2.0/lexinfo#commonNoun");
+            pos = pos.replace("http://www.lexinfo.net/ontology/2.0/lexinfo#","");
             for(Sense sense:entry.getSenseBehaviours().keySet()){
                 Reference ref = sense.getReference();
                 if (ref instanceof de.citec.sc.matoll.core.SimpleReference){
                     SimpleReference reference = (SimpleReference) ref;
                     String preposition = "";
                     if(entry.getPreposition()!=null) preposition = entry.getPreposition().getCanonicalForm();
-                    String input = entry.getCanonicalForm()+"\t"+preposition+"\t"+reference.getURI()+"\t";
+                    String input = entry.getCanonicalForm()+"\t"+preposition+"\t"+pos+"\t"+reference.getURI()+"\t";
                     if(hm_int.containsKey(input)){
                             int freq = hm_int.get(input);
                              hm_int.put(input, entry.getProvenance(sense).getFrequency()+freq);
@@ -693,7 +696,7 @@ public class Matoll {
                 }
                 else if (ref instanceof de.citec.sc.matoll.core.Restriction){
                     Restriction reference = (Restriction) ref;
-                    String input = entry.getCanonicalForm()+"\t"+reference.getValue()+"\t"+reference.getProperty()+"\t";
+                    String input = entry.getCanonicalForm()+"\t"+reference.getValue()+"\t"+pos+"\t"+reference.getProperty()+"\t";
                     if(entry.getProvenance(sense).getConfidence()!=null){
                         if(hm_double.containsKey(input)){
                             double value = hm_double.get(input);
