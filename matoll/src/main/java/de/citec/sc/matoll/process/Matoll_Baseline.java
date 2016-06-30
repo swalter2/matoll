@@ -195,7 +195,7 @@ public class Matoll_Baseline {
                         for(String x: tmp.split(" ")){
                             if(x.contains("_NN")){
                                 result += " "+x.split("_")[0];
-                                String value = x.split("_")[0]+" "+reference;
+                                String value = x.split("_")[0]+"\t"+reference;
                                 if(results.containsKey(value)){
                                     results.put(value, results.get(value)+1);
                                 }
@@ -205,7 +205,7 @@ public class Matoll_Baseline {
                             }
                             if(x.contains("_V")){
                                 result += " "+x.split("_")[0];
-                                String value = x.split("_")[0]+" "+reference;
+                                String value = x.split("_")[0]+"\t"+reference;
                                 if(results.containsKey(value)){
                                     results.put(value, results.get(value)+1);
                                 }
@@ -214,7 +214,7 @@ public class Matoll_Baseline {
                                 }
                             }
                         }
-                        String value = result.replaceFirst(" ", "")+" "+reference;
+                        String value = result.replaceFirst(" ", "")+"\t"+reference;
                         if(results.containsKey(value)){
                             results.put(value, results.get(value)+1);
                         }
