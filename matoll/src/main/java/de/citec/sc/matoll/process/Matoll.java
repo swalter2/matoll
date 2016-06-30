@@ -422,7 +422,11 @@ public class Matoll {
 		Statement stmt;
 		while (iter.hasNext()) {
 			stmt = iter.next();
-                   return stmt.getObject().toString();
+                   String uri = stmt.getObject().toString();
+                   if(uri.contains("http://dbpedia/")){
+                       uri = uri.replace("http://dbpedia/","http://dbpedia.org/");
+                   }
+                   return uri;
                 }
 		
 		return null;
