@@ -33,6 +33,8 @@ import de.citec.sc.matoll.core.Provenance;
 import de.citec.sc.matoll.core.Restriction;
 import de.citec.sc.matoll.core.Sense;
 import de.citec.sc.matoll.core.SimpleReference;
+import de.citec.sc.matoll.core.SyntacticArgument;
+import de.citec.sc.matoll.core.SyntacticBehaviour;
 import de.citec.sc.matoll.utils.Stopwords;
 import java.io.PrintWriter;
 
@@ -689,14 +691,28 @@ public class Matoll {
                     SimpleReference reference = (SimpleReference) ref;
                     String preposition = "";
                     if(entry.getPreposition()!=null) preposition = entry.getPreposition().getCanonicalForm();
-                    String input = entry.getCanonicalForm()+"\t"+preposition+"\t"+pos+"\t"+reference.getURI()+"\t";
-                    if(hm_int.containsKey(input)){
-                            int freq = hm_int.get(input);
-                             hm_int.put(input, entry.getProvenance(sense).getFrequency()+freq);
+                    for(SyntacticBehaviour synbehaviour : entry.getSenseBehaviours().get(sense)){
+                        String frame = synbehaviour.getFrame().replace("http://www.lexinfo.net/ontology/2.0/lexinfo#","");
+                        String subject = "";
+                        String object = "";
+                        for(SyntacticArgument syn_arg :synbehaviour.getSynArgs()){
+                            if(syn_arg.getValue().equals("object")){
+                                object = syn_arg.getArgumentType();
+                            }
+                            else subject = syn_arg.getArgumentType();
+                        }
+                        object = object.replace("http://www.lexinfo.net/ontology/2.0/lexinfo#","");
+                        subject = subject.replace("http://www.lexinfo.net/ontology/2.0/lexinfo#","");
+                        String input = entry.getCanonicalForm()+"\t"+preposition+"\t"+pos+"\t"+frame+"\t"+reference.getURI()+"\t"+subject+"\t"+object+"\t";
+                        if(hm_int.containsKey(input)){
+                                int freq = hm_int.get(input);
+                                 hm_int.put(input, entry.getProvenance(sense).getFrequency()+freq);
                         }
                         else{
                             hm_int.put(input, entry.getProvenance(sense).getFrequency());
                         }
+                    }
+                    
                 }
                 else if (ref instanceof de.citec.sc.matoll.core.Restriction){
                     Restriction reference = (Restriction) ref;

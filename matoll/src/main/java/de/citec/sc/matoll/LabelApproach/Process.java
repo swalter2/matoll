@@ -217,10 +217,10 @@ public class Process {
 
                
 
-                //runWornetPropertyApproach(properties,lexicon,wordnet,sl);
+                runWornetPropertyApproach(properties,lexicon,wordnet,sl);
 		runAdjectiveApproach(properties,adjectiveExtractor,posAdj,pos,label_3,label_2, prediction,tagger, lexicon, mp,path_to_objects,label_feature);
                 
-//		runWornetClassApproach(classes,lexicon,wordnet,"/Users/swalter/Downloads/EnglishIndexReduced");
+		runWornetClassApproach(classes,lexicon,wordnet,"/Users/swalter/Downloads/EnglishIndexReduced");
 		
 		Model model = ModelFactory.createDefaultModel();
 		
@@ -718,7 +718,6 @@ public class Process {
                         createWordnetVerbEntry(c,lexicon,uri);
                     }
                 }
-                
                 /*
                 if notheing else is generated before....
                 */
@@ -726,7 +725,9 @@ public class Process {
                      createWordnetVerbEntry(lemma,lexicon,uri);
                      createWordnetAdjectiveEntry(label,lexicon,uri);
                      createWordnetNounEntry(lemma,lexicon,uri);
+                     System.out.println("created general entries");
                 }
+                
             }
             
             
@@ -739,22 +740,41 @@ public class Process {
         Map<String,Double> hm_double = new HashMap<>();
         Map<String,Integer> hm_int = new HashMap<>();
         for(LexicalEntry entry : lexicon.getEntries()){
+            String pos = entry.getPOS();
+            pos = pos.replace("http://www.lexinfo.net/ontology/2.0/lexinfo#noun","http://www.lexinfo.net/ontology/2.0/lexinfo#commonNoun");
+            pos = pos.replace("http://www.lexinfo.net/ontology/2.0/lexinfo#","");
             for(Sense sense:entry.getSenseBehaviours().keySet()){
                 Reference ref = sense.getReference();
                 if (ref instanceof de.citec.sc.matoll.core.SimpleReference){
                     SimpleReference reference = (SimpleReference) ref;
-                    String input = entry.getCanonicalForm()+"\t"+reference.getURI()+"\t";
-                    if(hm_int.containsKey(input)){
-                            int freq = hm_int.get(input);
-                             hm_int.put(input, entry.getProvenance(sense).getFrequency()+freq);
+                    String preposition = "";
+                    if(entry.getPreposition()!=null) preposition = entry.getPreposition().getCanonicalForm();
+                    for(SyntacticBehaviour synbehaviour : entry.getSenseBehaviours().get(sense)){
+                        String frame = synbehaviour.getFrame().replace("http://www.lexinfo.net/ontology/2.0/lexinfo#","");
+                        String subject = "";
+                        String object = "";
+                        for(SyntacticArgument syn_arg :synbehaviour.getSynArgs()){
+                            if(syn_arg.getValue().equals("object")){
+                                object = syn_arg.getArgumentType();
+                            }
+                            else subject = syn_arg.getArgumentType();
+                        }
+                        object = object.replace("http://www.lexinfo.net/ontology/2.0/lexinfo#","");
+                        subject = subject.replace("http://www.lexinfo.net/ontology/2.0/lexinfo#","");
+                        String input = entry.getCanonicalForm()+"\t"+preposition+"\t"+pos+"\t"+frame+"\t"+reference.getURI()+"\t"+subject+"\t"+object+"\t";
+                        if(hm_int.containsKey(input)){
+                                int freq = hm_int.get(input);
+                                 hm_int.put(input, entry.getProvenance(sense).getFrequency()+freq);
                         }
                         else{
                             hm_int.put(input, entry.getProvenance(sense).getFrequency());
                         }
+                    }
+                    
                 }
                 else if (ref instanceof de.citec.sc.matoll.core.Restriction){
                     Restriction reference = (Restriction) ref;
-                    String input = entry.getCanonicalForm()+"\t"+reference.getValue()+"\t"+reference.getProperty()+"\t";
+                    String input = entry.getCanonicalForm()+"\t"+reference.getValue()+"\t"+pos+"\t"+reference.getProperty()+"\t";
                     if(entry.getProvenance(sense).getConfidence()!=null){
                         if(hm_double.containsKey(input)){
                             double value = hm_double.get(input);
@@ -784,7 +804,8 @@ public class Process {
         try {
                 writer = new PrintWriter(path+"_simple.tsv");
                 for(String key:hm_int.keySet()){
-                    writer.write(key+Integer.toString(hm_int.get(key))+"\n");
+                    if(hm_int.get(key)>1)
+                        writer.write(key+Integer.toString(hm_int.get(key))+"\n");
                 }
                 writer.close();
         } catch (FileNotFoundException e) {
@@ -793,6 +814,8 @@ public class Process {
         }
         
     }
+
+
     
     
     	private static Set<String> loadPropertyList(String pathToProperties) throws IOException {
