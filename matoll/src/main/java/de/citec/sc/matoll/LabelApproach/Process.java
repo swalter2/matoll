@@ -172,42 +172,42 @@ public class Process {
 		Lexicon lexicon = new Lexicon();
                 lexicon.setBaseURI("http://localhost:8080/");
 		
-		
-		/*
-		 * Generate ARFF File (Training)
-		 */
-		System.out.println("Generate ARFF File (Training)");
-		try {
-			GenerateArff.run(path_annotatedFiles, path_raw_files, path_to_write_arff,label_3,label_2,pos,posAdj,tagger,label_feature);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println(label_3.size());
-		System.out.println(label_2.size());
-		System.out.println(pos.size());
-		System.out.println(posAdj.size());
-		
-		System.out.println("Generate model");
-		/*
-		 * Generate model
-		 */
-		try {
-			generateModel(cls,path_to_write_arff);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		System.out.println("Load model for prediction");
-		/*
-		 * Load model for prediction
-		 */
-		Prediction prediction = new Prediction(path_weka_model);
-		
+//		
+//		/*
+//		 * Generate ARFF File (Training)
+//		 */
+//		System.out.println("Generate ARFF File (Training)");
+//		try {
+//			GenerateArff.run(path_annotatedFiles, path_raw_files, path_to_write_arff,label_3,label_2,pos,posAdj,tagger,label_feature);
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		System.out.println(label_3.size());
+//		System.out.println(label_2.size());
+//		System.out.println(pos.size());
+//		System.out.println(posAdj.size());
+//		
+//		System.out.println("Generate model");
+//		/*
+//		 * Generate model
+//		 */
+//		try {
+//			generateModel(cls,path_to_write_arff);
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+//		System.out.println("Load model for prediction");
+//		/*
+//		 * Load model for prediction
+//		 */
+//		Prediction prediction = new Prediction(path_weka_model);
+//		
 		
 		/*
 		 * Get Test Data features
@@ -830,8 +830,7 @@ public class Process {
         try {
                 writer = new PrintWriter(path+"_simple.tsv");
                 for(String key:hm_int.keySet()){
-                    if(hm_int.get(key)>1)
-                        writer.write(key+Integer.toString(hm_int.get(key))+"\n");
+                   writer.write(key+Integer.toString(hm_int.get(key))+"\n");
                 }
                 writer.close();
         } catch (FileNotFoundException e) {
