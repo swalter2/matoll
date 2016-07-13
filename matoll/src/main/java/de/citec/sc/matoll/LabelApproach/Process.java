@@ -222,19 +222,21 @@ public class Process {
 		//runAdjectiveApproach(properties,adjectiveExtractor,posAdj,pos,label_3,label_2, prediction,tagger, lexicon, mp,path_to_objects,label_feature);
                 
 		//runWornetClassApproach(classes,lexicon,wordnet,"/Users/swalter/Downloads/EnglishIndexReduced");
-		
+		String path = "new_adjectives.ttl";
+                exportTSV(lexicon,path);
+                
 		Model model = ModelFactory.createDefaultModel();
 		
 		LexiconSerialization serializer = new LexiconSerialization(false);
 		
 		serializer.serialize(lexicon, model);
 		
-                String path = "new_adjectives.ttl";
+                
 		FileOutputStream out = new FileOutputStream(new File(path));
 		
 		RDFDataMgr.write(out, model, RDFFormat.TURTLE) ;
 		
-		extportTSV(lexicon,path);
+		
 
 		
 		
@@ -464,8 +466,6 @@ public class Process {
     }
 
     private static void runWornetClassApproach(Set<String> classes, Lexicon lexicon, Wordnet wordnet, String pathToIndex) throws FileNotFoundException, IOException, ParseException {
-        System.out.println("in runWornetClassApproach");
-        System.out.println(classes.size());
         List<String> stopwords = new ArrayList<>();
         String everything = "";
         FileInputStream inputStream = new FileInputStream("resources/englishST.txt");
@@ -487,8 +487,6 @@ public class Process {
         int uri_counter = 0;
         for(String uri : classes){
             uri_counter+=1;
-            System.out.println("URI:"+uri);
-            System.out.println(uri_counter+"/"+classes.size()+" classes");
             String queryString = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?label WHERE{<"+uri+"> rdfs:label ?label. FILTER (lang(?label) = 'en') }";
             Query query = QueryFactory.create(queryString);
             QueryExecution qexec = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query);
@@ -680,10 +678,10 @@ public class Process {
                     }
                 }
             }
+            if(label_property_mapping.containsKey(uri)){
+                label = label_property_mapping.get(uri);
+            }
             if(!label.equals("")){
-                System.out.println("uri:"+uri);
-                System.out.println("label:"+label+"Done");
-                System.out.println();
                 String lemma = sl.getLemma(label);
                 boolean b_nouns = false;
                 boolean b_adverbs = false;
@@ -756,13 +754,15 @@ public class Process {
                 e.printStackTrace();
             }
         }
+        System.out.println(lexicon.size());
         
 
     }
     
     
     
-    private static void extportTSV(Lexicon lexicon, String path){
+    private static void exportTSV(Lexicon lexicon, String path){
+        System.out.println("number of entries to write:"+lexicon.getEntries().size());
         Map<String,Double> hm_double = new HashMap<>();
         Map<String,Integer> hm_int = new HashMap<>();
         for(LexicalEntry entry : lexicon.getEntries()){
@@ -892,10 +892,6 @@ public class Process {
     private static Set<String> wordnetDisambiguation(String uri, String inputLabel, Wordnet wordnet,List<String> stopwords, IndexSearcher searcher,Analyzer analyzer) throws ParseException, IOException {
         
         Set<String> wordnetLabels = wordnet.getAllSynonyms(inputLabel);
-        System.out.println("Input:");
-        for(String l : wordnetLabels){
-            System.out.println(l);
-        }
         if(wordnetLabels.size()<=3){
             return wordnetLabels;
         }
@@ -945,11 +941,7 @@ public class Process {
             }
 
             for(String x:tmp_terms.keySet()){
-                if(tmp_terms.get(x)>0.6)terms.add(x);
-            }
-            System.out.println("Output:");
-            for(String l : terms){
-                System.out.println(l);
+                if(tmp_terms.get(x)>0.1)terms.add(x);
             }
         
             return terms;
