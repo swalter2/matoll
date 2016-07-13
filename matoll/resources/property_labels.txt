@@ -1,0 +1,2687 @@
+http://dbpedia.org/ontology/placeOfBurial	place of burial
+http://dbpedia.org/ontology/brand	brand
+http://dbpedia.org/ontology/mainInterest	main interest
+http://dbpedia.org/ontology/freeFlightTime	free flight time (s)
+http://dbpedia.org/ontology/pastMember	past member
+http://dbpedia.org/ontology/apskritis	apskritis
+http://dbpedia.org/ontology/income	income
+http://dbpedia.org/ontology/sessionNumber	session number
+http://dbpedia.org/ontology/typeOfGrain	type of grain (wheat etc.)
+http://dbpedia.org/ontology/cost	cost ($)
+http://dbpedia.org/ontology/soccerLeaguePromoted	promoted
+http://dbpedia.org/ontology/aitaCode	aita code
+http://dbpedia.org/ontology/hairColor	hair color
+http://dbpedia.org/ontology/tie	tie
+http://dbpedia.org/ontology/otherFamilyBranch	other branch
+http://dbpedia.org/ontology/winsAtProTournaments	wins at pro tournaments
+http://dbpedia.org/ontology/canonizedDate	canonized date
+http://dbpedia.org/ontology/meetingCity	meeting city
+http://dbpedia.org/ontology/secondDriverCountry	second driver country
+http://dbpedia.org/ontology/officerInCharge	officer in charge
+http://dbpedia.org/ontology/taste	taste or flavour
+http://dbpedia.org/ontology/achievement	achievement
+http://dbpedia.org/ontology/province	province
+http://dbpedia.org/ontology/latestPreviewDate	latest preview date
+http://dbpedia.org/ontology/lethalOnMice	lethal when given to mice
+http://dbpedia.org/ontology/functionEndDate	function end date
+http://dbpedia.org/ontology/votesAgainst	Votes against the resolution
+http://dbpedia.org/ontology/highestRegion	highest region
+http://dbpedia.org/ontology/premiereYear	premiere year
+http://dbpedia.org/ontology/incumbent	incumbent
+http://dbpedia.org/ontology/canonizedBy	canonized by
+http://dbpedia.org/ontology/note	note
+http://dbpedia.org/ontology/Planet/meanRadius	mean radius (km)
+http://dbpedia.org/ontology/manufacturer	manufacturer
+http://dbpedia.org/ontology/endYearOfSales	end year of sales
+http://dbpedia.org/ontology/grossDomesticProductPurchasingPowerParityPerCapita	gross domestic product purchasing power parity per capita
+http://dbpedia.org/ontology/Galaxy/volume	volume (km3)
+http://dbpedia.org/ontology/routeStartLocation	route start location
+http://dbpedia.org/ontology/finalLostTeam	final lost team
+http://dbpedia.org/ontology/impactFactor	impact factor
+http://dbpedia.org/ontology/millSpan	mill span (μ)
+http://dbpedia.org/ontology/beatifiedBy	beatified by
+http://dbpedia.org/ontology/productionCompany	production company
+http://dbpedia.org/ontology/parentCompany	parent company
+http://dbpedia.org/ontology/mount	mount
+http://dbpedia.org/ontology/address	address
+http://dbpedia.org/ontology/topSpeed	top speed (kmh)
+http://dbpedia.org/ontology/einecsNumber	EINECS number
+http://dbpedia.org/ontology/service	service
+http://dbpedia.org/ontology/wilaya	wilaya
+http://dbpedia.org/ontology/presidentGeneralCouncil	president general council
+http://dbpedia.org/ontology/nationalTournament	continental tournament
+http://dbpedia.org/ontology/oilSystem	oil system
+http://dbpedia.org/ontology/gaudiAward	Gaudí Award
+http://dbpedia.org/ontology/icaoAirlineCode	ICAO code
+http://dbpedia.org/ontology/artPatron	patron (art)
+http://dbpedia.org/ontology/giniCoefficientAsOf	gini coefficient as of
+http://dbpedia.org/ontology/amsterdamCode	Amsterdam Code
+http://dbpedia.org/ontology/numberOfMembersAsOf	number of members as of
+http://dbpedia.org/ontology/poleDriver	pole driver
+http://dbpedia.org/ontology/accessDate	access date
+http://dbpedia.org/ontology/ceo	chief executive officer
+http://dbpedia.org/ontology/cemetery	cemetery
+http://dbpedia.org/ontology/eptItm	ept itm
+http://dbpedia.org/ontology/giniCoefficient	gini coefficient
+http://dbpedia.org/ontology/numberOfOffices	number of offices
+http://dbpedia.org/ontology/topFloorHeight	tor floor height
+http://dbpedia.org/ontology/spouse	spouse
+http://dbpedia.org/ontology/currentProduction	current production
+http://dbpedia.org/ontology/originalDanseCompetition	original danse competititon
+http://dbpedia.org/ontology/firstMention	first mention
+http://dbpedia.org/ontology/activity	activity
+http://dbpedia.org/ontology/registration	registration
+http://dbpedia.org/ontology/Galaxy/density	density (μ3)
+http://dbpedia.org/ontology/visitorsPercentageChange	visitor percentage change
+http://dbpedia.org/ontology/frazioni	frazioni
+http://dbpedia.org/ontology/widthQuote	width quote
+http://dbpedia.org/ontology/majorIsland	major island
+http://dbpedia.org/ontology/aircraftBomber	aircraft bomber
+http://dbpedia.org/ontology/gnl	gnl
+http://dbpedia.org/ontology/PopulatedPlace/populationMetroDensity	population metro density (/sqkm)
+http://dbpedia.org/ontology/britishOpen	britishOpen
+http://dbpedia.org/ontology/nflSeason	nfl season
+http://dbpedia.org/ontology/leadership	leadership
+http://dbpedia.org/ontology/requirement	requirement
+http://dbpedia.org/ontology/capitalPlace	capital place
+http://dbpedia.org/ontology/viceLeader	vice leader
+http://dbpedia.org/ontology/notableFeatures	notable features
+http://dbpedia.org/ontology/date	date
+http://dbpedia.org/ontology/throwingSide	throwing side
+http://dbpedia.org/ontology/lowestPosition	lowest position
+http://dbpedia.org/ontology/Spacecraft/cargoFuel	cargo fuel (kg)
+http://dbpedia.org/ontology/wheelbase	wheelbase (μ)
+http://dbpedia.org/ontology/publisher	publisher
+http://dbpedia.org/ontology/goalsInNationalTeam	goals in national team
+http://dbpedia.org/ontology/playerStatus	player status
+http://dbpedia.org/ontology/eyeColour	eye colour
+http://dbpedia.org/ontology/victoryPercentageAsMgr	victory percentage as manager
+http://dbpedia.org/ontology/youthYears	youth years
+http://dbpedia.org/ontology/numberOfLaunches	number of launches
+http://dbpedia.org/ontology/speedLimit	speed limit (kmh)
+http://dbpedia.org/ontology/features	features
+http://dbpedia.org/ontology/surfaceArea	surface area (m2)
+http://dbpedia.org/ontology/informationName	information name
+http://dbpedia.org/ontology/passengersPerDay	passengers per day
+http://dbpedia.org/ontology/geolocDual	geolocdual
+http://dbpedia.org/ontology/principal	principal
+http://dbpedia.org/ontology/governmentPosition	government position
+http://dbpedia.org/ontology/numberOfDoctoralStudents	number of doctoral students
+http://dbpedia.org/ontology/areaOfCatchmentQuote	area of catchment quote
+http://dbpedia.org/ontology/filmPolskiId	FilmPolski.pl id
+http://dbpedia.org/ontology/defeat	defeat
+http://dbpedia.org/ontology/operator	operator
+http://dbpedia.org/ontology/subdivisionLink	subdivision link
+http://dbpedia.org/ontology/identificationSymbol	identification symbol
+http://dbpedia.org/ontology/imageSize	image size (px)
+http://dbpedia.org/ontology/regency	regency
+http://dbpedia.org/ontology/populationDate	population date
+http://dbpedia.org/ontology/launchPad	launch pad
+http://dbpedia.org/ontology/circumcised	circumcised
+http://dbpedia.org/ontology/academicAdvisor	academic advisor
+http://dbpedia.org/ontology/primeMinister	prime minister
+http://dbpedia.org/ontology/nssdcId	NSSDC ID
+http://dbpedia.org/ontology/associationOfLocalGovernment	association of local government
+http://dbpedia.org/ontology/limit	limit
+http://dbpedia.org/ontology/capacityFactor	capacity factor
+http://dbpedia.org/ontology/architecturalStyle	architectural style
+http://dbpedia.org/ontology/flag	flag (image)
+http://dbpedia.org/ontology/cmykCoordinateBlack	black coordinate in the CMYK space
+http://dbpedia.org/ontology/seniunija	seniunija
+http://dbpedia.org/ontology/fuelTypeName	fuel type
+http://dbpedia.org/ontology/Galaxy/minimumTemperature	minimum temperature (K)
+http://dbpedia.org/ontology/leagueManager	league manager
+http://dbpedia.org/ontology/infantMortality	infant mortality
+http://dbpedia.org/ontology/Spacecraft/totalCargo	total cargo (kg)
+http://dbpedia.org/ontology/maximumArea	maximum area
+http://dbpedia.org/ontology/topic	topic
+http://dbpedia.org/ontology/dockedTime	docked time (s)
+http://dbpedia.org/ontology/population	population
+http://dbpedia.org/ontology/percentageAlcohol	percentage of alcohol
+http://dbpedia.org/ontology/cargoGas	cargo gas (g)
+http://dbpedia.org/ontology/foresterDistrict	foresterDistrict
+http://dbpedia.org/ontology/numberOfRestaurants	number of restaurants
+http://dbpedia.org/ontology/numberOfRooms	number of rooms
+http://dbpedia.org/ontology/catholicPercentage	catholic percentage
+http://dbpedia.org/ontology/numberOfBombs	number of bombs
+http://dbpedia.org/ontology/hasChannel	has channel
+http://dbpedia.org/ontology/foundingDate	founding date
+http://dbpedia.org/ontology/mgiid	mgiid
+http://dbpedia.org/ontology/nationalRanking	national ranking
+http://dbpedia.org/ontology/connotation	connotation
+http://dbpedia.org/ontology/nextMission	next mission
+http://dbpedia.org/ontology/boilingPoint	boiling point (K)
+http://dbpedia.org/ontology/trainerYears	trainer years
+http://dbpedia.org/ontology/assets	assets ($)
+http://dbpedia.org/ontology/suborbitalFlights	suborbital flights
+http://dbpedia.org/ontology/causeOfDeath	cause of death
+http://dbpedia.org/ontology/leftChild	left child
+http://dbpedia.org/ontology/solventWithGoodSolubility	solvent with good solubility
+http://dbpedia.org/ontology/populationDensity	population density (/sqkm)
+http://dbpedia.org/ontology/type	type
+http://dbpedia.org/ontology/fuelCapacity	fuel capacity (μ³)
+http://dbpedia.org/ontology/number	number
+http://dbpedia.org/ontology/SpaceMission/missionDuration	mission duration (μ)
+http://dbpedia.org/ontology/residence	residence
+http://dbpedia.org/ontology/comparable	comparable
+http://dbpedia.org/ontology/phonePrefixLabel	phone prefix label of a settlement
+http://dbpedia.org/ontology/anniversary	anniversary
+http://dbpedia.org/ontology/previousName	previous name
+http://dbpedia.org/ontology/meshId	MeSH ID
+http://dbpedia.org/ontology/governmentType	government type
+http://dbpedia.org/ontology/otherAppearances	other appearances
+http://dbpedia.org/ontology/sire	sire
+http://dbpedia.org/ontology/highestState	highest state
+http://dbpedia.org/ontology/areaOfCatchment	area of catchment (m2)
+http://dbpedia.org/ontology/mergedIntoParty	merged into party
+http://dbpedia.org/ontology/iso31661Code	ISO 3166-1 code
+http://dbpedia.org/ontology/areaRank	area rank
+http://dbpedia.org/ontology/strength	strength
+http://dbpedia.org/ontology/Spacecraft/apoapsis	apoapsis (km)
+http://dbpedia.org/ontology/highwaySystem	highway system
+http://dbpedia.org/ontology/Rocket/mass	mass (kg)
+http://dbpedia.org/ontology/capital	capital
+http://dbpedia.org/ontology/mukhtar	mukthar of a lebanon settlement
+http://dbpedia.org/ontology/heightAttack	height attack
+http://dbpedia.org/ontology/wimbledonMixed	wimbledon mixed
+http://dbpedia.org/ontology/Stream/maximumDischarge	maximum discharge (m³/s)
+http://dbpedia.org/ontology/maximumInclination	maximum inclination
+http://dbpedia.org/ontology/blueSkiPisteNumber	blue ski piste number
+http://dbpedia.org/ontology/significantBuilding	significant building
+http://dbpedia.org/ontology/internationalAffiliation	international affiliation
+http://dbpedia.org/ontology/Work/runtime	runtime (m)
+http://dbpedia.org/ontology/sourceConfluence	source confluence
+http://dbpedia.org/ontology/associateEditor	associate editor
+http://dbpedia.org/ontology/hairs	hairs
+http://dbpedia.org/ontology/minimumInclination	minimum inclination
+http://dbpedia.org/ontology/formerName	former name
+http://dbpedia.org/ontology/wikiPageWikiLink	Link from a Wikipage to another Wikipage
+http://dbpedia.org/ontology/subMunicipalityType	type of municipality
+http://dbpedia.org/ontology/dateLastUpdated	Date Last Updated
+http://dbpedia.org/ontology/originalStartPoint	original start point
+http://dbpedia.org/ontology/wptFinalTable	wpt final table
+http://dbpedia.org/ontology/dutchCOROPCode	Dutch COROP code
+http://dbpedia.org/ontology/agglomerationPopulationTotal	agglomeration population total
+http://dbpedia.org/ontology/wikiPageDisambiguates	Wikipage disambiguates
+http://dbpedia.org/ontology/dutchRKDCode	Dutch RKD code
+http://dbpedia.org/ontology/grossDomesticProductPerPeople	gross domestic product per people
+http://dbpedia.org/ontology/tag	tag
+http://dbpedia.org/ontology/valvetrain	valvetrain
+http://dbpedia.org/ontology/world	world
+http://dbpedia.org/ontology/developer	developer
+http://dbpedia.org/ontology/sourcePosition	source position
+http://dbpedia.org/ontology/previousEditor	previous editor
+http://dbpedia.org/ontology/chaplain	chaplain
+http://dbpedia.org/ontology/swimmingStyle	Swimming style
+http://dbpedia.org/ontology/capitalDistrict	capital district
+http://dbpedia.org/ontology/championInSingleMale	champion in single male
+http://dbpedia.org/ontology/discovery	date when the island has been discovered
+http://dbpedia.org/ontology/originalName	original name
+http://dbpedia.org/ontology/assetUnderManagement	asset under management ($)
+http://dbpedia.org/ontology/soccerTournamentOpeningSeason	opening season
+http://dbpedia.org/ontology/transmission	transmission
+http://dbpedia.org/ontology/specialist	specialist
+http://dbpedia.org/ontology/channel	channel
+http://dbpedia.org/ontology/epoch	epoch
+http://dbpedia.org/ontology/victory	victory
+http://dbpedia.org/ontology/showJudge	showJudge
+http://dbpedia.org/ontology/buildingEndYear	building end year
+http://dbpedia.org/ontology/dateUse	date use
+http://dbpedia.org/ontology/previousEntity	previous entity
+http://dbpedia.org/ontology/firstProMatch	first pro match
+http://dbpedia.org/ontology/millsCodeNLWindmotoren	millsCodeNLWindmotoren
+http://dbpedia.org/ontology/speciality	speciality
+http://dbpedia.org/ontology/jointCommunity	joint community
+http://dbpedia.org/ontology/SpaceMission/stationEvaDuration	station EVA duration (ω)
+http://dbpedia.org/ontology/isPartOfAnatomicalStructure	is part of anatomical structure
+http://dbpedia.org/ontology/childOrganisation	child organisation
+http://dbpedia.org/ontology/musicalBand	musical band
+http://dbpedia.org/ontology/mouthCountry	mouth country
+http://dbpedia.org/ontology/cityLink	city link
+http://dbpedia.org/ontology/leader	leader
+http://dbpedia.org/ontology/frontierLength	length of a frontier
+http://dbpedia.org/ontology/areaWater	area water (m2)
+http://dbpedia.org/ontology/albedo	albedo
+http://dbpedia.org/ontology/ncaaSeason	ncaa season
+http://dbpedia.org/ontology/routeDirection	route direction
+http://dbpedia.org/ontology/originalEndPoint	original end point
+http://dbpedia.org/ontology/electionMajority	election majority
+http://dbpedia.org/ontology/countySeat	county seat
+http://dbpedia.org/ontology/area	area (m2)
+http://dbpedia.org/ontology/spacewalkBegin	spacewalk begin
+http://dbpedia.org/ontology/codeMunicipalMonument	monument code (municipal)
+http://dbpedia.org/ontology/sourceConfluenceMountain	source confluence mountain
+http://dbpedia.org/ontology/shoeSize	shoe size
+http://dbpedia.org/ontology/executiveHeadteacher	executive headteacher
+http://dbpedia.org/ontology/religiousHead	religious head
+http://dbpedia.org/ontology/iataLocationIdentifier	IATA Location Identifier
+http://dbpedia.org/ontology/dbnlCodeDutch	Digital Library code NL
+http://dbpedia.org/ontology/codeNationalMonument	monument code (national)
+http://dbpedia.org/ontology/PopulatedPlace/populationUrbanDensity	population urban density (/sqkm)
+http://dbpedia.org/ontology/winsAtJLPGA	wins at JLPGA
+http://dbpedia.org/ontology/abbeychurchBlessing	abbey church blessing
+http://dbpedia.org/ontology/endPoint	end point
+http://dbpedia.org/ontology/statValue	stat value
+http://dbpedia.org/ontology/derivative	derivative
+http://dbpedia.org/ontology/nameAsOf	so named since
+http://dbpedia.org/ontology/consecration	consecration
+http://dbpedia.org/ontology/hybrid	hybrid
+http://dbpedia.org/ontology/congressionalDistrict	congressional district
+http://dbpedia.org/ontology/headteacher	head teacher
+http://dbpedia.org/ontology/broadcastRepeater	broadcast repeater
+http://dbpedia.org/ontology/mergerDate	merger date
+http://dbpedia.org/ontology/binomialAuthority	binomial authority
+http://dbpedia.org/ontology/routeEndLocation	route end location
+http://dbpedia.org/ontology/lastElectionDate	last election date
+http://dbpedia.org/ontology/boilerPressure	boiler pressure
+http://dbpedia.org/ontology/currentRecord	current record
+http://dbpedia.org/ontology/senator	senator
+http://dbpedia.org/ontology/activeYearsStartYearMgr	active years start year manager
+http://dbpedia.org/ontology/plays	plays
+http://dbpedia.org/ontology/subdivisions	subdivisions
+http://dbpedia.org/ontology/basedOn	based on
+http://dbpedia.org/ontology/cmykCoordinateMagenta	magenta coordinate in the CMYK space
+http://dbpedia.org/ontology/role	role
+http://dbpedia.org/ontology/soccerLeagueSeason	season
+http://dbpedia.org/ontology/constellation	constellation
+http://dbpedia.org/ontology/cmpEvaDuration	CMP EVA duration (s)
+http://dbpedia.org/ontology/lyrics	lyrics
+http://dbpedia.org/ontology/recordedIn	recorded in
+http://dbpedia.org/ontology/managingEditor	managing editor
+http://dbpedia.org/ontology/disciple	disciple
+http://dbpedia.org/ontology/perCapitaIncomeRank	per capital income rank
+http://dbpedia.org/ontology/goalsInLeague	goals in league
+http://dbpedia.org/ontology/aircraftHelicopterAttack	aircraft helicopter attack
+http://dbpedia.org/ontology/educationPlace	education place
+http://dbpedia.org/ontology/continentRank	continent rank
+http://dbpedia.org/ontology/secondCommander	second commander
+http://dbpedia.org/ontology/mouthPlace	mouth place
+http://dbpedia.org/ontology/jutsu	jutsu
+http://dbpedia.org/ontology/numberOfVolumes	number of volumes
+http://dbpedia.org/ontology/fileSize	size (B)
+http://dbpedia.org/ontology/waistSize	waist size (μ)
+http://dbpedia.org/ontology/foalDate	foal date
+http://dbpedia.org/ontology/mostDownPoint	most down point of a norwegian settlement
+http://dbpedia.org/ontology/umbrellaTitle	umbrella title
+http://dbpedia.org/ontology/bronzeMedalSingle	bronze medal single
+http://dbpedia.org/ontology/hand	hand
+http://dbpedia.org/ontology/groupCommemorated	group commemorated
+http://dbpedia.org/ontology/nextEntity	next entity
+http://dbpedia.org/ontology/family	family
+http://dbpedia.org/ontology/averageAnnualGeneration	average annual gross power generation (J)
+http://dbpedia.org/ontology/shipLaunch	ship launched
+http://dbpedia.org/ontology/projectKeyword	project keyword
+http://dbpedia.org/ontology/sourceCountry	source country
+http://dbpedia.org/ontology/breeder	breeder
+http://dbpedia.org/ontology/associatedBand	associated band
+http://dbpedia.org/ontology/massif	massif
+http://dbpedia.org/ontology/stateDelegate	state delegate
+http://dbpedia.org/ontology/europeanChampionship	european championship
+http://dbpedia.org/ontology/genomeDB	Genome DB
+http://dbpedia.org/ontology/nationalTeam	national team
+http://dbpedia.org/ontology/SpaceMission/lunarSurfaceTime	lunar surface time (ω)
+http://dbpedia.org/ontology/managerClub	manager club
+http://dbpedia.org/ontology/squadNumber	squad number
+http://dbpedia.org/ontology/costumeDesigner	costume designer
+http://dbpedia.org/ontology/tessitura	tessitura
+http://dbpedia.org/ontology/externalOrnament	external ornament
+http://dbpedia.org/ontology/analogChannel	analog channel
+http://dbpedia.org/ontology/finalLost	final lost
+http://dbpedia.org/ontology/yearElevationIntoNobility	year of elevation into the nobility
+http://dbpedia.org/ontology/mouthRegion	mouth region
+http://dbpedia.org/ontology/teamTitle	team title
+http://dbpedia.org/ontology/alternativeName	alternative name
+http://dbpedia.org/ontology/routeNumber	route number
+http://dbpedia.org/ontology/numberOfSeatsInParliament	number of seats in parliament
+http://dbpedia.org/ontology/currentLeague	current league
+http://dbpedia.org/ontology/recentWinner	recent winner
+http://dbpedia.org/ontology/finalLostSingle	final lost single
+http://dbpedia.org/ontology/footedness	Footedness
+http://dbpedia.org/ontology/builder	builder
+http://dbpedia.org/ontology/headLabel	head label
+http://dbpedia.org/ontology/owningCompany	owning company
+http://dbpedia.org/ontology/statisticValue	statistic value
+http://dbpedia.org/ontology/Stream/dischargeAverage	discharge average (m³/s)
+http://dbpedia.org/ontology/canBaggageChecked	can baggage checked
+http://dbpedia.org/ontology/declination	declination
+http://dbpedia.org/ontology/volume	volume (μ³)
+http://dbpedia.org/ontology/numberOfDistrict	number of district
+http://dbpedia.org/ontology/wins	wins
+http://dbpedia.org/ontology/museum	museum
+http://dbpedia.org/ontology/internationally	internationally
+http://dbpedia.org/ontology/originalMaximumBoatLength	original maximum boat length (μ)
+http://dbpedia.org/ontology/mission	mission
+http://dbpedia.org/ontology/amateurNoContest	amateur no contest
+http://dbpedia.org/ontology/longDistancePisteNumber	long distance piste number
+http://dbpedia.org/ontology/hopmanCup	hopman cup
+http://dbpedia.org/ontology/teamCoached	team coached
+http://dbpedia.org/ontology/centuryBreaks	century breaks
+http://dbpedia.org/ontology/badGuy	bad guy
+http://dbpedia.org/ontology/wikiPageRevisionLink	Link to the Wikipage revision URL
+http://dbpedia.org/ontology/familyMember	family member
+http://dbpedia.org/ontology/sourceConfluenceCountry	source confluence country
+http://dbpedia.org/ontology/draft	draft
+http://dbpedia.org/ontology/vicePresident	vice president
+http://dbpedia.org/ontology/access	access
+http://dbpedia.org/ontology/ChemicalSubstance/density	density (μ3)
+http://dbpedia.org/ontology/addressInRoad	address in road
+http://dbpedia.org/ontology/acquirementDate	date of acquirement
+http://dbpedia.org/ontology/cityType	city type
+http://dbpedia.org/ontology/origo	origo
+http://dbpedia.org/ontology/SpaceMission/cmpEvaDuration	CMP EVA duration (ω)
+http://dbpedia.org/ontology/managerYears	manager years
+http://dbpedia.org/ontology/radius_ly	Radius_ly
+http://dbpedia.org/ontology/absoluteMagnitude	absolute magnitude
+http://dbpedia.org/ontology/lastAppearance	last appearance
+http://dbpedia.org/ontology/issDockings	iss dockings
+http://dbpedia.org/ontology/viceChancellor	vice chancellor
+http://dbpedia.org/ontology/filmRuntime	film runtime (s)
+http://dbpedia.org/ontology/Canal/originalMaximumBoatLength	original maximum boat length (μ)
+http://dbpedia.org/ontology/geneLocation	Gene Location
+http://dbpedia.org/ontology/casSupplemental	CAS supplemental
+http://dbpedia.org/ontology/coachSeason	coach season
+http://dbpedia.org/ontology/timeZone	time zone
+http://dbpedia.org/ontology/aSide	a side
+http://dbpedia.org/ontology/volcanicType	volcanic type
+http://dbpedia.org/ontology/restingPlacePosition	resting place position
+http://dbpedia.org/ontology/numberOfGoldMedalsWon	number of gold medals won
+http://dbpedia.org/ontology/land	land
+http://dbpedia.org/ontology/gameModus	Modus the game can be played in
+http://dbpedia.org/ontology/percentage	percentage
+http://dbpedia.org/ontology/europeanAffiliation	european affiliation
+http://dbpedia.org/ontology/australiaOpenMixed	australia open mixed
+http://dbpedia.org/ontology/rocketFunction	rocket function
+http://dbpedia.org/ontology/demographicsAsOf	demographics as of
+http://dbpedia.org/ontology/plant	plant
+http://dbpedia.org/ontology/commissionerDate	commissioner date
+http://dbpedia.org/ontology/genus	genus
+http://dbpedia.org/ontology/activeYearsStartYear	active years start year
+http://dbpedia.org/ontology/seasonManager	season manager
+http://dbpedia.org/ontology/placeOfWorship	place of worship
+http://dbpedia.org/ontology/lastFlightEndDate	last flight end date
+http://dbpedia.org/ontology/army	army
+http://dbpedia.org/ontology/notableWine	notable wine
+http://dbpedia.org/ontology/presidentRegionalCouncilMandate	mandate of the president council of the regional council
+http://dbpedia.org/ontology/headChef	head chef
+http://dbpedia.org/ontology/Planet/surfaceArea	surface area (km2)
+http://dbpedia.org/ontology/discontinued	discontinued
+http://dbpedia.org/ontology/rector	rector
+http://dbpedia.org/ontology/vehiclesPerDay	vehicles per day
+http://dbpedia.org/ontology/followedBy	followed by
+http://dbpedia.org/ontology/amateurFight	amateur fight
+http://dbpedia.org/ontology/istat	code istat
+http://dbpedia.org/ontology/firstWin	first win
+http://dbpedia.org/ontology/lake	vastest lake
+http://dbpedia.org/ontology/country	country
+http://dbpedia.org/ontology/cluster	cluster
+http://dbpedia.org/ontology/humanDevelopmentIndexRank	human development index rank
+http://dbpedia.org/ontology/projectObjective	project objective
+http://dbpedia.org/ontology/dissolved	dissolved
+http://dbpedia.org/ontology/hasVariant	variant or variation
+http://dbpedia.org/ontology/Canal/maximumBoatLength	maximum boat length (μ)
+http://dbpedia.org/ontology/heritageRegister	heritage register
+http://dbpedia.org/ontology/friend	friend
+http://dbpedia.org/ontology/editorTitle	editor title
+http://dbpedia.org/ontology/revenue	revenue ($)
+http://dbpedia.org/ontology/numberOfSilverMedalsWon	number of silver medals won
+http://dbpedia.org/ontology/numberOfHouses	number of houses present)
+http://dbpedia.org/ontology/shoots	shoots
+http://dbpedia.org/ontology/height	height (μ)
+http://dbpedia.org/ontology/licenceNumber	licence number
+http://dbpedia.org/ontology/alpsSupergroup	Alps supergroup
+http://dbpedia.org/ontology/bronzeMedalDouble	bronze medal double
+http://dbpedia.org/ontology/localization	localization of the island
+http://dbpedia.org/ontology/class	class
+http://dbpedia.org/ontology/expedition	expedition
+http://dbpedia.org/ontology/otherOccupation	other occupation
+http://dbpedia.org/ontology/tonyAward	Tony Award
+http://dbpedia.org/ontology/fuel	fuel
+http://dbpedia.org/ontology/firstLaunch	first launch
+http://dbpedia.org/ontology/Planet/density	density (μ3)
+http://dbpedia.org/ontology/ons	ons
+http://dbpedia.org/ontology/countryOrigin	country origin
+http://dbpedia.org/ontology/maximumElevation	maximum elevation (μ)
+http://dbpedia.org/ontology/person	person
+http://dbpedia.org/ontology/missions	missions
+http://dbpedia.org/ontology/iihfHof	lihf hof
+http://dbpedia.org/ontology/originalTitle	original title
+http://dbpedia.org/ontology/rankAgreement	rank of an agreement
+http://dbpedia.org/ontology/autonomy	autonomy
+http://dbpedia.org/ontology/modelEndDate	model end date
+http://dbpedia.org/ontology/SpaceShuttle/timeInSpace	time in space (μ)
+http://dbpedia.org/ontology/archipelago	archipelago
+http://dbpedia.org/ontology/leaderFunction	leaderFunction
+http://dbpedia.org/ontology/language	language
+http://dbpedia.org/ontology/shipCrew	crew
+http://dbpedia.org/ontology/notableStudent	notable student
+http://dbpedia.org/ontology/numberOfSportsEvents	number of sports events
+http://dbpedia.org/ontology/neighbourhood	neighbourhood of a hungarian settlement
+http://dbpedia.org/ontology/oldcode	oldcode
+http://dbpedia.org/ontology/creativeDirector	creative director
+http://dbpedia.org/ontology/populationAsOf	population as of
+http://dbpedia.org/ontology/rolandGarrosSingle	roland garros single
+http://dbpedia.org/ontology/Stream/discharge	discharge (m³/s)
+http://dbpedia.org/ontology/distanceToEdinburgh	distance to Edinburgh (μ)
+http://dbpedia.org/ontology/structuralSystem	structural system
+http://dbpedia.org/ontology/party	party
+http://dbpedia.org/ontology/personFunction	person function
+http://dbpedia.org/ontology/filmFareAward	Film Fare Award
+http://dbpedia.org/ontology/lethalOnRabbits	lethal when given to rabbits
+http://dbpedia.org/ontology/unknownOutcomes	unknown outcomes
+http://dbpedia.org/ontology/launch	launch
+http://dbpedia.org/ontology/nationalYears	national years
+http://dbpedia.org/ontology/winsAtLAGT	wins at LAGT
+http://dbpedia.org/ontology/areaCode	area code
+http://dbpedia.org/ontology/crewSize	crew size
+http://dbpedia.org/ontology/ranking	ranking
+http://dbpedia.org/ontology/numberOfRockets	number of rockets
+http://dbpedia.org/ontology/capacity	capacity
+http://dbpedia.org/ontology/imposedDanseCompetition	imposed danse competition
+http://dbpedia.org/ontology/sportGoverningBody	sport governing body
+http://dbpedia.org/ontology/silverMedalDouble	silver medal double
+http://dbpedia.org/ontology/goldMedalist	gold medalist
+http://dbpedia.org/ontology/shareDate	share date
+http://dbpedia.org/ontology/size_v	size_v
+http://dbpedia.org/ontology/genre	genre
+http://dbpedia.org/ontology/rating	rating
+http://dbpedia.org/ontology/hometown	home town
+http://dbpedia.org/ontology/mouthPosition	mouth position
+http://dbpedia.org/ontology/otherFunction	other function
+http://dbpedia.org/ontology/danseScore	danse score
+http://dbpedia.org/ontology/numberOfMatches	number of matches or caps
+http://dbpedia.org/ontology/effectiveRadiatedPower	effectiveRadiatedPower (W)
+http://dbpedia.org/ontology/commander	commander
+http://dbpedia.org/ontology/managementRegion	management region
+http://dbpedia.org/ontology/humanDevelopmentIndexRankingCategory	human development index (HDI) category
+http://dbpedia.org/ontology/pisciculturalPopulation	piscicultural population
+http://dbpedia.org/ontology/presenter	presenter
+http://dbpedia.org/ontology/snowParkNumber	snow park number
+http://dbpedia.org/ontology/border	border
+http://dbpedia.org/ontology/Automobile/wheelbase	wheelbase (mm)
+http://dbpedia.org/ontology/jureLanguage	jure language
+http://dbpedia.org/ontology/firstDriverTeam	winning team
+http://dbpedia.org/ontology/riverMouth	river mouth
+http://dbpedia.org/ontology/lunarLandingSite	lunar landing site
+http://dbpedia.org/ontology/projectBudgetFunding	project budget funding ($)
+http://dbpedia.org/ontology/productionEndDate	production end date
+http://dbpedia.org/ontology/winsAtAsia	wins at ASIA
+http://dbpedia.org/ontology/administrativeHeadCity	head city
+http://dbpedia.org/ontology/championInMixedDouble	champion in mixed double
+http://dbpedia.org/ontology/politicalLeader	political leader
+http://dbpedia.org/ontology/championInSingleFemale	champion in single female
+http://dbpedia.org/ontology/endOccupation	end occupation
+http://dbpedia.org/ontology/School/campusSize	campus size (km2)
+http://dbpedia.org/ontology/winterTemperature	winter temperature (K)
+http://dbpedia.org/ontology/bourgmestre	bourgmestre
+http://dbpedia.org/ontology/isCityState	is a city state
+http://dbpedia.org/ontology/callSign	call sign
+http://dbpedia.org/ontology/callsignMeaning	call sign meaning
+http://dbpedia.org/ontology/grades	grades
+http://dbpedia.org/ontology/fdaUniiCode	FDA UNII code
+http://dbpedia.org/ontology/rotationPeriod	rotation period (s)
+http://dbpedia.org/ontology/totalTravellers	total travellers
+http://dbpedia.org/ontology/sizeBlazon	size blazon
+http://dbpedia.org/ontology/disappearanceDate	date disappearance of a populated place
+http://dbpedia.org/ontology/hipSize	hip size (μ)
+http://dbpedia.org/ontology/firstAscent	first ascent
+http://dbpedia.org/ontology/numberOfAlbums	number of albums
+http://dbpedia.org/ontology/electionDate	election date
+http://dbpedia.org/ontology/alumni	alumni
+http://dbpedia.org/ontology/model	model
+http://dbpedia.org/ontology/allcinemaId	allcinema id
+http://dbpedia.org/ontology/schoolPatron	school patron
+http://dbpedia.org/ontology/retirementDate	retirement date
+http://dbpedia.org/ontology/usedInWar	used in war
+http://dbpedia.org/ontology/proTeam	pro team
+http://dbpedia.org/ontology/wimbledonSingle	wimbledon single
+http://dbpedia.org/ontology/floorArea	floor area (m2)
+http://dbpedia.org/ontology/trackLength	track length (μ)
+http://dbpedia.org/ontology/yearOfElectrification	year of electrification
+http://dbpedia.org/ontology/serviceStartDate	service start date
+http://dbpedia.org/ontology/voltageOfElectrification	voltage of electrification (V)
+http://dbpedia.org/ontology/iftaAward	IFTA Award
+http://dbpedia.org/ontology/currentlyUsedFor	currently used for
+http://dbpedia.org/ontology/interest	interest
+http://dbpedia.org/ontology/veneratedIn	venerated in
+http://dbpedia.org/ontology/termPeriod	term period
+http://dbpedia.org/ontology/numberOfIsland	number of islands
+http://dbpedia.org/ontology/openingDate	opening date
+http://dbpedia.org/ontology/time	time
+http://dbpedia.org/ontology/sameName	same name
+http://dbpedia.org/ontology/ecNumber	EC number
+http://dbpedia.org/ontology/subtitle	subtitle
+http://dbpedia.org/ontology/designCompany	designer company
+http://dbpedia.org/ontology/draftTeam	draft team
+http://dbpedia.org/ontology/ableToGrind	able to grind
+http://dbpedia.org/ontology/nationality	nationality
+http://dbpedia.org/ontology/maximumTemperature	maximum temperature (K)
+http://dbpedia.org/ontology/thirdDriverCountry	third driver country
+http://dbpedia.org/ontology/amateurYear	amateur year
+http://dbpedia.org/ontology/railwayLineUsingTunnel	railway line using tunnel
+http://dbpedia.org/ontology/scale	scale
+http://dbpedia.org/ontology/director	film director
+http://dbpedia.org/ontology/superTribus	supertribus
+http://dbpedia.org/ontology/previousInfrastructure	previous infrastructure
+http://dbpedia.org/ontology/membershipAsOf	date membership established
+http://dbpedia.org/ontology/hasAbsorbedMunicipality	the previous municipality from which this one has been created or enlarged
+http://dbpedia.org/ontology/lastSeason	last season
+http://dbpedia.org/ontology/drama	drama
+http://dbpedia.org/ontology/chromosome	chromosome
+http://dbpedia.org/ontology/populationPctWomen	population percentage female
+http://dbpedia.org/ontology/nationalAffiliation	national affiliation
+http://dbpedia.org/ontology/modelStartDate	model start date
+http://dbpedia.org/ontology/numberOfNewlyIntroducedSports	number of newly introduced sports
+http://dbpedia.org/ontology/eptFinalTable	ept final table
+http://dbpedia.org/ontology/notableIdea	notableIdea
+http://dbpedia.org/ontology/numberBuilt	number built
+http://dbpedia.org/ontology/discharge	discharge (m³/s)
+http://dbpedia.org/ontology/endYear	start year
+http://dbpedia.org/ontology/zipCode	zip code
+http://dbpedia.org/ontology/nationalFilmAward	National Film Award
+http://dbpedia.org/ontology/productionStartDate	production start date
+http://dbpedia.org/ontology/bridgeCarries	bridge carries
+http://dbpedia.org/ontology/chairman	chairman
+http://dbpedia.org/ontology/grossDomesticProductNominalPerCapita	gross domestic product nominal per capita
+http://dbpedia.org/ontology/award	award
+http://dbpedia.org/ontology/managementElevation	management elevation (μ)
+http://dbpedia.org/ontology/Weapon/weight	weight (kg)
+http://dbpedia.org/ontology/projectParticipant	project participant
+http://dbpedia.org/ontology/overallRecord	overall record
+http://dbpedia.org/ontology/mythology	mythology
+http://dbpedia.org/ontology/rival	rival
+http://dbpedia.org/ontology/khlDraftTeam	khl draft team
+http://dbpedia.org/ontology/council	council of a liechtenstein settlement
+http://dbpedia.org/ontology/alternativeTitle	alternative title
+http://dbpedia.org/ontology/Software/fileSize	size (MB)
+http://dbpedia.org/ontology/arrestDate	arrest date
+http://dbpedia.org/ontology/areaDate	area date
+http://dbpedia.org/ontology/citizenship	citizenship
+http://dbpedia.org/ontology/fauna	fauna
+http://dbpedia.org/ontology/majorityLeader	majority leader
+http://dbpedia.org/ontology/juniorSeason	junior season
+http://dbpedia.org/ontology/movement	movement
+http://dbpedia.org/ontology/carNumber	car number
+http://dbpedia.org/ontology/relatedPlaces	related places
+http://dbpedia.org/ontology/aircraftInterceptor	aircraft interceptor
+http://dbpedia.org/ontology/MeanOfTransportation/weight	weight (kg)
+http://dbpedia.org/ontology/currentStatus	current status
+http://dbpedia.org/ontology/iafdId	iafd id
+http://dbpedia.org/ontology/previousMission	previous mission
+http://dbpedia.org/ontology/booster	booster
+http://dbpedia.org/ontology/percentageFat	percentage of fat
+http://dbpedia.org/ontology/torqueOutput	torque output (Nm)
+http://dbpedia.org/ontology/facilityId	facility id
+http://dbpedia.org/ontology/organSystem	organ system
+http://dbpedia.org/ontology/podiums	podiums
+http://dbpedia.org/ontology/commandStructure	command structure
+http://dbpedia.org/ontology/typeOfYeast	type of yeast
+http://dbpedia.org/ontology/largestCity	largest city
+http://dbpedia.org/ontology/municipalityAbsorbedBy	absorbed by
+http://dbpedia.org/ontology/ward	ward of a liechtenstein settlement
+http://dbpedia.org/ontology/geolocDepartment	geolocDepartment
+http://dbpedia.org/ontology/nationalTournamentGold	national tournament gold
+http://dbpedia.org/ontology/skiLift	ski lift
+http://dbpedia.org/ontology/skiPisteKilometre	ski piste kilometre (μ)
+http://dbpedia.org/ontology/quotation	quotation
+http://dbpedia.org/ontology/militaryFunction	military function
+http://dbpedia.org/ontology/Galaxy/maximumTemperature	maximum temperature (K)
+http://dbpedia.org/ontology/redSkiPisteNumber	red ski piste number
+http://dbpedia.org/ontology/oldName	old name
+http://dbpedia.org/ontology/finalLostDouble	final lost double
+http://dbpedia.org/ontology/militaryRank	military rank
+http://dbpedia.org/ontology/purchasingPowerParityRank	purchasing power parity rank
+http://dbpedia.org/ontology/astrologicalSign	astrological sign
+http://dbpedia.org/ontology/decommissioningDate	decommissioning date
+http://dbpedia.org/ontology/killedBy	killed by
+http://dbpedia.org/ontology/team	team
+http://dbpedia.org/ontology/distanceLaps	distance laps
+http://dbpedia.org/ontology/promotion	promotion
+http://dbpedia.org/ontology/worldTeamCup	world team cup
+http://dbpedia.org/ontology/lchfDraftYear	lchf draft year
+http://dbpedia.org/ontology/GrandPrix/course	course (km)
+http://dbpedia.org/ontology/orderDate	order date
+http://dbpedia.org/ontology/numberOfPads	number of pads
+http://dbpedia.org/ontology/Planet/apoapsis	apoapsis (km)
+http://dbpedia.org/ontology/configuration	configuration
+http://dbpedia.org/ontology/particularSign	particular sign
+http://dbpedia.org/ontology/patronSaint	patron saint
+http://dbpedia.org/ontology/languageCode	language code
+http://dbpedia.org/ontology/ideology	ideology
+http://dbpedia.org/ontology/uniprot	UniProt
+http://dbpedia.org/ontology/firstPopularVote	firstPopularVote
+http://dbpedia.org/ontology/numberOfLaps	number of laps
+http://dbpedia.org/ontology/highestPoint	highest point
+http://dbpedia.org/ontology/meshName	MeSH name
+http://dbpedia.org/ontology/symbol	Symbol
+http://dbpedia.org/ontology/agglomerationPopulationYear	agglomerationPopulationYear
+http://dbpedia.org/ontology/shortProgScore	short prog score
+http://dbpedia.org/ontology/freeScoreCompetition	free score competition
+http://dbpedia.org/ontology/totalTracks	total tracks
+http://dbpedia.org/ontology/sourceConfluenceState	source confluence state
+http://dbpedia.org/ontology/stationEvaDuration	station EVA duration (s)
+http://dbpedia.org/ontology/serviceModule	service module
+http://dbpedia.org/ontology/lastPublicationDate	last publication date
+http://dbpedia.org/ontology/bronzeMedalist	bronze medalist
+http://dbpedia.org/ontology/frequentlyUpdated	frequently updated
+http://dbpedia.org/ontology/Planet/periapsis	periapsis (km)
+http://dbpedia.org/ontology/meetingBuilding	meeting building
+http://dbpedia.org/ontology/oversight	oversight
+http://dbpedia.org/ontology/Canal/originalMaximumBoatBeam	original maximum boat beam (μ)
+http://dbpedia.org/ontology/dateBudget	date budget
+http://dbpedia.org/ontology/wsopItm	wsop itm
+http://dbpedia.org/ontology/currentPartner	current partner
+http://dbpedia.org/ontology/depth	depth (μ)
+http://dbpedia.org/ontology/activeYearsEndDate	active years end date
+http://dbpedia.org/ontology/river	river
+http://dbpedia.org/ontology/numberOfParticipatingFemaleAthletes	number of participating female athletes
+http://dbpedia.org/ontology/numberOfPostgraduateStudents	number of postgraduate students
+http://dbpedia.org/ontology/activeYearsStartDateMgr	active years start date manager
+http://dbpedia.org/ontology/rankingsSingles	single rankings
+http://dbpedia.org/ontology/largestSettlement	largest settlement
+http://dbpedia.org/ontology/laterality	laterality
+http://dbpedia.org/ontology/nutsCode	NUTS code
+http://dbpedia.org/ontology/firstOwner	first owner
+http://dbpedia.org/ontology/associatedRocket	associated rocket
+http://dbpedia.org/ontology/sisterNewspaper	sister newspaper
+http://dbpedia.org/ontology/aircraftPatrol	aircraft patrol
+http://dbpedia.org/ontology/internationalPhonePrefix	international phone prefix
+http://dbpedia.org/ontology/newspaper	newspaper
+http://dbpedia.org/ontology/selibrId	SELIBR Id
+http://dbpedia.org/ontology/secondDriver	second driver
+http://dbpedia.org/ontology/visitorsPerDay	visitors per day
+http://dbpedia.org/ontology/decay	decay
+http://dbpedia.org/ontology/waterwayThroughTunnel	waterway through tunnel
+http://dbpedia.org/ontology/skiTow	ski tow
+http://dbpedia.org/ontology/eloRecord	maximum ELO rating
+http://dbpedia.org/ontology/humanDevelopmentIndex	Human Development Index (HDI)
+http://dbpedia.org/ontology/uses	uses
+http://dbpedia.org/ontology/davisCup	davis cup
+http://dbpedia.org/ontology/currentTeamManager	current team manager
+http://dbpedia.org/ontology/presidentRegionalCouncil	president regional council
+http://dbpedia.org/ontology/livingPlace	livingPlace
+http://dbpedia.org/ontology/splitFromParty	split from party
+http://dbpedia.org/ontology/managementCountry	management country
+http://dbpedia.org/ontology/hsvCoordinateValue	value coordinate in the HSV colour space
+http://dbpedia.org/ontology/series	series
+http://dbpedia.org/ontology/mainOrgan	main organ
+http://dbpedia.org/ontology/penaltiesTeamB	Penalties Team B
+http://dbpedia.org/ontology/winterAppearances	winter appearances
+http://dbpedia.org/ontology/deliveryDate	delivery date
+http://dbpedia.org/ontology/dateAct	date act
+http://dbpedia.org/ontology/penaltiesTeamA	Penalties Team A
+http://dbpedia.org/ontology/passengersUsedSystem	passengers used system
+http://dbpedia.org/ontology/cmykCoordinateCyanic	cyanic coordinate in the CMYK space
+http://dbpedia.org/ontology/metropolitanBorough	metropolitan borough
+http://dbpedia.org/ontology/description	description
+http://dbpedia.org/ontology/hof	hof
+http://dbpedia.org/ontology/dateAgreement	date of an agreement
+http://dbpedia.org/ontology/railwayPlatforms	railway platforms
+http://dbpedia.org/ontology/winsAtAlpg	wins at ALPG
+http://dbpedia.org/ontology/codeProvincialMonument	monument code (provinciall)
+http://dbpedia.org/ontology/ncaaTeam	ncaa season
+http://dbpedia.org/ontology/refcul	reference for cultural data
+http://dbpedia.org/ontology/announcedFrom	announcedFrom
+http://dbpedia.org/ontology/spokenIn	spoken in
+http://dbpedia.org/ontology/fight	fight
+http://dbpedia.org/ontology/refpol	reference for politic data
+http://dbpedia.org/ontology/associateStar	associateStar
+http://dbpedia.org/ontology/wptItm	wpt itm
+http://dbpedia.org/ontology/tribus	tribus
+http://dbpedia.org/ontology/branchFrom	branch from
+http://dbpedia.org/ontology/formationDate	formation date
+http://dbpedia.org/ontology/numberOfOfficials	number of officials
+http://dbpedia.org/ontology/mouthElevation	mouth elevation (μ)
+http://dbpedia.org/ontology/creationYear	year of creation
+http://dbpedia.org/ontology/omim	OMIM id
+http://dbpedia.org/ontology/registryNumber	registry number
+http://dbpedia.org/ontology/hraState	hra state
+http://dbpedia.org/ontology/previousWork	previous work
+http://dbpedia.org/ontology/clothSize	cloth size
+http://dbpedia.org/ontology/drainsFrom	drains from
+http://dbpedia.org/ontology/satScore	SAT score
+http://dbpedia.org/ontology/gameEngine	Game Engine
+http://dbpedia.org/ontology/senior	senior
+http://dbpedia.org/ontology/victoryAsMgr	victory as manager
+http://dbpedia.org/ontology/regionalCouncil	regional council
+http://dbpedia.org/ontology/scene	scene
+http://dbpedia.org/ontology/ccaState	cca state
+http://dbpedia.org/ontology/selection	selection
+http://dbpedia.org/ontology/titleSingle	title single
+http://dbpedia.org/ontology/elementAbove	element above
+http://dbpedia.org/ontology/industry	industry
+http://dbpedia.org/ontology/collaboration	collaboration
+http://dbpedia.org/ontology/eventDate	event date
+http://dbpedia.org/ontology/dec	dec
+http://dbpedia.org/ontology/isPeerReviewed	is peer reviewed
+http://dbpedia.org/ontology/dfE	DfE
+http://dbpedia.org/ontology/naacpImageAward	NAACP Image Award
+http://dbpedia.org/ontology/derivedWord	derived word
+http://dbpedia.org/ontology/lastAirDate	last air date
+http://dbpedia.org/ontology/lunarOrbitTime	lunar orbit time (s)
+http://dbpedia.org/ontology/patent	patent
+http://dbpedia.org/ontology/otherWins	other wins
+http://dbpedia.org/ontology/landArea	area of a land (m2)
+http://dbpedia.org/ontology/firstFlight	first flight
+http://dbpedia.org/ontology/numberOfEpisodes	number of episodes
+http://dbpedia.org/ontology/horseRidingDiscipline	horse riding discipline
+http://dbpedia.org/ontology/wingArea	wing area (m2)
+http://dbpedia.org/ontology/theology	Theology
+http://dbpedia.org/ontology/soccerTournamentMostSteady	most steady
+http://dbpedia.org/ontology/localizationThumbnail	thumbnail localization
+http://dbpedia.org/ontology/affiliation	affiliation
+http://dbpedia.org/ontology/rgbCoordinateGreen	green coordinate in the RGB space
+http://dbpedia.org/ontology/olympicGamesSilver	olympic games silver
+http://dbpedia.org/ontology/Galaxy/meanRadius	mean radius (km)
+http://dbpedia.org/ontology/follows	follows
+http://dbpedia.org/ontology/synonym	synonym
+http://dbpedia.org/ontology/hallOfFame	hall of fame
+http://dbpedia.org/ontology/protectionStatus	monument protection status
+http://dbpedia.org/ontology/stylisticOrigin	stylistic origin
+http://dbpedia.org/ontology/leaderName	leader name
+http://dbpedia.org/ontology/dateUnveiled	date unveiled
+http://dbpedia.org/ontology/literaryGenre	literary genre
+http://dbpedia.org/ontology/startReign	start reign
+http://dbpedia.org/ontology/closingYear	closing year
+http://dbpedia.org/ontology/diameter	diameter (μ)
+http://dbpedia.org/ontology/aircraftHelicopterObservation	aircraft helicopter observation
+http://dbpedia.org/ontology/titleDouble	title double
+http://dbpedia.org/ontology/component	component
+http://dbpedia.org/ontology/policeName	police name
+http://dbpedia.org/ontology/Weapon/length	length (mm)
+http://dbpedia.org/ontology/specialTrial	special trial
+http://dbpedia.org/ontology/mentor	mentor
+http://dbpedia.org/ontology/bronzeMedalMixed	bronze medal mixed
+http://dbpedia.org/ontology/facultySize	faculty size
+http://dbpedia.org/ontology/highestPlace	highest place
+http://dbpedia.org/ontology/homeport	homeport
+http://dbpedia.org/ontology/firstLaunchRocket	first launch rocket
+http://dbpedia.org/ontology/firstDriver	first driver
+http://dbpedia.org/ontology/dcc	Dewey Decimal Classification
+http://dbpedia.org/ontology/office	office
+http://dbpedia.org/ontology/raceTrack	race track
+http://dbpedia.org/ontology/firstAscentPerson	person that first ascented a mountain
+http://dbpedia.org/ontology/portrayer	portrayer
+http://dbpedia.org/ontology/damsire	damsire
+http://dbpedia.org/ontology/politicalFunction	political function
+http://dbpedia.org/ontology/freeProgScore	free prog score
+http://dbpedia.org/ontology/orderInOffice	order in office
+http://dbpedia.org/ontology/district	district
+http://dbpedia.org/ontology/equity	equity ($)
+http://dbpedia.org/ontology/numberOfMembers	number of members
+http://dbpedia.org/ontology/trustee	trustee
+http://dbpedia.org/ontology/municipalityRenamedTo	a municipality's new name
+http://dbpedia.org/ontology/headquarter	headquarter
+http://dbpedia.org/ontology/Planet/maximumTemperature	maximum temperature (K)
+http://dbpedia.org/ontology/reffBourgmestre	referent bourgmestre
+http://dbpedia.org/ontology/artisticFunction	artistic function
+http://dbpedia.org/ontology/power	power
+http://dbpedia.org/ontology/majorShrine	major shrine
+http://dbpedia.org/ontology/boxerStyle	boxing style
+http://dbpedia.org/ontology/teamPoint	team point
+http://dbpedia.org/ontology/range	range
+http://dbpedia.org/ontology/leadTeam	lead team
+http://dbpedia.org/ontology/place	place of military conflict
+http://dbpedia.org/ontology/tournamentOfChampions	tournament of champions
+http://dbpedia.org/ontology/currencyCode	currency code
+http://dbpedia.org/ontology/conservationStatus	conservation status
+http://dbpedia.org/ontology/visitorsTotal	visitors total
+http://dbpedia.org/ontology/rebuildingDate	rebuilding date
+http://dbpedia.org/ontology/sovereignCountry	sovereign country
+http://dbpedia.org/ontology/millsCodeNLVerdwenen	mill dissapeared code NL
+http://dbpedia.org/ontology/causalties	causalties
+http://dbpedia.org/ontology/careerStation	career station
+http://dbpedia.org/ontology/names	names
+http://dbpedia.org/ontology/countryWithFirstAstronaut	country with first astronaut
+http://dbpedia.org/ontology/rolandGarrosMixed	roland garros mixed
+http://dbpedia.org/ontology/sourceState	source state
+http://dbpedia.org/ontology/grindingCapability	grinding capability
+http://dbpedia.org/ontology/numberOfBronzeMedalsWon	number of bronze medals won
+http://dbpedia.org/ontology/artificialSnowArea	artificial snow area
+http://dbpedia.org/ontology/endowment	endowment ($)
+http://dbpedia.org/ontology/dissolutionYear	dissolution year
+http://dbpedia.org/ontology/case	case
+http://dbpedia.org/ontology/vicePrimeMinister	vice prime minister
+http://dbpedia.org/ontology/domain	domain
+http://dbpedia.org/ontology/relation	relation
+http://dbpedia.org/ontology/cosparId	COSPAR id
+http://dbpedia.org/ontology/sales	sales
+http://dbpedia.org/ontology/fastestDriver	fastest driver
+http://dbpedia.org/ontology/engineType	engine type
+http://dbpedia.org/ontology/coverArtist	cover artist
+http://dbpedia.org/ontology/icdo	ICDO
+http://dbpedia.org/ontology/Spacecraft/cargoWater	cargo water (kg)
+http://dbpedia.org/ontology/failedLaunches	failed launches
+http://dbpedia.org/ontology/ofsCode	ofs code of a settlement
+http://dbpedia.org/ontology/licenceLetter	licence letter of a german settlement
+http://dbpedia.org/ontology/grammyAward	Grammy Award
+http://dbpedia.org/ontology/bowlRecord	bowl record
+http://dbpedia.org/ontology/latestReleaseVersion	latest release version
+http://dbpedia.org/ontology/highestBreak	highest break
+http://dbpedia.org/ontology/origin	origin
+http://dbpedia.org/ontology/activeYear	active year
+http://dbpedia.org/ontology/mouthState	mouth state
+http://dbpedia.org/ontology/individualisedGnd	individualised GND number
+http://dbpedia.org/ontology/sport	sport
+http://dbpedia.org/ontology/startOccupation	start occupation
+http://dbpedia.org/ontology/leaderParty	leader party
+http://dbpedia.org/ontology/locusSupplementaryData	locus supplementary data
+http://dbpedia.org/ontology/giniCoefficientRanking	gini coefficient ranking
+http://dbpedia.org/ontology/latestReleaseDate	latest release date
+http://dbpedia.org/ontology/deathDate	death date
+http://dbpedia.org/ontology/reservations	reservations
+http://dbpedia.org/ontology/draftYear	draft year
+http://dbpedia.org/ontology/order	order (taxonomy)
+http://dbpedia.org/ontology/PopulatedPlace/populationDensity	population density (/sqkm)
+http://dbpedia.org/ontology/dam	dam
+http://dbpedia.org/ontology/draftRound	draft round
+http://dbpedia.org/ontology/mainspan	mainspan (μ)
+http://dbpedia.org/ontology/choreographer	choreographer
+http://dbpedia.org/ontology/deathAge	death age
+http://dbpedia.org/ontology/day	day
+http://dbpedia.org/ontology/virtualChannel	virtual channel
+http://dbpedia.org/ontology/matchPoint	match point
+http://dbpedia.org/ontology/denomination	denomination
+http://dbpedia.org/ontology/lowestState	lowest state
+http://dbpedia.org/ontology/motto	motto
+http://dbpedia.org/ontology/biome	biome
+http://dbpedia.org/ontology/vicePrincipalLabel	vice principal label
+http://dbpedia.org/ontology/riverBranch	branch
+http://dbpedia.org/ontology/numberOfCountries	number of countries
+http://dbpedia.org/ontology/municipality	municipality
+http://dbpedia.org/ontology/feature	feature
+http://dbpedia.org/ontology/flagBorder	flag border
+http://dbpedia.org/ontology/crewMember	crew member
+http://dbpedia.org/ontology/sportDiscipline	sport discipline
+http://dbpedia.org/ontology/distributingLabel	distributing label
+http://dbpedia.org/ontology/ulanId	ULAN id
+http://dbpedia.org/ontology/thirdDriver	third driver
+http://dbpedia.org/ontology/musicBy	music by
+http://dbpedia.org/ontology/aircraftHelicopterUtility	aircraft helicopter utility
+http://dbpedia.org/ontology/criteria	criteria
+http://dbpedia.org/ontology/supplementalDraftYear	supplemental draft year
+http://dbpedia.org/ontology/programmeFormat	programme format
+http://dbpedia.org/ontology/teachingStaff	teaching staff
+http://dbpedia.org/ontology/nobelLaureates	nobel laureates
+http://dbpedia.org/ontology/asiaChampionship	asia championship
+http://dbpedia.org/ontology/landskap	norwegian landskap
+http://dbpedia.org/ontology/localPhonePrefix	local phone prefix
+http://dbpedia.org/ontology/worldTournamentSilver	world tournament silver
+http://dbpedia.org/ontology/originalLanguage	original language
+http://dbpedia.org/ontology/numberOfCantons	Number Of Cantons
+http://dbpedia.org/ontology/partialFailedLaunches	partial failed launches
+http://dbpedia.org/ontology/managerTitle	manager title
+http://dbpedia.org/ontology/millsCodeBE	mill code BE
+http://dbpedia.org/ontology/tournamentRecord	tournament record
+http://dbpedia.org/ontology/numberOfCapitalDeputies	Number Of Capital Deputies
+http://dbpedia.org/ontology/depthQuote	depth quote
+http://dbpedia.org/ontology/giniCoefficientCategory	gini coefficient category
+http://dbpedia.org/ontology/education	education
+http://dbpedia.org/ontology/largestMetro	largest metro
+http://dbpedia.org/ontology/mastersWins	masters wins
+http://dbpedia.org/ontology/functionStartDate	function start date
+http://dbpedia.org/ontology/backhand	backhand
+http://dbpedia.org/ontology/numberOfVineyards	number of vineyards
+http://dbpedia.org/ontology/winsAtMajors	wins at majors
+http://dbpedia.org/ontology/militaryUnit	military unit
+http://dbpedia.org/ontology/titleLanguage	title language
+http://dbpedia.org/ontology/buildingStartYear	building start year
+http://dbpedia.org/ontology/bnfId	BNF Id
+http://dbpedia.org/ontology/deFactoLanguage	de facto language
+http://dbpedia.org/ontology/fileExtension	The extension of this file
+http://dbpedia.org/ontology/keyPerson	key person
+http://dbpedia.org/ontology/averageDepth	average depth (μ)
+http://dbpedia.org/ontology/painter	painter
+http://dbpedia.org/ontology/releaseDate	release date
+http://dbpedia.org/ontology/nisCode	NIS code
+http://dbpedia.org/ontology/cityRank	city rank
+http://dbpedia.org/ontology/careerPoints	career points
+http://dbpedia.org/ontology/governmentPlace	government place
+http://dbpedia.org/ontology/orientation	orientation
+http://dbpedia.org/ontology/firstLaunchDate	first launch date
+http://dbpedia.org/ontology/amateurDefeat	amateur defeat
+http://dbpedia.org/ontology/signName	sign name of a hungarian settlement
+http://dbpedia.org/ontology/numberOfCounties	number of counties
+http://dbpedia.org/ontology/abstract	has abstract
+http://dbpedia.org/ontology/dubber	dubber
+http://dbpedia.org/ontology/principalEngineer	principal engineer
+http://dbpedia.org/ontology/primaryFuelType	primary fuel type
+http://dbpedia.org/ontology/atcSuffix	ATC suffix
+http://dbpedia.org/ontology/numberOfIntercommunality	number of intercommunality
+http://dbpedia.org/ontology/museumType	museumType
+http://dbpedia.org/ontology/playerInTeam	player in team
+http://dbpedia.org/ontology/fastestDriverTeam	fastest driver team
+http://dbpedia.org/ontology/nflCode	nfl code
+http://dbpedia.org/ontology/wikiPageEditLink	Link to the Wikipage edit URL
+http://dbpedia.org/ontology/quebecerTitle	quebecer title
+http://dbpedia.org/ontology/statisticYear	statistic year
+http://dbpedia.org/ontology/maximumDischarge	maximum discharge (m³/s)
+http://dbpedia.org/ontology/populationPlace	population place
+http://dbpedia.org/ontology/prominence	prominence (μ)
+http://dbpedia.org/ontology/torchBearer	torch bearer
+http://dbpedia.org/ontology/abbeychurchBlessingCharge	abbey church blessing charge
+http://dbpedia.org/ontology/numberOfSpeakers	number of speakers
+http://dbpedia.org/ontology/reign	reign
+http://dbpedia.org/ontology/cargoFuel	cargo fuel (g)
+http://dbpedia.org/ontology/wsopWinYear	wsop win year
+http://dbpedia.org/ontology/satellite	satellite
+http://dbpedia.org/ontology/patron	patron
+http://dbpedia.org/ontology/SpaceMission/lunarSampleMass	lunar sample mass (kg)
+http://dbpedia.org/ontology/sharingOutPopulationYear	sharing out year
+http://dbpedia.org/ontology/company	company
+http://dbpedia.org/ontology/lastLaunchRocket	last launch rocket
+http://dbpedia.org/ontology/producer	producer
+http://dbpedia.org/ontology/produces	produces
+http://dbpedia.org/ontology/codeSettlement	settlement code
+http://dbpedia.org/ontology/spokesperson	spokesperson
+http://dbpedia.org/ontology/academicDiscipline	academic discipline
+http://dbpedia.org/ontology/schoolCode	school code
+http://dbpedia.org/ontology/onChromosome	on chromosome
+http://dbpedia.org/ontology/maximumDepth	maximum depth (μ)
+http://dbpedia.org/ontology/demolitionDate	demolition date
+http://dbpedia.org/ontology/averageClassSize	average class size
+http://dbpedia.org/ontology/webcast	webcast
+http://dbpedia.org/ontology/dean	dean
+http://dbpedia.org/ontology/minority	minority
+http://dbpedia.org/ontology/foot	foot
+http://dbpedia.org/ontology/escalafon	escalafon
+http://dbpedia.org/ontology/destructionDate	destruction date
+http://dbpedia.org/ontology/eyes	eyes
+http://dbpedia.org/ontology/birthSign	birth sign
+http://dbpedia.org/ontology/titleDate	title date
+http://dbpedia.org/ontology/allegiance	allegiance
+http://dbpedia.org/ontology/followingEvent	following event
+http://dbpedia.org/ontology/garrison	garrison
+http://dbpedia.org/ontology/executiveProducer	executive producer
+http://dbpedia.org/ontology/operatingSystem	operating system
+http://dbpedia.org/ontology/numberOfOrbits	number of orbits
+http://dbpedia.org/ontology/proSince	pro since
+http://dbpedia.org/ontology/rank	rank
+http://dbpedia.org/ontology/programCost	program cost ($)
+http://dbpedia.org/ontology/source	source
+http://dbpedia.org/ontology/reportingMark	reporting mark
+http://dbpedia.org/ontology/hasJunctionWith	has junction with
+http://dbpedia.org/ontology/brainInfoType	brain info type
+http://dbpedia.org/ontology/historicalMap	historical map
+http://dbpedia.org/ontology/altitude	altitude
+http://dbpedia.org/ontology/wordBefore	word before the country
+http://dbpedia.org/ontology/manager	manager
+http://dbpedia.org/ontology/nationalSelection	national selection
+http://dbpedia.org/ontology/distanceToBelfast	distance to Belfast (μ)
+http://dbpedia.org/ontology/otherLanguage	other language of a settlement
+http://dbpedia.org/ontology/neighboringMunicipality	neighboring municipality
+http://dbpedia.org/ontology/superFamily	super-family
+http://dbpedia.org/ontology/chEBI	ChEBI
+http://dbpedia.org/ontology/openingTheme	opening theme
+http://dbpedia.org/ontology/wikiPageRedirects	Wikipage redirect
+http://dbpedia.org/ontology/winsAtNWIDE	wins at NWIDE
+http://dbpedia.org/ontology/designer	designer
+http://dbpedia.org/ontology/outskirts	outskirts
+http://dbpedia.org/ontology/firstPublicationDate	first publication date
+http://dbpedia.org/ontology/volcanicActivity	volcanic activity
+http://dbpedia.org/ontology/vein	vein
+http://dbpedia.org/ontology/probowlPick	pro bowl pick
+http://dbpedia.org/ontology/lowerEarthOrbitPayload	lower earth orbit payload (g)
+http://dbpedia.org/ontology/documentNumber	document number
+http://dbpedia.org/ontology/Spacecraft/cargoGas	cargo gas (kg)
+http://dbpedia.org/ontology/wineProduced	wine produced
+http://dbpedia.org/ontology/coastLine	coast line (μ)
+http://dbpedia.org/ontology/competition	competition
+http://dbpedia.org/ontology/baftaAward	BAFTA Award
+http://dbpedia.org/ontology/soccerTournamentMostSuccesfull	most successfull
+http://dbpedia.org/ontology/GeopoliticalOrganisation/areaMetro	area metro (km2)
+http://dbpedia.org/ontology/beatifiedDate	beatified date
+http://dbpedia.org/ontology/lieutenancy	lieutenancy
+http://dbpedia.org/ontology/head	head
+http://dbpedia.org/ontology/novel	novel
+http://dbpedia.org/ontology/retired	retired
+http://dbpedia.org/ontology/deme	deme
+http://dbpedia.org/ontology/distanceToLondon	distance to London (μ)
+http://dbpedia.org/ontology/student	diploma
+http://dbpedia.org/ontology/refseqprotein	refseq protein
+http://dbpedia.org/ontology/noteOnPlaceOfBurial	note on place of burial
+http://dbpedia.org/ontology/nationalTournamentSilver	national tournament silver
+http://dbpedia.org/ontology/departmentCode	code of the department
+http://dbpedia.org/ontology/visitorsPerYear	visitors per year
+http://dbpedia.org/ontology/honours	honours
+http://dbpedia.org/ontology/iupacName	IUPAC name
+http://dbpedia.org/ontology/totalPopulation	total population
+http://dbpedia.org/ontology/communityIsoCode	iso code of a community
+http://dbpedia.org/ontology/maximumBoatBeam	maximum boat beam (μ)
+http://dbpedia.org/ontology/mountainRange	mountain range
+http://dbpedia.org/ontology/ChemicalSubstance/meltingPoint	melting point (K)
+http://dbpedia.org/ontology/coemperor	coemperor
+http://dbpedia.org/ontology/ChemicalSubstance/boilingPoint	boiling point (K)
+http://dbpedia.org/ontology/serviceEndDate	service end date
+http://dbpedia.org/ontology/assembly	assembly
+http://dbpedia.org/ontology/oldDistrict	old district
+http://dbpedia.org/ontology/editing	editing
+http://dbpedia.org/ontology/britishWins	british wins
+http://dbpedia.org/ontology/code	code
+http://dbpedia.org/ontology/coastLength	length of a coast
+http://dbpedia.org/ontology/endangeredSince	endangered since
+http://dbpedia.org/ontology/qatarClassic	qatar classic
+http://dbpedia.org/ontology/Galaxy/meanTemperature	mean temperature (K)
+http://dbpedia.org/ontology/contractAward	contract award
+http://dbpedia.org/ontology/formerCoach	former coach
+http://dbpedia.org/ontology/seniority	seniority
+http://dbpedia.org/ontology/isoCodeRegion	ISO region code
+http://dbpedia.org/ontology/deadInFightPlace	dead in fight place
+http://dbpedia.org/ontology/meanRadius	mean radius (μ)
+http://dbpedia.org/ontology/wimbledonDouble	wimbledon double
+http://dbpedia.org/ontology/numberOfReactors	number of reactors
+http://dbpedia.org/ontology/numberOfProfessionals	number of professionals
+http://dbpedia.org/ontology/fcRuns	FC runs
+http://dbpedia.org/ontology/Galaxy/periapsis	periapsis (km)
+http://dbpedia.org/ontology/tradeMark	TradeMark
+http://dbpedia.org/ontology/freeProgCompetition	free prog competition
+http://dbpedia.org/ontology/computingMedia	Computing Media
+http://dbpedia.org/ontology/programmingLanguage	programming language
+http://dbpedia.org/ontology/agglomerationDemographics	agglomeration demographics
+http://dbpedia.org/ontology/brainInfoNumber	brain info number
+http://dbpedia.org/ontology/politicalSeats	political seats
+http://dbpedia.org/ontology/numberOfLanes	number of lanes
+http://dbpedia.org/ontology/musicalArtist	musical artist
+http://dbpedia.org/ontology/iso6392Code	ISO 639-2 code
+http://dbpedia.org/ontology/finalPublicationDate	final publication date
+http://dbpedia.org/ontology/episode	episode
+http://dbpedia.org/ontology/canonizedPlace	canonized place
+http://dbpedia.org/ontology/destination	destination
+http://dbpedia.org/ontology/targetSpaceStation	target space station station
+http://dbpedia.org/ontology/votesFor	Number of votes in favour of the resolution
+http://dbpedia.org/ontology/discipline	discipline
+http://dbpedia.org/ontology/codeDistrict	City district code
+http://dbpedia.org/ontology/surfaceFormOccurrenceOffset	position in which a surface occurs in a text
+http://dbpedia.org/ontology/reopeningDate	reopening date
+http://dbpedia.org/ontology/europeanUnionEntranceDate	european union entrance date
+http://dbpedia.org/ontology/relatedMeanOfTransportation	related mean of transportation
+http://dbpedia.org/ontology/variantOf	variant or variation
+http://dbpedia.org/ontology/soccerLeagueRelegated	relegated teams
+http://dbpedia.org/ontology/closingFilm	closing film
+http://dbpedia.org/ontology/competitionTitle	death place
+http://dbpedia.org/ontology/minorityFloorLeader	minority floor leader
+http://dbpedia.org/ontology/blackLongDistancePisteNumber	long distance piste number
+http://dbpedia.org/ontology/wingspan	wingspan (μ)
+http://dbpedia.org/ontology/alpsSection	Alps section
+http://dbpedia.org/ontology/almaMater	alma mater
+http://dbpedia.org/ontology/activeYearsEndDateMgr	active years end date manager
+http://dbpedia.org/ontology/participant	participant
+http://dbpedia.org/ontology/wikiPageOutDegree	Wiki page out degree
+http://dbpedia.org/ontology/waterPercentage	water percentage of a place
+http://dbpedia.org/ontology/startDate	start date
+http://dbpedia.org/ontology/messierName	Messier name
+http://dbpedia.org/ontology/numberOfCanton	number of canton
+http://dbpedia.org/ontology/distanceToCharingCross	distance to Charing Cross (μ)
+http://dbpedia.org/ontology/previousPopulationTotal	previous population total
+http://dbpedia.org/ontology/groundsForLiquidation	grounds for termination of activities
+http://dbpedia.org/ontology/silverMedalist	siler medalist
+http://dbpedia.org/ontology/gridReference	grid reference
+http://dbpedia.org/ontology/phonePrefix	phone prefix
+http://dbpedia.org/ontology/updated	updated
+http://dbpedia.org/ontology/routeTypeAbbreviation	route type abbreviation
+http://dbpedia.org/ontology/railwayRollingStock	railway rolling stock
+http://dbpedia.org/ontology/goldMedalMixed	gold medal mixed
+http://dbpedia.org/ontology/bodyDiscovered	body discovered
+http://dbpedia.org/ontology/Weapon/height	height (mm)
+http://dbpedia.org/ontology/kindOfCoordinate	kind of coordinate
+http://dbpedia.org/ontology/mayorMandate	mayorMandate
+http://dbpedia.org/ontology/inchi	The IUPAC International Chemical Identifier
+http://dbpedia.org/ontology/doctoralStudent	doctoral student
+http://dbpedia.org/ontology/Spacecraft/totalMass	total mass (kg)
+http://dbpedia.org/ontology/alpsSubgroup	Alps subgroup
+http://dbpedia.org/ontology/winsAtSun	wins at sun
+http://dbpedia.org/ontology/ensembl	ensemble
+http://dbpedia.org/ontology/currentRank	current rank
+http://dbpedia.org/ontology/imposedDanseScore	imposed danse score
+http://dbpedia.org/ontology/mapDescription	map description
+http://dbpedia.org/ontology/biggestCity	biggest city
+http://dbpedia.org/ontology/isniId	ISNI Id
+http://dbpedia.org/ontology/peopleName	peopleName
+http://dbpedia.org/ontology/pluviometry	pluviometry
+http://dbpedia.org/ontology/missionDuration	mission duration (s)
+http://dbpedia.org/ontology/endYearOfInsertion	end year of insertion
+http://dbpedia.org/ontology/areaLand	area land (m2)
+http://dbpedia.org/ontology/nationalTeamMatchPoint	national team match point
+http://dbpedia.org/ontology/netIncome	net income ($)
+http://dbpedia.org/ontology/otherChannel	other channel
+http://dbpedia.org/ontology/coProducer	co producer
+http://dbpedia.org/ontology/avifaunaPopulation	avifauna population
+http://dbpedia.org/ontology/memberOfParliament	Member of Parliament
+http://dbpedia.org/ontology/writer	writer
+http://dbpedia.org/ontology/wikiPageModified	Wikipage modification datetime
+http://dbpedia.org/ontology/numberOfFilms	number of films
+http://dbpedia.org/ontology/territory	territory
+http://dbpedia.org/ontology/lastPosition	last position
+http://dbpedia.org/ontology/khlDraft	khl draft year
+http://dbpedia.org/ontology/duration	duration (s)
+http://dbpedia.org/ontology/buildingType	buildingType
+http://dbpedia.org/ontology/extinctionDate	extinction date
+http://dbpedia.org/ontology/Galaxy/temperature	temperature (K)
+http://dbpedia.org/ontology/numberOfPeopleAttending	number of people attending
+http://dbpedia.org/ontology/training	training
+http://dbpedia.org/ontology/afiAward	AFI Award
+http://dbpedia.org/ontology/launchVehicle	launch vehicle
+http://dbpedia.org/ontology/discoverer	discoverer
+http://dbpedia.org/ontology/supply	supply
+http://dbpedia.org/ontology/lcc	LCC
+http://dbpedia.org/ontology/orcidId	ORCID Id
+http://dbpedia.org/ontology/hasNaturalBust	has natural bust
+http://dbpedia.org/ontology/availableSmartCard	available smart card
+http://dbpedia.org/ontology/suppreddedDate	suppredded date
+http://dbpedia.org/ontology/administrativeDistrict	administrative district
+http://dbpedia.org/ontology/iucnCategory	iucn category
+http://dbpedia.org/ontology/bestRankDouble	best rank double
+http://dbpedia.org/ontology/apcPresident	apc president
+http://dbpedia.org/ontology/discovered	discovery date
+http://dbpedia.org/ontology/MeanOfTransportation/width	width (mm)
+http://dbpedia.org/ontology/bibsysId	BIBSYS Id
+http://dbpedia.org/ontology/municipalityType	type of municipality
+http://dbpedia.org/ontology/statusManager	status manager
+http://dbpedia.org/ontology/Lake/volume	volume (μ³)
+http://dbpedia.org/ontology/ethnicGroup	ethnic group
+http://dbpedia.org/ontology/deputy	deputy
+http://dbpedia.org/ontology/pubchem	PubChem
+http://dbpedia.org/ontology/areaRural	area rural (m2)
+http://dbpedia.org/ontology/magazine	magazine
+http://dbpedia.org/ontology/Drug/boilingPoint	boiling point (K)
+http://dbpedia.org/ontology/juniorYearsStartYear	junior years start year
+http://dbpedia.org/ontology/depictionDescription	depiction description (caption)
+http://dbpedia.org/ontology/setupTime	setup time (s)
+http://dbpedia.org/ontology/olympicOathSwornByAthlete	olympic oath sworn by athlete
+http://dbpedia.org/ontology/millsCodeDutch	mill code NL
+http://dbpedia.org/ontology/worldTournamentGold	world tournament gold
+http://dbpedia.org/ontology/roofHeight	roof height
+http://dbpedia.org/ontology/landeshauptmann	landeshauptmann
+http://dbpedia.org/ontology/material	material
+http://dbpedia.org/ontology/orthologousGene	Orthologous Gene
+http://dbpedia.org/ontology/appointer	appointer
+http://dbpedia.org/ontology/volumes	volumes
+http://dbpedia.org/ontology/illiteracy	illiteracy
+http://dbpedia.org/ontology/signature	signature
+http://dbpedia.org/ontology/relief	relief
+http://dbpedia.org/ontology/wsopWristband	wsop wristband
+http://dbpedia.org/ontology/otherMedia	other media
+http://dbpedia.org/ontology/pictureFormat	picture format
+http://dbpedia.org/ontology/shuttle	shuttle
+http://dbpedia.org/ontology/Astronaut/timeInSpace	time in space (m)
+http://dbpedia.org/ontology/starring	starring
+http://dbpedia.org/ontology/loadLimit	load limit (g)
+http://dbpedia.org/ontology/winsAtOtherTournaments	wins at other tournaments
+http://dbpedia.org/ontology/ngcName	NGC name
+http://dbpedia.org/ontology/goldenCalfAward	Golden Calf Award
+http://dbpedia.org/ontology/departmentPosition	geolocDepartment
+http://dbpedia.org/ontology/previousPopulation	previous population
+http://dbpedia.org/ontology/rightChild	right child
+http://dbpedia.org/ontology/similar	similar
+http://dbpedia.org/ontology/wikiPageInterLanguageLink	Link from a Wikipage to a Wikipage in a different language about the same or a related subject.
+http://dbpedia.org/ontology/otherActivity	other activity
+http://dbpedia.org/ontology/greenSkiPisteNumber	green ski piste number
+http://dbpedia.org/ontology/soccerTournamentClosingSeason	closing season
+http://dbpedia.org/ontology/urbanArea	urban area
+http://dbpedia.org/ontology/chancellor	chancellor
+http://dbpedia.org/ontology/supplies	supplies
+http://dbpedia.org/ontology/numberOfTeams	number of teams
+http://dbpedia.org/ontology/attorneyGeneral	attorney general
+http://dbpedia.org/ontology/volcanoId	volcano id
+http://dbpedia.org/ontology/cpu	CPU
+http://dbpedia.org/ontology/explorer	explorer
+http://dbpedia.org/ontology/alias	alias
+http://dbpedia.org/ontology/ethnicGroupsInYear	ethnic groups in year
+http://dbpedia.org/ontology/linkedTo	linked to
+http://dbpedia.org/ontology/selectionPoint	selection point
+http://dbpedia.org/ontology/shipBeam	ship beam (μ)
+http://dbpedia.org/ontology/leftTributary	left tributary
+http://dbpedia.org/ontology/heir	heir
+http://dbpedia.org/ontology/delegation	delegation
+http://dbpedia.org/ontology/systemOfLaw	system of law
+http://dbpedia.org/ontology/house	house
+http://dbpedia.org/ontology/existence	existence
+http://dbpedia.org/ontology/debut	debut
+http://dbpedia.org/ontology/gun	aircraft gun
+http://dbpedia.org/ontology/poleDriverTeam	pole driver team
+http://dbpedia.org/ontology/SpaceShuttle/distance	distance (km)
+http://dbpedia.org/ontology/winsAtLET	wins at LET
+http://dbpedia.org/ontology/lowest	lowest
+http://dbpedia.org/ontology/school	school
+http://dbpedia.org/ontology/portfolio	portfolio
+http://dbpedia.org/ontology/affair	affair
+http://dbpedia.org/ontology/colourHexCode	colour hex code
+http://dbpedia.org/ontology/nlaId	NLA Id
+http://dbpedia.org/ontology/idNumber	id number
+http://dbpedia.org/ontology/federalState	federal state
+http://dbpedia.org/ontology/classification	classification
+http://dbpedia.org/ontology/reference	reference
+http://dbpedia.org/ontology/tenant	tenant
+http://dbpedia.org/ontology/routeJunction	route junction
+http://dbpedia.org/ontology/cannonNumber	cannon number
+http://dbpedia.org/ontology/undraftedYear	undrafted year
+http://dbpedia.org/ontology/division	division
+http://dbpedia.org/ontology/dischargeAverage	discharge average (m³/s)
+http://dbpedia.org/ontology/crosses	crosses
+http://dbpedia.org/ontology/aircraftHelicopterCargo	aircraft helicopter cargo
+http://dbpedia.org/ontology/third	third
+http://dbpedia.org/ontology/minimumDischarge	minimum discharge (m³/s)
+http://dbpedia.org/ontology/deathCause	death cause
+http://dbpedia.org/ontology/minimumElevation	minimum elevation (μ)
+http://dbpedia.org/ontology/illustrator	illustrator
+http://dbpedia.org/ontology/commissioner	commissioner
+http://dbpedia.org/ontology/neighbourRegion	neighbour region
+http://dbpedia.org/ontology/uRN	unique reference number (URN)
+http://dbpedia.org/ontology/locationIdentifier	Location Identifier
+http://dbpedia.org/ontology/annualTemperature	annual temperature (K)
+http://dbpedia.org/ontology/personName	personName
+http://dbpedia.org/ontology/homeStadium	home stadium
+http://dbpedia.org/ontology/maintainedBy	maintained by
+http://dbpedia.org/ontology/significantDesign	significant design
+http://dbpedia.org/ontology/aircraftAttack	aircraft attack
+http://dbpedia.org/ontology/municipalityCode	municipality code
+http://dbpedia.org/ontology/servingRailwayLine	serving railway line
+http://dbpedia.org/ontology/blueLongDistancePisteNumber	blue long distance piste number
+http://dbpedia.org/ontology/freeDanseScore	free danse score
+http://dbpedia.org/ontology/opponent	opponent
+http://dbpedia.org/ontology/gross	gross ($)
+http://dbpedia.org/ontology/birthDate	birth date
+http://dbpedia.org/ontology/creationChristianBishop	creation christian bishop
+http://dbpedia.org/ontology/otherSportsExperience	otherSportsExperience
+http://dbpedia.org/ontology/architect	architect
+http://dbpedia.org/ontology/computingPlatform	computing platform
+http://dbpedia.org/ontology/projectReferenceID	project reference ID
+http://dbpedia.org/ontology/lunarEvaTime	lunar EVA time (s)
+http://dbpedia.org/ontology/soccerTournamentThisSeason	this season
+http://dbpedia.org/ontology/agglomerationArea	agglomeration area
+http://dbpedia.org/ontology/winsAtPGA	wins at pga
+http://dbpedia.org/ontology/sibling	sibling
+http://dbpedia.org/ontology/introductionDate	introduction date
+http://dbpedia.org/ontology/egafdId	egafd id
+http://dbpedia.org/ontology/governor	governor
+http://dbpedia.org/ontology/SpaceMission/mass	mass (kg)
+http://dbpedia.org/ontology/operatingIncome	operating income ($)
+http://dbpedia.org/ontology/highestPointIsland	highest point of the island
+http://dbpedia.org/ontology/isPartOfWineRegion	is part of wine region
+http://dbpedia.org/ontology/grossDomesticProductAsOf	gross domestic product as of
+http://dbpedia.org/ontology/shipDraft	ship draft (μ)
+http://dbpedia.org/ontology/startPoint	start point
+http://dbpedia.org/ontology/legislativePeriodName	legislative period name
+http://dbpedia.org/ontology/olympicGames	olympic games
+http://dbpedia.org/ontology/premiereDate	premiere date
+http://dbpedia.org/ontology/elevatorCount	elevator count
+http://dbpedia.org/ontology/commune	commune
+http://dbpedia.org/ontology/position	position
+http://dbpedia.org/ontology/vehicle	vehicle
+http://dbpedia.org/ontology/relatedFunctions	related functions
+http://dbpedia.org/ontology/blazonCaption	Blazon caption
+http://dbpedia.org/ontology/listItemOf	list item
+http://dbpedia.org/ontology/blazon	blazon
+http://dbpedia.org/ontology/conservationStatusSystem	conservation status system
+http://dbpedia.org/ontology/landRegistryCode	land registry code
+http://dbpedia.org/ontology/visitorStatisticsAsOf	visitor statistics as of
+http://dbpedia.org/ontology/subsequentWork	subsequent work
+http://dbpedia.org/ontology/lastFamilyMember	last family member
+http://dbpedia.org/ontology/draftLeague	draft league
+http://dbpedia.org/ontology/skiPisteNumber	ski piste number
+http://dbpedia.org/ontology/endReign	end reign
+http://dbpedia.org/ontology/intercommunality	intercommunality
+http://dbpedia.org/ontology/automobilePlatform	automobile platform
+http://dbpedia.org/ontology/thumbnailCaption	thumbnail caption
+http://dbpedia.org/ontology/makeupArtist	makeup artist
+http://dbpedia.org/ontology/numberOfVehicles	number of vehicles
+http://dbpedia.org/ontology/founder	founder
+http://dbpedia.org/ontology/creatorOfDish	creator of dish
+http://dbpedia.org/ontology/eptTitle	ept title
+http://dbpedia.org/ontology/Person/height	height (cm)
+http://dbpedia.org/ontology/playRole	play role
+http://dbpedia.org/ontology/drugbank	DrugBank
+http://dbpedia.org/ontology/molecularWeight	molecular weight
+http://dbpedia.org/ontology/fullScore	full score
+http://dbpedia.org/ontology/chain	chain
+http://dbpedia.org/ontology/lengthReference	length reference
+http://dbpedia.org/ontology/authorityMandate	authority mandate
+http://dbpedia.org/ontology/mirDockings	mir dockings
+http://dbpedia.org/ontology/rightTributary	right tributary
+http://dbpedia.org/ontology/season	season
+http://dbpedia.org/ontology/coachedTeam	coached team
+http://dbpedia.org/ontology/subsystemLink	subsystem link
+http://dbpedia.org/ontology/hubAirport	hub airport
+http://dbpedia.org/ontology/continentalTournamentBronze	continental tournament bronze
+http://dbpedia.org/ontology/producedBy	produced by
+http://dbpedia.org/ontology/pdb	PDB
+http://dbpedia.org/ontology/worstDefeat	worst defeat
+http://dbpedia.org/ontology/usSales	US sales
+http://dbpedia.org/ontology/screenActorsGuildAward	Screen Actors Guild Award
+http://dbpedia.org/ontology/playingTime	playing time (s)
+http://dbpedia.org/ontology/careerPrizeMoney	career prize money ($)
+http://dbpedia.org/ontology/management	management
+http://dbpedia.org/ontology/ist	ist
+http://dbpedia.org/ontology/firstFlightEndDate	first flight end date
+http://dbpedia.org/ontology/GeopoliticalOrganisation/populationDensity	population density (/sqkm)
+http://dbpedia.org/ontology/blazonLink	blazon link
+http://dbpedia.org/ontology/arrondissement	arrondissement
+http://dbpedia.org/ontology/teamName	team name
+http://dbpedia.org/ontology/frequencyOfPublication	frequency of publication
+http://dbpedia.org/ontology/isil	International Standard Identifier for Libraries and Related Organizations (ISIL)
+http://dbpedia.org/ontology/inseeCode	INSEE code
+http://dbpedia.org/ontology/start	start
+http://dbpedia.org/ontology/characterInPlay	character in play
+http://dbpedia.org/ontology/nonFictionSubject	non-fiction subject
+http://dbpedia.org/ontology/mouthMountain	mouth mountain
+http://dbpedia.org/ontology/academyAward	Academy Award
+http://dbpedia.org/ontology/pronunciation	pronunciation
+http://dbpedia.org/ontology/populationYear	population year
+http://dbpedia.org/ontology/governmentElevation	government elevation (μ)
+http://dbpedia.org/ontology/grandsire	grandsire
+http://dbpedia.org/ontology/impactFactorAsOf	impact factor as of
+http://dbpedia.org/ontology/density	density (μ3)
+http://dbpedia.org/ontology/blockAlloy	block alloy
+http://dbpedia.org/ontology/otherFuelType	secondary/other fuel type
+http://dbpedia.org/ontology/elo	ELO rating
+http://dbpedia.org/ontology/detectionMethod	Method of discovery
+http://dbpedia.org/ontology/militaryUnitSize	military unit size
+http://dbpedia.org/ontology/formerBandMember	former band member
+http://dbpedia.org/ontology/alpsMajorSector	Alps major sector
+http://dbpedia.org/ontology/areaMetro	area metro (m2)
+http://dbpedia.org/ontology/detractor	detractor
+http://dbpedia.org/ontology/climbUpNumber	clip up number
+http://dbpedia.org/ontology/lunarSampleMass	lunar sample mass (g)
+http://dbpedia.org/ontology/nrhpType	NRHP type
+http://dbpedia.org/ontology/highestMountain	highest mountain
+http://dbpedia.org/ontology/numberOfMinistries	number of ministries
+http://dbpedia.org/ontology/owningOrganisation	owning organisation
+http://dbpedia.org/ontology/beatifiedPlace	beatified place
+http://dbpedia.org/ontology/curator	curator
+http://dbpedia.org/ontology/simcCode	SIMC code
+http://dbpedia.org/ontology/goldMedalSingle	gold medal single
+http://dbpedia.org/ontology/danseCompetition	danse competition
+http://dbpedia.org/ontology/tvShow	tvShow
+http://dbpedia.org/ontology/Planet/volume	volume (km3)
+http://dbpedia.org/ontology/religion	religion
+http://dbpedia.org/ontology/filename	filename
+http://dbpedia.org/ontology/constructionMaterial	construction material
+http://dbpedia.org/ontology/locationCountry	państwo
+http://dbpedia.org/ontology/olympicOathSwornBy	olympic oath sworn by
+http://dbpedia.org/ontology/otherServingLines	other serving lines
+http://dbpedia.org/ontology/winsAtJapan	wins at japan
+http://dbpedia.org/ontology/carcinogen	carcinogen
+http://dbpedia.org/ontology/landPercentage	land percentage of a place
+http://dbpedia.org/ontology/currency	currency
+http://dbpedia.org/ontology/polePosition	pole position
+http://dbpedia.org/ontology/namedByLanguage	named by language
+http://dbpedia.org/ontology/towerHeight	tower height
+http://dbpedia.org/ontology/taoiseach	taoiseach
+http://dbpedia.org/ontology/nationalTeamYear	national team year
+http://dbpedia.org/ontology/jurisdiction	jurisdiction
+http://dbpedia.org/ontology/olympicGamesWins	olympic games wins
+http://dbpedia.org/ontology/musicFusionGenre	music fusion genre
+http://dbpedia.org/ontology/sisterStation	sister station
+http://dbpedia.org/ontology/amateurTitle	amateur title
+http://dbpedia.org/ontology/dorlandsPrefix	Dorlands prefix
+http://dbpedia.org/ontology/australiaOpenSingle	australia open single
+http://dbpedia.org/ontology/firstOlympicEvent	first olympic event
+http://dbpedia.org/ontology/pole	pole
+http://dbpedia.org/ontology/numberOfSpans	number of spans
+http://dbpedia.org/ontology/dorlandsSuffix	Dorlands suffix
+http://dbpedia.org/ontology/state	state
+http://dbpedia.org/ontology/albumRuntime	album duration (s)
+http://dbpedia.org/ontology/version	version
+http://dbpedia.org/ontology/hasInput	has input
+http://dbpedia.org/ontology/nrhpReferenceNumber	NRHP Reference Number
+http://dbpedia.org/ontology/numberOfVisitors	number of visitors
+http://dbpedia.org/ontology/storyEditor	story editor
+http://dbpedia.org/ontology/militaryCommand	military command
+http://dbpedia.org/ontology/fedCup	fed cup
+http://dbpedia.org/ontology/firstAppearance	first appearance
+http://dbpedia.org/ontology/parentOrganisation	parent organisation
+http://dbpedia.org/ontology/viceLeaderParty	vice leader party
+http://dbpedia.org/ontology/bicycleInformation	bicycle information
+http://dbpedia.org/ontology/circuitLength	circuit length (μ)
+http://dbpedia.org/ontology/alpsMainPart	Alps main part
+http://dbpedia.org/ontology/managerYearsStartYear	manager years start year
+http://dbpedia.org/ontology/mbaId	MBA Id
+http://dbpedia.org/ontology/cesarAward	Cesar Award
+http://dbpedia.org/ontology/tattoo	tattoo
+http://dbpedia.org/ontology/sourcePlace	source place
+http://dbpedia.org/ontology/startYearOfSales	start year of sales
+http://dbpedia.org/ontology/jstor	JSTOR
+http://dbpedia.org/ontology/landtagMandate	austrian land tag mandate
+http://dbpedia.org/ontology/nonProfessionalCareer	non professional career
+http://dbpedia.org/ontology/populationTotal	population total
+http://dbpedia.org/ontology/kingdom	kingdom
+http://dbpedia.org/ontology/bgafdId	bgafd id
+http://dbpedia.org/ontology/raceHorse	race horse
+http://dbpedia.org/ontology/majorityFloorLeader	majority floor leader
+http://dbpedia.org/ontology/course	course (μ)
+http://dbpedia.org/ontology/pastor	pastor
+http://dbpedia.org/ontology/fourthCommander	fourth commander
+http://dbpedia.org/ontology/thirdCommander	third commander
+http://dbpedia.org/ontology/typeOfElectrification	type of electrification
+http://dbpedia.org/ontology/agency	agency
+http://dbpedia.org/ontology/publicationDate	publication date
+http://dbpedia.org/ontology/procedure	procedure
+http://dbpedia.org/ontology/captureDate	capture date
+http://dbpedia.org/ontology/numberOfSeasons	number of seasons
+http://dbpedia.org/ontology/geneLocationEnd	gene location end
+http://dbpedia.org/ontology/conflict	conflict
+http://dbpedia.org/ontology/numberOfParticipatingNations	number of participating nations
+http://dbpedia.org/ontology/stateOfOriginYear	state of origin year
+http://dbpedia.org/ontology/administrativeStatus	administrative status
+http://dbpedia.org/ontology/australiaOpenDouble	australia open double
+http://dbpedia.org/ontology/subdivision	subdivision
+http://dbpedia.org/ontology/vehicleCode	vehicle code
+http://dbpedia.org/ontology/borough	borough
+http://dbpedia.org/ontology/waterArea	area of water (m2)
+http://dbpedia.org/ontology/water	water
+http://dbpedia.org/ontology/ruralMunicipality	rural municipality
+http://dbpedia.org/ontology/temple	temple
+http://dbpedia.org/ontology/thirdTeam	third team
+http://dbpedia.org/ontology/productionStartYear	production start year
+http://dbpedia.org/ontology/lahHof	lah hof
+http://dbpedia.org/ontology/managementPlace	management place
+http://dbpedia.org/ontology/salary	salary ($)
+http://dbpedia.org/ontology/modelStartYear	model start year
+http://dbpedia.org/ontology/lethalOnChickens	lethal when given to chickens
+http://dbpedia.org/ontology/subFamily	sub-family
+http://dbpedia.org/ontology/meanTemperature	mean temperature (K)
+http://dbpedia.org/ontology/orbitalInclination	orbital inclination
+http://dbpedia.org/ontology/millType	mill type
+http://dbpedia.org/ontology/anthem	anthem
+http://dbpedia.org/ontology/birthName	birth name
+http://dbpedia.org/ontology/touristicSite	touristic site
+http://dbpedia.org/ontology/councilArea	Council area
+http://dbpedia.org/ontology/firstFlightStartDate	first flight start date
+http://dbpedia.org/ontology/numberOfSeats	number of seats
+http://dbpedia.org/ontology/college	college
+http://dbpedia.org/ontology/lastLaunch	last launch
+http://dbpedia.org/ontology/usopenWins	usopen wins
+http://dbpedia.org/ontology/Planet/mass	mass (kg)
+http://dbpedia.org/ontology/schoolBoard	school board
+http://dbpedia.org/ontology/olympicGamesGold	olympic games gold
+http://dbpedia.org/ontology/parliament	parliament
+http://dbpedia.org/ontology/numberOfPlatformLevels	number of platform levels
+http://dbpedia.org/ontology/iataAirlineCode	IATA code
+http://dbpedia.org/ontology/inclination	inclination
+http://dbpedia.org/ontology/officialLanguage	official language
+http://dbpedia.org/ontology/amgid	amgId
+http://dbpedia.org/ontology/island	island
+http://dbpedia.org/ontology/educationSystem	education system
+http://dbpedia.org/ontology/location	location
+http://dbpedia.org/ontology/muteCharacterInPlay	mute character in play
+http://dbpedia.org/ontology/numberOfStaff	number of staff
+http://dbpedia.org/ontology/completionDate	completion date
+http://dbpedia.org/ontology/mvp	mvp
+http://dbpedia.org/ontology/work	work
+http://dbpedia.org/ontology/inn	INN
+http://dbpedia.org/ontology/humanDevelopmentIndexAsOf	human development index as of
+http://dbpedia.org/ontology/juniorYearsEndYear	junior years end year
+http://dbpedia.org/ontology/subjectOfPlay	subject of play
+http://dbpedia.org/ontology/formerTeam	former team
+http://dbpedia.org/ontology/publiclyAccessible	publicly accessible
+http://dbpedia.org/ontology/barangays	barangays
+http://dbpedia.org/ontology/speaker	speaker
+http://dbpedia.org/ontology/lunarRover	lunar rover
+http://dbpedia.org/ontology/gameArtist	game artist
+http://dbpedia.org/ontology/block	block
+http://dbpedia.org/ontology/continentalTournamentGold	continental tournament gold
+http://dbpedia.org/ontology/geneLocationStart	gene location start
+http://dbpedia.org/ontology/heisman	heisman
+http://dbpedia.org/ontology/coach	coach
+http://dbpedia.org/ontology/background	background
+http://dbpedia.org/ontology/aircraftHelicopter	aircraft helicopter
+http://dbpedia.org/ontology/goldMedalDouble	gold medal double
+http://dbpedia.org/ontology/areaQuote	area quote
+http://dbpedia.org/ontology/numberOfIslands	number of islands
+http://dbpedia.org/ontology/blazonRatio	blazon ratio
+http://dbpedia.org/ontology/statusYear	status year
+http://dbpedia.org/ontology/campusType	campus type
+http://dbpedia.org/ontology/victim	victim
+http://dbpedia.org/ontology/weapon	weapon
+http://dbpedia.org/ontology/largestWin	largest win
+http://dbpedia.org/ontology/soccerTournamentLastChampion	last champion
+http://dbpedia.org/ontology/superintendent	superintendent
+http://dbpedia.org/ontology/battingSide	batting side
+http://dbpedia.org/ontology/aircraftFighter	aircraft fighter
+http://dbpedia.org/ontology/sourceDistrict	source district
+http://dbpedia.org/ontology/highestBuildingInYear	highest building in year
+http://dbpedia.org/ontology/alongside	alongside
+http://dbpedia.org/ontology/editor	editor
+http://dbpedia.org/ontology/usOpenSingle	us open single
+http://dbpedia.org/ontology/numberOfCollectionItems	number of items in collection
+http://dbpedia.org/ontology/typeOfStorage	type of storage
+http://dbpedia.org/ontology/philosophicalSchool	philosophicalSchool
+http://dbpedia.org/ontology/significantProject	significant project
+http://dbpedia.org/ontology/silCode	SIL code
+http://dbpedia.org/ontology/casualties	casualties
+http://dbpedia.org/ontology/populationTotalRanking	total population ranking
+http://dbpedia.org/ontology/stationVisitDuration	station visit duration (s)
+http://dbpedia.org/ontology/homeArena	home arena
+http://dbpedia.org/ontology/commonName	common name
+http://dbpedia.org/ontology/canton	canton
+http://dbpedia.org/ontology/president	president
+http://dbpedia.org/ontology/provost	provost
+http://dbpedia.org/ontology/redline	redline (kmh)
+http://dbpedia.org/ontology/tempPlace	Temporary Placement in the Music Charts
+http://dbpedia.org/ontology/eyeColor	eye color
+http://dbpedia.org/ontology/wavelength	wavelength (μ)
+http://dbpedia.org/ontology/combatant	combatant
+http://dbpedia.org/ontology/amateurTeam	amateur team
+http://dbpedia.org/ontology/refgen	reference for general data
+http://dbpedia.org/ontology/refgeo	reference for geographic data
+http://dbpedia.org/ontology/satellitesDeployed	satellites deployed
+http://dbpedia.org/ontology/functionEndYear	function end year
+http://dbpedia.org/ontology/networth	networth ($)
+http://dbpedia.org/ontology/homeColourHexCode	colour hex code of home jersey or its parts
+http://dbpedia.org/ontology/drainsTo	drains to
+http://dbpedia.org/ontology/Building/floorArea	floor area (m2)
+http://dbpedia.org/ontology/politicGovernmentDepartment	politic government department
+http://dbpedia.org/ontology/minimumAreaQuote	minimum area quote
+http://dbpedia.org/ontology/weight	weight (g)
+http://dbpedia.org/ontology/associatedAct	associated act
+http://dbpedia.org/ontology/silverMedalMixed	silver medal mixed
+http://dbpedia.org/ontology/ordination	Ordination
+http://dbpedia.org/ontology/utcOffset	UTC offset
+http://dbpedia.org/ontology/winsAtChampionships	wins at championships
+http://dbpedia.org/ontology/MeanOfTransportation/height	height (mm)
+http://dbpedia.org/ontology/numberOfTracks	number of tracks
+http://dbpedia.org/ontology/legalArticle	legal article
+http://dbpedia.org/ontology/influencedBy	influenced by
+http://dbpedia.org/ontology/secondPlace	second place
+http://dbpedia.org/ontology/barPassRate	bar pass rate
+http://dbpedia.org/ontology/clubsRecordGoalscorer	clubs record goalscorer
+http://dbpedia.org/ontology/aircraftHelicopterMultirole	aircraft helicopter multirole
+http://dbpedia.org/ontology/openingFilm	opening film
+http://dbpedia.org/ontology/lowestPlace	lowest place
+http://dbpedia.org/ontology/endingTheme	ending theme
+http://dbpedia.org/ontology/Galaxy/apoapsis	apoapsis (km)
+http://dbpedia.org/ontology/child	child
+http://dbpedia.org/ontology/maidenVoyage	maiden voyage
+http://dbpedia.org/ontology/lastRace	last race
+http://dbpedia.org/ontology/notifyDate	notify date
+http://dbpedia.org/ontology/coalition	coalition
+http://dbpedia.org/ontology/shortProgCompetition	short prog competition
+http://dbpedia.org/ontology/hgncid	HGNCid
+http://dbpedia.org/ontology/activeYearsStartDate	active years start date
+http://dbpedia.org/ontology/runwayWidth	width of runway (μ)
+http://dbpedia.org/ontology/selectionYear	selection year
+http://dbpedia.org/ontology/lchfDraftTeam	lchf draft year
+http://dbpedia.org/ontology/flora	flora
+http://dbpedia.org/ontology/period	event period
+http://dbpedia.org/ontology/radio	radio
+http://dbpedia.org/ontology/passengersPerYear	passengers per year
+http://dbpedia.org/ontology/architectualBureau	architectual bureau
+http://dbpedia.org/ontology/startWqs	start wqs
+http://dbpedia.org/ontology/headOfFamily	family head
+http://dbpedia.org/ontology/codeStockExchange	code Stock Exchange
+http://dbpedia.org/ontology/security	security
+http://dbpedia.org/ontology/pistonStroke	piston stroke (μ)
+http://dbpedia.org/ontology/ceeb	ceeb
+http://dbpedia.org/ontology/prefaceBy	author of preface
+http://dbpedia.org/ontology/mayorCouncillor	mayor councillor
+http://dbpedia.org/ontology/certification	certification
+http://dbpedia.org/ontology/musicSubgenre	music subgenre
+http://dbpedia.org/ontology/parkingInformation	parking information
+http://dbpedia.org/ontology/capitalRegion	capital region
+http://dbpedia.org/ontology/poleDriverCountry	pole driver country
+http://dbpedia.org/ontology/fate	fate
+http://dbpedia.org/ontology/delegateMayor	delegate mayor
+http://dbpedia.org/ontology/sheading	sheading
+http://dbpedia.org/ontology/MeanOfTransportation/diameter	diameter (μ)
+http://dbpedia.org/ontology/agglomeration	agglomeration
+http://dbpedia.org/ontology/formula	formula
+http://dbpedia.org/ontology/dateOfAbandonment	date of abandonment
+http://dbpedia.org/ontology/arielAward	Ariel Award
+http://dbpedia.org/ontology/geologicPeriod	geologic period
+http://dbpedia.org/ontology/subsidiary	subsidiary
+http://dbpedia.org/ontology/winsAtSenEuro	wins at Senior Euro
+http://dbpedia.org/ontology/species	species
+http://dbpedia.org/ontology/goyaAward	Goya Award
+http://dbpedia.org/ontology/imdbId	IMDB id
+http://dbpedia.org/ontology/countryWithFirstSpaceflight	country with first spaceflight
+http://dbpedia.org/ontology/routeStart	route start
+http://dbpedia.org/ontology/kinOfLanguage	kindOfLanguage
+http://dbpedia.org/ontology/shareSource	share source
+http://dbpedia.org/ontology/buildingEndDate	building end date
+http://dbpedia.org/ontology/abbreviation	abbreviation
+http://dbpedia.org/ontology/sizeLogo	size logo
+http://dbpedia.org/ontology/meshNumber	MeSH number
+http://dbpedia.org/ontology/beltwayCity	beltway city
+http://dbpedia.org/ontology/shoot	shoot
+http://dbpedia.org/ontology/year	year
+http://dbpedia.org/ontology/colorChart	colorChart
+http://dbpedia.org/ontology/diocese	diocese
+http://dbpedia.org/ontology/campusSize	campus size (m2)
+http://dbpedia.org/ontology/heightAgainst	height against
+http://dbpedia.org/ontology/establishment	Establishment
+http://dbpedia.org/ontology/reignName	reign name
+http://dbpedia.org/ontology/settlement	settlement
+http://dbpedia.org/ontology/firstGame	first game
+http://dbpedia.org/ontology/aircraftHelicopterTransport	aircraft helicopter transport
+http://dbpedia.org/ontology/assistantPrincipal	assistant principal
+http://dbpedia.org/ontology/wikiPageExtracted	extraction datetime
+http://dbpedia.org/ontology/Stream/watershed	watershed (km2)
+http://dbpedia.org/ontology/wikiPageID	Wikipage page ID
+http://dbpedia.org/ontology/established	Established
+http://dbpedia.org/ontology/commandant	commandant
+http://dbpedia.org/ontology/distanceToCardiff	distance to Cardiff (μ)
+http://dbpedia.org/ontology/sexualOrientation	sexual orientation
+http://dbpedia.org/ontology/winsAtKLPGA	wins at KLPGA
+http://dbpedia.org/ontology/historicalRegion	historical region
+http://dbpedia.org/ontology/measurements	measurements
+http://dbpedia.org/ontology/shareOfAudience	share of audience
+http://dbpedia.org/ontology/alliance	alliance
+http://dbpedia.org/ontology/generalCouncil	general council
+http://dbpedia.org/ontology/nflTeam	nfl team
+http://dbpedia.org/ontology/fundedBy	funded by
+http://dbpedia.org/ontology/populationUrban	population urban
+http://dbpedia.org/ontology/twinCountry	twin country
+http://dbpedia.org/ontology/lccn	LCCN
+http://dbpedia.org/ontology/wikiPageHistoryLink	Link to the Wikipage history URL
+http://dbpedia.org/ontology/homage	homage
+http://dbpedia.org/ontology/colourName	colour name
+http://dbpedia.org/ontology/narrator	narrator
+http://dbpedia.org/ontology/complexion	complexion
+http://dbpedia.org/ontology/Lake/areaOfCatchment	area of catchment (km2)
+http://dbpedia.org/ontology/continent	continent
+http://dbpedia.org/ontology/solventWithMediocreSolubility	solvent with mediocre solubility
+http://dbpedia.org/ontology/projectStartDate	project start date
+http://dbpedia.org/ontology/mainIslands	main islands
+http://dbpedia.org/ontology/linkedSpace	linked space
+http://dbpedia.org/ontology/alpsGroup	Alps group
+http://dbpedia.org/ontology/filmAudioType	film audio type
+http://dbpedia.org/ontology/flagCaption	flag caption
+http://dbpedia.org/ontology/fuelSystem	fuel system
+http://dbpedia.org/ontology/distanceToCapital	distance to capital (μ)
+http://dbpedia.org/ontology/thirdPlace	third place
+http://dbpedia.org/ontology/eurobabeIndexId	eurobabe index id
+http://dbpedia.org/ontology/isHandicappedAccessible	is handicapped accessible
+http://dbpedia.org/ontology/runwaySurface	surface of runway
+http://dbpedia.org/ontology/purchasingPowerParity	purchasing power parity
+http://dbpedia.org/ontology/regime	regime
+http://dbpedia.org/ontology/route	route
+http://dbpedia.org/ontology/grossDomesticProduct	gross domestic product (GDP) ($)
+http://dbpedia.org/ontology/bustSize	bust size (μ)
+http://dbpedia.org/ontology/numberOfPlayers	number of players
+http://dbpedia.org/ontology/dryCargo	dry cargo (g)
+http://dbpedia.org/ontology/casNumber	CAS number
+http://dbpedia.org/ontology/purpose	purpose
+http://dbpedia.org/ontology/initiallyUsedFor	initally used for
+http://dbpedia.org/ontology/prefecture	prefecture
+http://dbpedia.org/ontology/bigPoolRecord	big pool record
+http://dbpedia.org/ontology/cyclistGenre	cyclist genre
+http://dbpedia.org/ontology/lethalOnRats	lethal when given to rats
+http://dbpedia.org/ontology/closed	closed
+http://dbpedia.org/ontology/athletics	athletics
+http://dbpedia.org/ontology/capitalCoordinates	capital coordinates
+http://dbpedia.org/ontology/espnId	ESPN id
+http://dbpedia.org/ontology/icd10	ICD10
+http://dbpedia.org/ontology/formerBroadcastNetwork	former broadcast network
+http://dbpedia.org/ontology/nameDay	name day
+http://dbpedia.org/ontology/schoolNumber	school number
+http://dbpedia.org/ontology/chairLabel	chair label
+http://dbpedia.org/ontology/forces	forces
+http://dbpedia.org/ontology/diploma	diploma
+http://dbpedia.org/ontology/populationMetro	population metro
+http://dbpedia.org/ontology/believers	Believers
+http://dbpedia.org/ontology/Galaxy/averageSpeed	average speed (km/s)
+http://dbpedia.org/ontology/min	min
+http://dbpedia.org/ontology/prospectTeam	prospect team
+http://dbpedia.org/ontology/tennisSurfaceType	type of tennis surface
+http://dbpedia.org/ontology/grave	grave
+http://dbpedia.org/ontology/unitaryAuthority	unitary authority
+http://dbpedia.org/ontology/whaDraftYear	wha draft year
+http://dbpedia.org/ontology/frozen	frozen
+http://dbpedia.org/ontology/worldTournamentBronze	world tournament bronze
+http://dbpedia.org/ontology/olympicOathSwornByJudge	olympic oath sworn by judge
+http://dbpedia.org/ontology/title	title
+http://dbpedia.org/ontology/currentWorldChampion	current world champion
+http://dbpedia.org/ontology/governmentMountain	government mountain
+http://dbpedia.org/ontology/seatNumber	number of seats in the land parlement
+http://dbpedia.org/ontology/numberOfSports	number of sports
+http://dbpedia.org/ontology/SpaceMission/lunarEvaTime	lunar EVA time (ω)
+http://dbpedia.org/ontology/winsAtLPGA	wins at LPGA
+http://dbpedia.org/ontology/rankInFinalMedalCount	rank in final medal count
+http://dbpedia.org/ontology/refseq	RefSeq
+http://dbpedia.org/ontology/topLevelDomain	country top level (tld)
+http://dbpedia.org/ontology/rgbCoordinateRed	red coordinate in the RGB space
+http://dbpedia.org/ontology/digitalSubChannel	digital sub channel
+http://dbpedia.org/ontology/bioavailability	Bioavailability
+http://dbpedia.org/ontology/airportUsing	Different usage of an airport
+http://dbpedia.org/ontology/numberOfStars	number of stars
+http://dbpedia.org/ontology/statName	stat name
+http://dbpedia.org/ontology/otherParty	other party
+http://dbpedia.org/ontology/licensee	licensee
+http://dbpedia.org/ontology/owner	owner
+http://dbpedia.org/ontology/projectBudgetTotal	project budget total ($)
+http://dbpedia.org/ontology/numberOfDependency	number of dependency
+http://dbpedia.org/ontology/provinceLink	province link
+http://dbpedia.org/ontology/agencyStationCode	agency station code
+http://dbpedia.org/ontology/lowestPoint	lowest point
+http://dbpedia.org/ontology/vicePrincipal	vice principal
+http://dbpedia.org/ontology/runwayLength	length of runway (μ)
+http://dbpedia.org/ontology/region	region
+http://dbpedia.org/ontology/statistic	statistic
+http://dbpedia.org/ontology/siren	siren number
+http://dbpedia.org/ontology/zdb	zdb
+http://dbpedia.org/ontology/pseudonym	pseudonym
+http://dbpedia.org/ontology/sublimationPoint	sublimation point (K)
+http://dbpedia.org/ontology/crew	crew
+http://dbpedia.org/ontology/solventWithBadSolubility	solvent with bad solubility
+http://dbpedia.org/ontology/Spacecraft/periapsis	periapsis (km)
+http://dbpedia.org/ontology/aspectRatio	Aspect Ratio
+http://dbpedia.org/ontology/testaverage	testaverage
+http://dbpedia.org/ontology/billed	billed
+http://dbpedia.org/ontology/eruptionYear	eruption date
+http://dbpedia.org/ontology/command	command
+http://dbpedia.org/ontology/youthClub	youth club
+http://dbpedia.org/ontology/mapCaption	map caption
+http://dbpedia.org/ontology/successfulLaunches	successful launches
+http://dbpedia.org/ontology/staff	staff
+http://dbpedia.org/ontology/bestRankSingle	best rank single
+http://dbpedia.org/ontology/fansgroup	fansgroup
+http://dbpedia.org/ontology/escapeVelocity	escape velocity (kmh)
+http://dbpedia.org/ontology/meetingRoad	meeting road
+http://dbpedia.org/ontology/amateurTie	amateur tie
+http://dbpedia.org/ontology/areaTotal	area total (m2)
+http://dbpedia.org/ontology/leadYear	lead year
+http://dbpedia.org/ontology/cuisine	cuisine
+http://dbpedia.org/ontology/minimumArea	minimum area
+http://dbpedia.org/ontology/coachClub	coach club
+http://dbpedia.org/ontology/lifeExpectancy	life expectancy
+http://dbpedia.org/ontology/city	city
+http://dbpedia.org/ontology/reopened	reopened
+http://dbpedia.org/ontology/offeredClasses	offered classes
+http://dbpedia.org/ontology/legalForm	legal form
+http://dbpedia.org/ontology/agglomerationPopulation	agglomeration population
+http://dbpedia.org/ontology/averageSpeed	average speed (kmh)
+http://dbpedia.org/ontology/heightAboveAverageTerrain	height above average terrain (μ)
+http://dbpedia.org/ontology/graySubject	Gray subject
+http://dbpedia.org/ontology/lieutenancyArea	Lieutenancy area
+http://dbpedia.org/ontology/okatoCode	okato code
+http://dbpedia.org/ontology/provides	provides
+http://dbpedia.org/ontology/lastLaunchDate	last launch date
+http://dbpedia.org/ontology/knownFor	known for
+http://dbpedia.org/ontology/review	review
+http://dbpedia.org/ontology/rocket	rocket
+http://dbpedia.org/ontology/linguisticsTradition	linguistics tradition
+http://dbpedia.org/ontology/americanComedyAward	American Comedy Award
+http://dbpedia.org/ontology/aircraftTransport	aircraft transport
+http://dbpedia.org/ontology/firstPublisher	first publisher
+http://dbpedia.org/ontology/sharingOutPopulation	sharing out population
+http://dbpedia.org/ontology/compiler	compiler
+http://dbpedia.org/ontology/spurOf	spur of
+http://dbpedia.org/ontology/populationMetroDensity	population metro density (/sqkm)
+http://dbpedia.org/ontology/ibdbId	IBDB ID
+http://dbpedia.org/ontology/championships	championships
+http://dbpedia.org/ontology/neighbourConstellations	neighbour constellations
+http://dbpedia.org/ontology/dateOfBurial	date of burial
+http://dbpedia.org/ontology/languageRegulator	language regulator or academy
+http://dbpedia.org/ontology/toll	toll ($)
+http://dbpedia.org/ontology/different	different
+http://dbpedia.org/ontology/penaltyScore	penalty score
+http://dbpedia.org/ontology/numberOfParticipatingAthletes	number of participating athletes
+http://dbpedia.org/ontology/fastestDriverCountry	fastest driver country
+http://dbpedia.org/ontology/issn	issn
+http://dbpedia.org/ontology/ridId	RID Id
+http://dbpedia.org/ontology/amateurVictory	amateur victory
+http://dbpedia.org/ontology/filmColourType	film colour type
+http://dbpedia.org/ontology/license	license
+http://dbpedia.org/ontology/winsAtAus	wins at AUS
+http://dbpedia.org/ontology/podium	podium
+http://dbpedia.org/ontology/sixthFormStudents	sixth form students
+http://dbpedia.org/ontology/defeatAsMgr	defeat as team manager
+http://dbpedia.org/ontology/equipment	equipment
+http://dbpedia.org/ontology/governmentCountry	government country
+http://dbpedia.org/ontology/prefectMandate	mandate of a prefect of a romanian settlement
+http://dbpedia.org/ontology/numberOfGraduateStudents	number of graduate students
+http://dbpedia.org/ontology/settingOfPlay	setting of play
+http://dbpedia.org/ontology/maidenFlight	maiden flight
+http://dbpedia.org/ontology/animal	animal
+http://dbpedia.org/ontology/legalArrondissement	legal arrondissement
+http://dbpedia.org/ontology/Stream/minimumDischarge	minimum discharge (m³/s)
+http://dbpedia.org/ontology/nationalTournamentBronze	national tournament bronze
+http://dbpedia.org/ontology/champion	champion
+http://dbpedia.org/ontology/solubility	solubility
+http://dbpedia.org/ontology/spacecraft	spacecraft
+http://dbpedia.org/ontology/localAuthority	local authority
+http://dbpedia.org/ontology/circuitName	circuit name
+http://dbpedia.org/ontology/subdivisionName	subdivision name of the island
+http://dbpedia.org/ontology/musicBand	Music Band
+http://dbpedia.org/ontology/usk	approved rating of the Entertainment Software Self-Regulation Body in Germany
+http://dbpedia.org/ontology/productionYears	production years
+http://dbpedia.org/ontology/modelEndYear	model end year
+http://dbpedia.org/ontology/meltingPoint	melting point (K)
+http://dbpedia.org/ontology/greenLongDistancePisteNumber	green long distance piste number
+http://dbpedia.org/ontology/managerSeason	manager season
+http://dbpedia.org/ontology/maximumBoatLength	maximum boat length (μ)
+http://dbpedia.org/ontology/games	games
+http://dbpedia.org/ontology/acceleration	acceleration (s)
+http://dbpedia.org/ontology/ceremonialCounty	Ceremonial County
+http://dbpedia.org/ontology/boiler	boiler
+http://dbpedia.org/ontology/terytCode	TERYT code
+http://dbpedia.org/ontology/dist_ly	dist_ly
+http://dbpedia.org/ontology/countryWithFirstSatellite	country with first satellite
+http://dbpedia.org/ontology/colonialName	colonial name
+http://dbpedia.org/ontology/kindOfRock	kind of rock
+http://dbpedia.org/ontology/show	show
+http://dbpedia.org/ontology/affiliate	affiliate
+http://dbpedia.org/ontology/totalCargo	total cargo (g)
+http://dbpedia.org/ontology/stockExchange	Registered at Stock Exchange
+http://dbpedia.org/ontology/projectEndDate	project end date
+http://dbpedia.org/ontology/crest	crest
+http://dbpedia.org/ontology/event	event
+http://dbpedia.org/ontology/perCapitaIncomeAsOf	per capita income as of
+http://dbpedia.org/ontology/mood	mood
+http://dbpedia.org/ontology/entrezgene	EntrezGene
+http://dbpedia.org/ontology/race	race
+http://dbpedia.org/ontology/sentence	sentence
+http://dbpedia.org/ontology/icd9	ICD9
+http://dbpedia.org/ontology/layout	layout
+http://dbpedia.org/ontology/Spacecraft/dockedTime	docked time (μ)
+http://dbpedia.org/ontology/tuition	tuition ($)
+http://dbpedia.org/ontology/Galaxy/orbitalPeriod	orbital period (μ)
+http://dbpedia.org/ontology/populationTotalReference	total population reference
+http://dbpedia.org/ontology/numberOfEmployees	number of employees
+http://dbpedia.org/ontology/outflow	outflow
+http://dbpedia.org/ontology/totalLaunches	total launches
+http://dbpedia.org/ontology/authorityTitle	authority title of a romanian settlement
+http://dbpedia.org/ontology/seiyu	seiyu
+http://dbpedia.org/ontology/wikiPageRevisionID	Wikipage revision ID
+http://dbpedia.org/ontology/prefix	prefix
+http://dbpedia.org/ontology/comic	comic
+http://dbpedia.org/ontology/racketCatching	racket catching
+http://dbpedia.org/ontology/landtag	austrian land tag
+http://dbpedia.org/ontology/value	value
+http://dbpedia.org/ontology/previousEvent	previous event
+http://dbpedia.org/ontology/name	name
+http://dbpedia.org/ontology/televisionSeries	television series
+http://dbpedia.org/ontology/activeYearsEndYear	active years end year
+http://dbpedia.org/ontology/goldenRaspberryAward	Golden Raspberry Award
+http://dbpedia.org/ontology/championInDoubleFemale	champion in double female
+http://dbpedia.org/ontology/tvComId	tv.com id
+http://dbpedia.org/ontology/map	map
+http://dbpedia.org/ontology/stateOfOrigin	state of origin
+http://dbpedia.org/ontology/proPeriod	pro period
+http://dbpedia.org/ontology/max	max
+http://dbpedia.org/ontology/hsvCoordinateHue	hue coordinate in the HSV colour space
+http://dbpedia.org/ontology/Drug/meltingPoint	melting point (K)
+http://dbpedia.org/ontology/areaUrban	area urban (m2)
+http://dbpedia.org/ontology/capitalCountry	capital country
+http://dbpedia.org/ontology/dynasty	dynasty
+http://dbpedia.org/ontology/maximumDepthQuote	maximum depth quote
+http://dbpedia.org/ontology/publication	publication
+http://dbpedia.org/ontology/notableCommander	notable commander
+http://dbpedia.org/ontology/nominee	nominee
+http://dbpedia.org/ontology/startCareer	start career
+http://dbpedia.org/ontology/individualisedPnd	individualised PND number
+http://dbpedia.org/ontology/dist_pc	dist_pc
+http://dbpedia.org/ontology/co2Emission	CO2 emission (g/km)
+http://dbpedia.org/ontology/projectType	project type
+http://dbpedia.org/ontology/restoreDate	restore date
+http://dbpedia.org/ontology/geology	geology
+http://dbpedia.org/ontology/gender	gender
+http://dbpedia.org/ontology/slogan	slogan
+http://dbpedia.org/ontology/adjacentSettlement	adjacent settlement of a switzerland settlement
+http://dbpedia.org/ontology/populationRural	population rural
+http://dbpedia.org/ontology/notableWork	notable work
+http://dbpedia.org/ontology/websiteLabel	label of a website
+http://dbpedia.org/ontology/worldChampionTitleYear	year of world champion title
+http://dbpedia.org/ontology/sourceConfluencePosition	source confluence position
+http://dbpedia.org/ontology/bloodType	blood type
+http://dbpedia.org/ontology/father	father
+http://dbpedia.org/ontology/aircraftRecon	aircraft recon
+http://dbpedia.org/ontology/populationPctMen	population percentage male
+http://dbpedia.org/ontology/pccSecretary	pcc secretary
+http://dbpedia.org/ontology/athleticsDiscipline	athletics discipline
+http://dbpedia.org/ontology/recommissioningDate	recommissioning date
+http://dbpedia.org/ontology/rankArea	rank of an area
+http://dbpedia.org/ontology/cylinderBore	cylinder bore (μ)
+http://dbpedia.org/ontology/ascent	ascent
+http://dbpedia.org/ontology/sportSpecialty	sport specialty
+http://dbpedia.org/ontology/result	result
+http://dbpedia.org/ontology/institution	institution
+http://dbpedia.org/ontology/inCemetery	in cemetery
+http://dbpedia.org/ontology/atRowNumber	row number
+http://dbpedia.org/ontology/volumeQuote	volume quote
+http://dbpedia.org/ontology/foundedBy	founded by
+http://dbpedia.org/ontology/feastDay	feast day, holiday
+http://dbpedia.org/ontology/month	month
+http://dbpedia.org/ontology/goldenGlobeAward	Golden Globe Award
+http://dbpedia.org/ontology/crews	crews
+http://dbpedia.org/ontology/length	length (μ)
+http://dbpedia.org/ontology/varietals	varietals
+http://dbpedia.org/ontology/principalArea	principal area
+http://dbpedia.org/ontology/aircraftType	aircraft type
+http://dbpedia.org/ontology/generalManager	general manager
+http://dbpedia.org/ontology/handedness	handedness
+http://dbpedia.org/ontology/comment	comment
+http://dbpedia.org/ontology/continentalTournament	continental tournament
+http://dbpedia.org/ontology/cylinderCount	cylinder count
+http://dbpedia.org/ontology/performer	performer
+http://dbpedia.org/ontology/openingYear	opening year
+http://dbpedia.org/ontology/popularVote	Number of votes given to candidate
+http://dbpedia.org/ontology/recordDate	record date
+http://dbpedia.org/ontology/cmykCoordinateYellow	yellow coordinate in the CMYK space
+http://dbpedia.org/ontology/britishComedyAwards	British Comedy Awards
+http://dbpedia.org/ontology/nation	nation
+http://dbpedia.org/ontology/millsCodeNL	mill code NL
+http://dbpedia.org/ontology/relative	relative
+http://dbpedia.org/ontology/usingCountry	using country
+http://dbpedia.org/ontology/endDate	end date
+http://dbpedia.org/ontology/county	county
+http://dbpedia.org/ontology/recordLabel	record label
+http://dbpedia.org/ontology/currentCity	current city
+http://dbpedia.org/ontology/organ	organ
+http://dbpedia.org/ontology/numberOfSuites	number of suites
+http://dbpedia.org/ontology/smiles	SMILES
+http://dbpedia.org/ontology/numberOfArrondissement	number of arrondissement
+http://dbpedia.org/ontology/trainerClub	trainer club
+http://dbpedia.org/ontology/currentMember	current member
+http://dbpedia.org/ontology/kindOfCriminal	kind of criminal
+http://dbpedia.org/ontology/highestRank	highest rank
+http://dbpedia.org/ontology/SpaceMission/distanceTraveled	distance traveled (km)
+http://dbpedia.org/ontology/regionalPrefecture	regional prefecture
+http://dbpedia.org/ontology/officialName	official name
+http://dbpedia.org/ontology/Planet/minimumTemperature	minimum temperature (K)
+http://dbpedia.org/ontology/march	march
+http://dbpedia.org/ontology/lymph	lymph
+http://dbpedia.org/ontology/firstDriverCountry	first driver country
+http://dbpedia.org/ontology/broadcastNetwork	broadcast network
+http://dbpedia.org/ontology/fileURL	The URL at which this file can be downloaded
+http://dbpedia.org/ontology/numberOfAcademicStaff	number of academic staff
+http://dbpedia.org/ontology/startWct	start xct
+http://dbpedia.org/ontology/parentMountainPeak	parent mountain peak
+http://dbpedia.org/ontology/flagBearer	flag bearer
+http://dbpedia.org/ontology/soccerTournamentTopScorer	top scorer
+http://dbpedia.org/ontology/spouseName	spouse name
+http://dbpedia.org/ontology/usOpenDouble	us open double
+http://dbpedia.org/ontology/populationQuote	population quote
+http://dbpedia.org/ontology/mouthDistrict	mouth district
+http://dbpedia.org/ontology/information	information
+http://dbpedia.org/ontology/ethnicity	ethnicity
+http://dbpedia.org/ontology/translator	translator
+http://dbpedia.org/ontology/historicalName	historical name
+http://dbpedia.org/ontology/flashPoint	flash point
+http://dbpedia.org/ontology/unitCost	unit cost ($)
+http://dbpedia.org/ontology/formerPartner	former partner
+http://dbpedia.org/ontology/numberOfPiersInWater	number of piers in water
+http://dbpedia.org/ontology/operatedBy	operated by
+http://dbpedia.org/ontology/blackSkiPisteNumber	black ski piste number
+http://dbpedia.org/ontology/areaOfSearch	area of search
+http://dbpedia.org/ontology/religiousHeadLabel	religious head label
+http://dbpedia.org/ontology/mascot	mascot
+http://dbpedia.org/ontology/lastWin	last win
+http://dbpedia.org/ontology/secondLeader	secondLeader
+http://dbpedia.org/ontology/regionServed	region served
+http://dbpedia.org/ontology/fibahof	fibahof
+http://dbpedia.org/ontology/numberOfNeighbourhood	number of neighbourhood
+http://dbpedia.org/ontology/numberOfCity	number of contries inside en continent
+http://dbpedia.org/ontology/isPartOf	is part of
+http://dbpedia.org/ontology/enshrinedDeity	enshrined deity
+http://dbpedia.org/ontology/Automobile/fuelCapacity	fuel capacity (l)
+http://dbpedia.org/ontology/Rocket/lowerEarthOrbitPayload	lower earth orbit payload (kg)
+http://dbpedia.org/ontology/surfaceGravity	surface gravity (g)
+http://dbpedia.org/ontology/chef	chef
+http://dbpedia.org/ontology/aircraftElectronic	aircraft electronic
+http://dbpedia.org/ontology/wikiPageCharacterSize	Character size of wiki page
+http://dbpedia.org/ontology/SpaceMission/lunarOrbitTime	lunar orbit time (ω)
+http://dbpedia.org/ontology/trainer	trainer
+http://dbpedia.org/ontology/distanceTraveled	distance traveled (μ)
+http://dbpedia.org/ontology/network	network
+http://dbpedia.org/ontology/rebuildDate	rebuild date
+http://dbpedia.org/ontology/championInDoubleMale	champion in double male
+http://dbpedia.org/ontology/coExecutiveProducer	co executive producer
+http://dbpedia.org/ontology/numberOfStateDeputies	Number Of State Deputies
+http://dbpedia.org/ontology/administrativeCollectivity	administrative collectivity
+http://dbpedia.org/ontology/Infrastructure/length	length (km)
+http://dbpedia.org/ontology/sizeMap	size map
+http://dbpedia.org/ontology/part	part
+http://dbpedia.org/ontology/bestYearWsop	best year wsop
+http://dbpedia.org/ontology/closingDate	closing date
+http://dbpedia.org/ontology/codeBook	code book
+http://dbpedia.org/ontology/seatingCapacity	seating capacity
+http://dbpedia.org/ontology/rankingsDoubles	doubles rankings
+http://dbpedia.org/ontology/secondTeam	second team
+http://dbpedia.org/ontology/partner	partner
+http://dbpedia.org/ontology/whaDraftTeam	wha draft team
+http://dbpedia.org/ontology/enemy	enemy
+http://dbpedia.org/ontology/filmNumber	film number
+http://dbpedia.org/ontology/maximumAreaQuote	maximum area quote
+http://dbpedia.org/ontology/animator	animator
+http://dbpedia.org/ontology/europeanParliamentGroup	european parliament group
+http://dbpedia.org/ontology/parent	parent
+http://dbpedia.org/ontology/media	media
+http://dbpedia.org/ontology/draftPosition	draft position
+http://dbpedia.org/ontology/unicode	unicode
+http://dbpedia.org/ontology/afdbId	afdb id
+http://dbpedia.org/ontology/coachingRecord	coaching record
+http://dbpedia.org/ontology/episodeNumber	episode number
+http://dbpedia.org/ontology/seasonNumber	season number
+http://dbpedia.org/ontology/mayorTitle	mayor title of a hungarian settlement
+http://dbpedia.org/ontology/lineLength	line length (μ)
+http://dbpedia.org/ontology/sea	sea
+http://dbpedia.org/ontology/university	university
+http://dbpedia.org/ontology/coolingSystem	cooling system
+http://dbpedia.org/ontology/servingTemperature	serving temperature
+http://dbpedia.org/ontology/playerSeason	player season
+http://dbpedia.org/ontology/distanceToDublin	distance to Dublin (μ)
+http://dbpedia.org/ontology/peabodyAward	Peabody Award
+http://dbpedia.org/ontology/dateConstruction	date construction
+http://dbpedia.org/ontology/governingBody	governing body
+http://dbpedia.org/ontology/artery	artery
+http://dbpedia.org/ontology/membership	membership
+http://dbpedia.org/ontology/league	league
+http://dbpedia.org/ontology/subClassis	sub-classis
+http://dbpedia.org/ontology/handisport	handisport
+http://dbpedia.org/ontology/powerOutput	power output (W)
+http://dbpedia.org/ontology/serviceStartYear	service start year
+http://dbpedia.org/ontology/presentName	a municipality's present name
+http://dbpedia.org/ontology/representative	number of representatives
+http://dbpedia.org/ontology/worldTournament	world tournament
+http://dbpedia.org/ontology/numberOfStations	number of stations
+http://dbpedia.org/ontology/sex	sex
+http://dbpedia.org/ontology/wineYear	wine year
+http://dbpedia.org/ontology/LunarCrater/diameter	diameter (km)
+http://dbpedia.org/ontology/authority	authority
+http://dbpedia.org/ontology/usOpenMixed	us open mixed
+http://dbpedia.org/ontology/subregion	subregion
+http://dbpedia.org/ontology/SpaceStation/volume	volume (μ³)
+http://dbpedia.org/ontology/musicType	musicType
+http://dbpedia.org/ontology/powerType	power type
+http://dbpedia.org/ontology/tree	tree
+http://dbpedia.org/ontology/contest	contest
+http://dbpedia.org/ontology/Spacecraft/freeFlightTime	free flight time (μ)
+http://dbpedia.org/ontology/numberOfWineries	number of wineries
+http://dbpedia.org/ontology/latestPreviewVersion	latest preview version
+http://dbpedia.org/ontology/shoeNumber	shoe number
+http://dbpedia.org/ontology/sportsFunction	sports function
+http://dbpedia.org/ontology/serviceNumber	service number
+http://dbpedia.org/ontology/originallyUsedFor	originally used for
+http://dbpedia.org/ontology/raceLength	race length (μ)
+http://dbpedia.org/ontology/cargoWater	cargo water (g)
+http://dbpedia.org/ontology/numberOfDistricts	number of districts
+http://dbpedia.org/ontology/sourceConfluenceRegion	source confluence region
+http://dbpedia.org/ontology/unloCode	UN/LOCODE
+http://dbpedia.org/ontology/doctoralAdvisor	doctoral advisor
+http://dbpedia.org/ontology/activeYears	active years
+http://dbpedia.org/ontology/citySince	city since
+http://dbpedia.org/ontology/silverMedalSingle	silver medal single
+http://dbpedia.org/ontology/average	average
+http://dbpedia.org/ontology/compressionRatio	compression ratio
+http://dbpedia.org/ontology/voice	voice
+http://dbpedia.org/ontology/alpsSoiusaCode	Alps SOIUSA code
+http://dbpedia.org/ontology/scientificName	scientific name
+http://dbpedia.org/ontology/currentTeamMember	current team member
+http://dbpedia.org/ontology/summerAppearances	summer appearances
+http://dbpedia.org/ontology/atcSupplemental	ATC supplemental
+http://dbpedia.org/ontology/stateOfOriginPoint	state of origin point
+http://dbpedia.org/ontology/numberOfLines	number of lines
+http://dbpedia.org/ontology/chairperson	chairperson
+http://dbpedia.org/ontology/translatedMotto	translated motto
+http://dbpedia.org/ontology/noContest	no contest
+http://dbpedia.org/ontology/currentTeam	current team
+http://dbpedia.org/ontology/presidentGeneralCouncilMandate	mandate of the president of the general council
+http://dbpedia.org/ontology/numberOfVillages	number of villages
+http://dbpedia.org/ontology/PopulatedPlace/areaUrban	area urban (km2)
+http://dbpedia.org/ontology/bioclimate	bioclimate
+http://dbpedia.org/ontology/maxApparentMagnitude	maximum apparent magnitude
+http://dbpedia.org/ontology/numberOfUndergraduateStudents	number of undergraduate students
+http://dbpedia.org/ontology/subjectTerm	subject term
+http://dbpedia.org/ontology/raceWins	race wins
+http://dbpedia.org/ontology/supplementalDraftRound	supplemental draft round
+http://dbpedia.org/ontology/Person/weight	weight (kg)
+http://dbpedia.org/ontology/commandModule	command module
+http://dbpedia.org/ontology/coden	CODEN
+http://dbpedia.org/ontology/firstWinner	first winner
+http://dbpedia.org/ontology/battle	battle
+http://dbpedia.org/ontology/alpsSubsection	Alps subsection
+http://dbpedia.org/ontology/convictionDate	conviction date
+http://dbpedia.org/ontology/rankingWins	ranking wins
+http://dbpedia.org/ontology/collectionSize	country
+http://dbpedia.org/ontology/firstBroadcast	first broadcast
+http://dbpedia.org/ontology/distance	distance (μ)
+http://dbpedia.org/ontology/distanceToDouglas	distance to Douglas (μ)
+http://dbpedia.org/ontology/governorate	governorate
+http://dbpedia.org/ontology/emblem	emblem
+http://dbpedia.org/ontology/fipsCode	fips code
+http://dbpedia.org/ontology/christeningDate	date of christening
+http://dbpedia.org/ontology/crownDependency	crown dependency
+http://dbpedia.org/ontology/ruling	ruling
+http://dbpedia.org/ontology/mergedSettlement	merged settlement
+http://dbpedia.org/ontology/digitalChannel	digital channel
+http://dbpedia.org/ontology/rgbCoordinateBlue	bluecoordinate in the RGB space
+http://dbpedia.org/ontology/superbowlWin	superbowl win
+http://dbpedia.org/ontology/olivierAward	Olivier Award
+http://dbpedia.org/ontology/previousDemographics	previous demographics
+http://dbpedia.org/ontology/engineer	engineer
+http://dbpedia.org/ontology/coordinates	geographic coordinates
+http://dbpedia.org/ontology/regionLink	region link
+http://dbpedia.org/ontology/numberOfCrew	number of crew
+http://dbpedia.org/ontology/olympicGamesBronze	olympic games bronze
+http://dbpedia.org/ontology/highschool	highschool
+http://dbpedia.org/ontology/introduced	introduced
+http://dbpedia.org/ontology/birthPlace	birth place
+http://dbpedia.org/ontology/associate	associate
+http://dbpedia.org/ontology/yearOfConstruction	year of construction
+http://dbpedia.org/ontology/cableCar	cable car
+http://dbpedia.org/ontology/uciCode	UCI code
+http://dbpedia.org/ontology/buildingStartDate	building start date
+http://dbpedia.org/ontology/space	space
+http://dbpedia.org/ontology/endCareer	end career
+http://dbpedia.org/ontology/federation	federation
+http://dbpedia.org/ontology/subprefecture	subprefecture
+http://dbpedia.org/ontology/ekatteCode	EKATTE code
+http://dbpedia.org/ontology/numberOfFederalDeputies	Number Of Federal Deputies
+http://dbpedia.org/ontology/floodingDate	flooding date
+http://dbpedia.org/ontology/firstAscentYear	year of first ascent
+http://dbpedia.org/ontology/ground	ground
+http://dbpedia.org/ontology/debutTeam	debut team
+http://dbpedia.org/ontology/runtime	runtime (s)
+http://dbpedia.org/ontology/firstLeader	firstLeader
+http://dbpedia.org/ontology/redLongDistancePisteNumber	red long distance piste number
+http://dbpedia.org/ontology/artist	performer
+http://dbpedia.org/ontology/subTribus	subtribus
+http://dbpedia.org/ontology/apparentMagnitude	apparent magnitude
+http://dbpedia.org/ontology/cultivatedVariety	cultivar
+http://dbpedia.org/ontology/technique	technique
+http://dbpedia.org/ontology/deathPlace	death place
+http://dbpedia.org/ontology/totalMass	total mass (g)
+http://dbpedia.org/ontology/Weapon/width	width (mm)
+http://dbpedia.org/ontology/isoCode	iso code of a place
+http://dbpedia.org/ontology/firstPlace	first place
+http://dbpedia.org/ontology/years	years
+http://dbpedia.org/ontology/timeshiftChannel	timeshift channel
+http://dbpedia.org/ontology/numberOfEntrances	number of entrances
+http://dbpedia.org/ontology/sourceRegion	source region
+http://dbpedia.org/ontology/airDate	airdate
+http://dbpedia.org/ontology/related	related
+http://dbpedia.org/ontology/Planet/averageSpeed	average speed (km/s)
+http://dbpedia.org/ontology/elevation	elevation (μ)
+http://dbpedia.org/ontology/soccerLeagueWinner	league champion
+http://dbpedia.org/ontology/originalMaximumBoatBeam	original maximum boat beam (μ)
+http://dbpedia.org/ontology/managementMountain	management mountain
+http://dbpedia.org/ontology/licenceNumberLabel	licence number label
+http://dbpedia.org/ontology/decideDate	decide date
+http://dbpedia.org/ontology/proYear	pro year
+http://dbpedia.org/ontology/mayorFunction	mayor function of a switzerland settlement
+http://dbpedia.org/ontology/stateOfOriginTeam	state of origin team
+http://dbpedia.org/ontology/originalDanseScore	original danse score
+http://dbpedia.org/ontology/demolitionYear	demolition year
+http://dbpedia.org/ontology/foundationPlace	foundation place
+http://dbpedia.org/ontology/capitalPosition	capital position
+http://dbpedia.org/ontology/grossDomesticProductRank	gross domestic product rank
+http://dbpedia.org/ontology/foundation	foundation
+http://dbpedia.org/ontology/field	field
+http://dbpedia.org/ontology/oldTeamCoached	old team coached
+http://dbpedia.org/ontology/termOfOffice	term of office
+http://dbpedia.org/ontology/longName	longName
+http://dbpedia.org/ontology/khlDraftYear	khl draft year
+http://dbpedia.org/ontology/premierePlace	premiere place
+http://dbpedia.org/ontology/numberOfStudents	number of students
+http://dbpedia.org/ontology/mainBuilding	main building
+http://dbpedia.org/ontology/awayColourHexCode	colour hex code of away jersey or its parts
+http://dbpedia.org/ontology/lengthQuote	length quote
+http://dbpedia.org/ontology/orogeny	orogeny
+http://dbpedia.org/ontology/protestantPercentage	protestant percentage
+http://dbpedia.org/ontology/nationalTopographicSystemMapNumber	National Topographic System map number
+http://dbpedia.org/ontology/dutchMIPCode	monument code for the Monuments Inventory Project
+http://dbpedia.org/ontology/numberOfTurns	number of turns
+http://dbpedia.org/ontology/credit	credit
+http://dbpedia.org/ontology/wineRegion	wine region
+http://dbpedia.org/ontology/influenced	influenced
+http://dbpedia.org/ontology/numberOfPages	number of pages
+http://dbpedia.org/ontology/usurper	usurper
+http://dbpedia.org/ontology/routeStartDirection	road start direction
+http://dbpedia.org/ontology/causedBy	caused by
+http://dbpedia.org/ontology/shape	intercommunality shape
+http://dbpedia.org/ontology/approximateCalories	approximate calories (J)
+http://dbpedia.org/ontology/railGauge	rail gauge (μ)
+http://dbpedia.org/ontology/project	project
+http://dbpedia.org/ontology/dissolutionDate	dissolution date
+http://dbpedia.org/ontology/chiefPlace	chief place
+http://dbpedia.org/ontology/Spacecraft/dryCargo	dry cargo (kg)
+http://dbpedia.org/ontology/boxerCategory	boxer category
+http://dbpedia.org/ontology/sportCountry	sport country
+http://dbpedia.org/ontology/locationCity	location city
+http://dbpedia.org/ontology/precursor	precursor
+http://dbpedia.org/ontology/nearestCity	nearest city
+http://dbpedia.org/ontology/organisation	organisation
+http://dbpedia.org/ontology/upperAge	upper age
+http://dbpedia.org/ontology/eruption	eruption
+http://dbpedia.org/ontology/numberOfLiveAlbums	number of live albums
+http://dbpedia.org/ontology/teamSize	team size
+http://dbpedia.org/ontology/club	club
+http://dbpedia.org/ontology/bird	bird
+http://dbpedia.org/ontology/wptTitle	wpt title
+http://dbpedia.org/ontology/poles	poles
+http://dbpedia.org/ontology/runningMate	running mate
+http://dbpedia.org/ontology/populationPctChildren	population percentage under 12 years
+http://dbpedia.org/ontology/department	department
+http://dbpedia.org/ontology/bodyStyle	body style
+http://dbpedia.org/ontology/draftPick	draft pick
+http://dbpedia.org/ontology/Planet/orbitalPeriod	orbital period (μ)
+http://dbpedia.org/ontology/whaDraft	wha draft
+http://dbpedia.org/ontology/setDesigner	set designer
+http://dbpedia.org/ontology/fc	FC
+http://dbpedia.org/ontology/firstPublicationYear	first publication year
+http://dbpedia.org/ontology/teamManager	team manager
+http://dbpedia.org/ontology/landingVehicle	landing vehicle
+http://dbpedia.org/ontology/lowestRegion	lowest region
+http://dbpedia.org/ontology/hsvCoordinateSaturation	saturation coordinate in the HSV colour space
+http://dbpedia.org/ontology/projectCoordinator	project coordinator
+http://dbpedia.org/ontology/ingredient	ingredient
+http://dbpedia.org/ontology/sourceElevation	source elevation (μ)
+http://dbpedia.org/ontology/productionEndYear	production end year
+http://dbpedia.org/ontology/battleHonours	battle honours
+http://dbpedia.org/ontology/occupation	occupation
+http://dbpedia.org/ontology/percentageOfAreaWater	percentage of area water
+http://dbpedia.org/ontology/laurenceOlivierAward	Laurence Olivier Award
+http://dbpedia.org/ontology/iobdbId	IOBDB ID
+http://dbpedia.org/ontology/member	member
+http://dbpedia.org/ontology/oldProvince	old province
+http://dbpedia.org/ontology/totalDiscs	total discs
+http://dbpedia.org/ontology/resolution	resolution
+http://dbpedia.org/ontology/regionType	region type
+http://dbpedia.org/ontology/ko	ko
+http://dbpedia.org/ontology/races	races
+http://dbpedia.org/ontology/depths	depths
+http://dbpedia.org/ontology/committee	committee
+http://dbpedia.org/ontology/bSide	b side
+http://dbpedia.org/ontology/coronationDate	coronation date
+http://dbpedia.org/ontology/center	norwegian center
+http://dbpedia.org/ontology/iso6393Code	ISO 639-3 code
+http://dbpedia.org/ontology/isPartOfMilitaryConflict	is part of military conflict
+http://dbpedia.org/ontology/creator	creator (agent)
+http://dbpedia.org/ontology/systemRequirements	minimum system requirements
+http://dbpedia.org/ontology/numberOfParticipatingMaleAthletes	number of participating male athletes
+http://dbpedia.org/ontology/secondPopularVote	secondPopularVote
+http://dbpedia.org/ontology/mostWins	most wins
+http://dbpedia.org/ontology/lieutenant	lieutenant
+http://dbpedia.org/ontology/certificationDate	certification date
+http://dbpedia.org/ontology/deathYear	death year
+http://dbpedia.org/ontology/launches	launches
+http://dbpedia.org/ontology/highestPosition	highest position
+http://dbpedia.org/ontology/faaLocationIdentifier	FAA Location Identifier
+http://dbpedia.org/ontology/numberOfGraves	number of graves
+http://dbpedia.org/ontology/nextEvent	next event
+http://dbpedia.org/ontology/timeInSpace	time in space (s)
+http://dbpedia.org/ontology/weddingParentsDate	Parents Wedding Date
+http://dbpedia.org/ontology/production	production
+http://dbpedia.org/ontology/governorGeneral	governor general
+http://dbpedia.org/ontology/fareZone	fare zone
+http://dbpedia.org/ontology/mainDomain	main domain
+http://dbpedia.org/ontology/binomial	binomial
+http://dbpedia.org/ontology/longtype	longtype
+http://dbpedia.org/ontology/lowestMountain	lowest mountain
+http://dbpedia.org/ontology/continentalTournamentSilver	continental tournament silver
+http://dbpedia.org/ontology/headAlloy	head alloy
+http://dbpedia.org/ontology/extinctionYear	extinction year
+http://dbpedia.org/ontology/fighter	fighter
+http://dbpedia.org/ontology/temperature	temperature (K)
+http://dbpedia.org/ontology/electionDateLeader	election date leader
+http://dbpedia.org/ontology/watershed	watershed (m2)
+http://dbpedia.org/ontology/predecessor	predecessor
+http://dbpedia.org/ontology/bestWsopRank	best wsop rank
+http://dbpedia.org/ontology/geminiAward	Gemini Award
+http://dbpedia.org/ontology/winsInEurope	wins in Europe
+http://dbpedia.org/ontology/managerYearsEndYear	manager years end year
+http://dbpedia.org/ontology/notSolubleIn	not soluble in
+http://dbpedia.org/ontology/skills	skills
+http://dbpedia.org/ontology/populationRuralDensity	population density rural (/sqkm)
+http://dbpedia.org/ontology/unitedStatesNationalBridgeId	United States National Bridge ID
+http://dbpedia.org/ontology/rocketStages	number of rocket stages
+http://dbpedia.org/ontology/id	id
+http://dbpedia.org/ontology/MeanOfTransportation/length	length (mm)
+http://dbpedia.org/ontology/leaderTitle	leader title
+http://dbpedia.org/ontology/reopeningYear	reopening year
+http://dbpedia.org/ontology/medalist	medalist
+http://dbpedia.org/ontology/broadcastTranslator	broadcast translator
+http://dbpedia.org/ontology/shoreLength	shore length (μ)
+http://dbpedia.org/ontology/ratio	ratio
+http://dbpedia.org/ontology/rankPopulation	rank of a population
+http://dbpedia.org/ontology/juniorTeam	junior team
+http://dbpedia.org/ontology/war	wars
+http://dbpedia.org/ontology/codeLandRegistry	code land registry
+http://dbpedia.org/ontology/voiceType	voice type
+http://dbpedia.org/ontology/category	category
+http://dbpedia.org/ontology/formationYear	formation year
+http://dbpedia.org/ontology/spike	spike
+http://dbpedia.org/ontology/lccnId	LCCN Id
+http://dbpedia.org/ontology/numberOfVolunteers	number of volunteers
+http://dbpedia.org/ontology/startYearOfInsertion	start year of insertion
+http://dbpedia.org/ontology/numberOfClassrooms	number of classrooms
+http://dbpedia.org/ontology/added	added
+http://dbpedia.org/ontology/maxAbsoluteMagnitude	maximum absolute magnitude
+http://dbpedia.org/ontology/organisationMember	organisation member
+http://dbpedia.org/ontology/status	status
+http://dbpedia.org/ontology/musicalKey	musical key
+http://dbpedia.org/ontology/Canal/maximumBoatBeam	maximum boat beam (μ)
+http://dbpedia.org/ontology/otherName	other name
+http://dbpedia.org/ontology/numberOfPeopleLicensed	number of licensed
+http://dbpedia.org/ontology/wikiPageExternalLink	Link from a Wikipage to an external page
+http://dbpedia.org/ontology/formerCallsign	former call sign
+http://dbpedia.org/ontology/lunarModule	lunar module
+http://dbpedia.org/ontology/dateExtended	date extended
+http://dbpedia.org/ontology/firstRace	first race
+http://dbpedia.org/ontology/guest	guest
+http://dbpedia.org/ontology/mediaType	media type
+http://dbpedia.org/ontology/sizeThumbnail	size thumbnail
+http://dbpedia.org/ontology/quote	quote
+http://dbpedia.org/ontology/royalAnthem	royal anthem
+http://dbpedia.org/ontology/populationUrbanDensity	population urban density (/sqkm)
+http://dbpedia.org/ontology/militaryGovernment	military government
+http://dbpedia.org/ontology/kindOfCriminalAction	kind of criminal action
+http://dbpedia.org/ontology/apoapsis	apoapsis (μ)
+http://dbpedia.org/ontology/lastFlightStartDate	last flight start date
+http://dbpedia.org/ontology/bestLap	best lap
+http://dbpedia.org/ontology/postalCode	postal code
+http://dbpedia.org/ontology/periapsis	periapsis (μ)
+http://dbpedia.org/ontology/lastFlight	last flight
+http://dbpedia.org/ontology/partyNumber	party number
+http://dbpedia.org/ontology/maidenFlightRocket	maiden flight rocket
+http://dbpedia.org/ontology/mayor	mayor
+http://dbpedia.org/ontology/codeMemorial	memorial ID number
+http://dbpedia.org/ontology/committeeInLegislature	committee in legislature
+http://dbpedia.org/ontology/flower	flower
+http://dbpedia.org/ontology/finalPublicationYear	final publication year
+http://dbpedia.org/ontology/refseqmrna	refseq mRNA
+http://dbpedia.org/ontology/firstAirDate	first air date
+http://dbpedia.org/ontology/activeYearsEndYearMgr	active years end year manager
+http://dbpedia.org/ontology/wholeArea	whole area
+http://dbpedia.org/ontology/custodian	custodian
+http://dbpedia.org/ontology/photographer	photographer
+http://dbpedia.org/ontology/birthYear	birth year
+http://dbpedia.org/ontology/locality	locality of a switzerland settlement
+http://dbpedia.org/ontology/functionStartYear	function start year
+http://dbpedia.org/ontology/distributingCompany	distributing company
+http://dbpedia.org/ontology/managementPosition	management position
+http://dbpedia.org/ontology/watercourse	watercourse
+http://dbpedia.org/ontology/governmentRegion	government region
+http://dbpedia.org/ontology/stationStructure	station structure
+http://dbpedia.org/ontology/ithfDate	ithf date
+http://dbpedia.org/ontology/politicalMajority	political majority
+http://dbpedia.org/ontology/ncbhof	ncbhof
+http://dbpedia.org/ontology/landingDate	landing date
+http://dbpedia.org/ontology/colour	colour
+http://dbpedia.org/ontology/definition	definition
+http://dbpedia.org/ontology/Lake/shoreLength	shore length (km)
+http://dbpedia.org/ontology/militaryBranch	military branch
+http://dbpedia.org/ontology/second	second
+http://dbpedia.org/ontology/frequency	frequency (Hz)
+http://dbpedia.org/ontology/sourceConfluencePlace	source confluence place
+http://dbpedia.org/ontology/capitalElevation	capital elevation (μ)
+http://dbpedia.org/ontology/Galaxy/mass	mass (kg)
+http://dbpedia.org/ontology/mother	mother
+http://dbpedia.org/ontology/restingDate	resting date
+http://dbpedia.org/ontology/numberOfSettlement	number of settlement
+http://dbpedia.org/ontology/areaTotalRanking	total area ranking
+http://dbpedia.org/ontology/lchfDraft	lchf draft year
+http://dbpedia.org/ontology/bandMember	band member
+http://dbpedia.org/ontology/film	film
+http://dbpedia.org/ontology/locatedInArea	located in area
+http://dbpedia.org/ontology/localizationThumbnailCaption	legend thumbnail localization
+http://dbpedia.org/ontology/chairmanTitle	chairman title
+http://dbpedia.org/ontology/arm	arm
+http://dbpedia.org/ontology/rebuilder	rebuilder
+http://dbpedia.org/ontology/championInDouble	champion in double
+http://dbpedia.org/ontology/littlePoolRecord	little pool record
+http://dbpedia.org/ontology/argueDate	argue date
+http://dbpedia.org/ontology/icaoLocationIdentifier	ICAO Location Identifier
+http://dbpedia.org/ontology/currentSeason	current season
+http://dbpedia.org/ontology/meaning	meaning
+http://dbpedia.org/ontology/PopulatedPlace/area	area (km2)
+http://dbpedia.org/ontology/lastProMatch	first pro match
+http://dbpedia.org/ontology/countryWithFirstSatelliteLaunched	country with first satellite launched
+http://dbpedia.org/ontology/specialEffects	special effects
+http://dbpedia.org/ontology/thumbnail	thumbnail
+http://dbpedia.org/ontology/countryRank	country rank
+http://dbpedia.org/ontology/campus	campus
+http://dbpedia.org/ontology/gymApparatus	gym apparatus
+http://dbpedia.org/ontology/fees	fees ($)
+http://dbpedia.org/ontology/wikiPageInDegree	Wiki page in degree
+http://dbpedia.org/ontology/clothingSize	clothing size
+http://dbpedia.org/ontology/atcPrefix	ATC prefix
+http://dbpedia.org/ontology/retiredRocket	retired rocket
+http://dbpedia.org/ontology/building	building
+http://dbpedia.org/ontology/logo	logo
+http://dbpedia.org/ontology/mandate	political mandate
+http://dbpedia.org/ontology/opponents	opponents
+http://dbpedia.org/ontology/perCapitaIncome	per capita income ($)
+http://dbpedia.org/ontology/fuelConsumption	fuel consumption
+http://dbpedia.org/ontology/PopulatedPlace/areaMetro	area metro (km2)
+http://dbpedia.org/ontology/numberOfStudioAlbums	number of studio albums
+http://dbpedia.org/ontology/commissioningDate	commissioning date
+http://dbpedia.org/ontology/daylightSavingTimeZone	daylight saving time zone
+http://dbpedia.org/ontology/inflow	inflow
+http://dbpedia.org/ontology/pictureDescription	picture description
+http://dbpedia.org/ontology/displacement	displacement (μ³)
+http://dbpedia.org/ontology/Planet/temperature	temperature (K)
+http://dbpedia.org/ontology/sisterCollege	sister college
+http://dbpedia.org/ontology/demographics	demographics
+http://dbpedia.org/ontology/dressCode	dress code
+http://dbpedia.org/ontology/v_hb	V_hb
+http://dbpedia.org/ontology/musicians	musicians
+http://dbpedia.org/ontology/numberOfLocations	number of locations
+http://dbpedia.org/ontology/chorusCharacterInPlay	chorus character in play
+http://dbpedia.org/ontology/filmVersion	film version
+http://dbpedia.org/ontology/Galaxy/surfaceArea	surface area (km2)
+http://dbpedia.org/ontology/numberOfVisitorsAsOf	number of visitors as of
+http://dbpedia.org/ontology/Weapon/diameter	diameter (mm)
+http://dbpedia.org/ontology/hairColour	hair colour
+http://dbpedia.org/ontology/numberOfParkingSpaces	number of parking spaces
+http://dbpedia.org/ontology/bedCount	bed count
+http://dbpedia.org/ontology/profession	profession
+http://dbpedia.org/ontology/saint	saint
+http://dbpedia.org/ontology/championInSingle	champion in single
+http://dbpedia.org/ontology/unesco	unesco
+http://dbpedia.org/ontology/rightAscension	right ascension
+http://dbpedia.org/ontology/routeEndDirection	road end direction
+http://dbpedia.org/ontology/disbanded	disbanded
+http://dbpedia.org/ontology/appearancesInNationalTeam	appearances in national team
+http://dbpedia.org/ontology/landingSite	landing site
+http://dbpedia.org/ontology/riverBranchOf	branch of
+http://dbpedia.org/ontology/construction	construction
+http://dbpedia.org/ontology/mainFamilyBranch	main branch
+http://dbpedia.org/ontology/averageDepthQuote	average depth quote
+http://dbpedia.org/ontology/winsAtChallenges	wins at challenges
+http://dbpedia.org/ontology/fastestLap	fastest lap
+http://dbpedia.org/ontology/aircraftTrainer	aircraft trainer
+http://dbpedia.org/ontology/pgaWins	pga wins
+http://dbpedia.org/ontology/phylum	phylum
+http://dbpedia.org/ontology/actingHeadteacher	acting headteacher
+http://dbpedia.org/ontology/associatedMusicalArtist	associated musical artist
+http://dbpedia.org/ontology/settlementAttached	settlement attached
+http://dbpedia.org/ontology/wikiPageLength	page length (characters) of wiki page
+http://dbpedia.org/ontology/officialSchoolColour	official school colour
+http://dbpedia.org/ontology/launchSite	launch site
+http://dbpedia.org/ontology/employersCelebration	employer's celebration
+http://dbpedia.org/ontology/orbitalEccentricity	orbital eccentricity
+http://dbpedia.org/ontology/nerve	nerve
+http://dbpedia.org/ontology/tu	tu
+http://dbpedia.org/ontology/longDistancePisteKilometre	long distance piste kilometre (μ)
+http://dbpedia.org/ontology/parliamentaryGroup	parliamentary group
+http://dbpedia.org/ontology/nndbId	NNDB id
+http://dbpedia.org/ontology/lunarSurfaceTime	lunar surface time (s)
+http://dbpedia.org/ontology/youthWing	youth wing
+http://dbpedia.org/ontology/installedCapacity	installed capacity (W)
+http://dbpedia.org/ontology/deanery	deanery
+http://dbpedia.org/ontology/taxon	has taxon
+http://dbpedia.org/ontology/numberOfCompetitors	number of competitors
+http://dbpedia.org/ontology/solicitorGeneral	solicitor general
+http://dbpedia.org/ontology/subsequentInfrastructure	subsequent infrastructure
+http://dbpedia.org/ontology/sourceConfluenceElevation	source confluence elevation (μ)
+http://dbpedia.org/ontology/other	other
+http://dbpedia.org/ontology/prospectLeague	prospect league
+http://dbpedia.org/ontology/otherInformation	other information of a settlement
+http://dbpedia.org/ontology/administrativeCenter	administrative center
+http://dbpedia.org/ontology/lounge	lounge
+http://dbpedia.org/ontology/iso6391Code	ISO 639-1 code
+http://dbpedia.org/ontology/worldOpen	world open
+http://dbpedia.org/ontology/rolandGarrosDouble	roland garros double
+http://dbpedia.org/ontology/government	government
+http://dbpedia.org/ontology/deadInFightDate	dead in fight date
+http://dbpedia.org/ontology/numberOfGoals	number of goals scored
+http://dbpedia.org/ontology/circle	region
+http://dbpedia.org/ontology/launchDate	launch date
+http://dbpedia.org/ontology/penisLength	penis length
+http://dbpedia.org/ontology/growingGrape	growing grape
+http://dbpedia.org/ontology/fullCompetition	full competition
+http://dbpedia.org/ontology/SpaceMission/stationVisitDuration	station visit duration (ω)
+http://dbpedia.org/ontology/computingInput	Computing input
+http://dbpedia.org/ontology/serviceEndYear	service end year
+http://dbpedia.org/ontology/distributor	distributor
+http://dbpedia.org/ontology/author	author
+http://dbpedia.org/ontology/created	created
+http://dbpedia.org/ontology/lawCountry	law country
+http://dbpedia.org/ontology/feat	feat
+http://dbpedia.org/ontology/ra	ra
+http://dbpedia.org/ontology/decoration	decoration
+http://dbpedia.org/ontology/chiefEditor	chief editor
+http://dbpedia.org/ontology/MeanOfTransportation/mass	mass (kg)
+http://dbpedia.org/ontology/comitat	comitat of a settlement
+http://dbpedia.org/ontology/primogenitor	primogenitor, first forebear
+http://dbpedia.org/ontology/entourage	entourage
+http://dbpedia.org/ontology/summerTemperature	summer temperature (K)
+http://dbpedia.org/ontology/noteOnRestingPlace	note on resting place
+http://dbpedia.org/ontology/retentionTime	relation time
+http://dbpedia.org/ontology/statisticLabel	statistic label
+http://dbpedia.org/ontology/actScore	ACT score
+http://dbpedia.org/ontology/successor	successor
+http://dbpedia.org/ontology/mainIsland	main island
+http://dbpedia.org/ontology/officialOpenedBy	official opened by
+http://dbpedia.org/ontology/album	album
+http://dbpedia.org/ontology/namedAfter	named after
+http://dbpedia.org/ontology/bestFinish	best ranking finish
+http://dbpedia.org/ontology/spurType	spur type
+http://dbpedia.org/ontology/grayPage	Gray page
+http://dbpedia.org/ontology/startYear	start year
+http://dbpedia.org/ontology/movie	movie
+http://dbpedia.org/ontology/approach	approach
+http://dbpedia.org/ontology/judge	judge
+http://dbpedia.org/ontology/copilote	copilote
+http://dbpedia.org/ontology/innervates	innervates
+http://dbpedia.org/ontology/rebuildingYear	rebuilding year
+http://dbpedia.org/ontology/daira	daira
+http://dbpedia.org/ontology/trackNumber	track number
+http://dbpedia.org/ontology/instrument	instrument
+http://dbpedia.org/ontology/minimumTemperature	minimum temperature (K)
+http://dbpedia.org/ontology/isbn	ISBN
+http://dbpedia.org/ontology/catch	catch
+http://dbpedia.org/ontology/marketCapitalisation	market capitalisation ($)
+http://dbpedia.org/ontology/workArea	work area (m2)
+http://dbpedia.org/ontology/censusYear	census year
+http://dbpedia.org/ontology/vonKlitzingConstant	von Klitzing electromagnetic constant (RK)
+http://dbpedia.org/ontology/nationalOlympicCommittee	National Olympic Committee
+http://dbpedia.org/ontology/mayorArticle	mayor article
+http://dbpedia.org/ontology/mass	mass (g)
+http://dbpedia.org/ontology/product	product
+http://dbpedia.org/ontology/atPage	page number
+http://dbpedia.org/ontology/dateClosed	date closed
+http://dbpedia.org/ontology/provinceIsoCode	iso code of a province
+http://dbpedia.org/ontology/branchTo	branch to
+http://dbpedia.org/ontology/formerChannel	former channel
+http://dbpedia.org/ontology/freeLabel	freeLabel
+http://dbpedia.org/ontology/finalFlight	final flight
+http://dbpedia.org/ontology/classes	classes
+http://dbpedia.org/ontology/aircraftUser	aircraft user
+http://dbpedia.org/ontology/orbitalPeriod	orbital period (s)
+http://dbpedia.org/ontology/picture	picture
+http://dbpedia.org/ontology/orbits	orbits
+http://dbpedia.org/ontology/runwayDesignation	designation of runway
+http://dbpedia.org/ontology/presentMunicipality	present municipality
+http://dbpedia.org/ontology/style	style
+http://dbpedia.org/ontology/composer	composer
+http://dbpedia.org/ontology/restingPlace	resting place
+http://dbpedia.org/ontology/foundingYear	founding year
+http://dbpedia.org/ontology/typeCoordinate	type coordinate
+http://dbpedia.org/ontology/templeYear	temple year
+http://dbpedia.org/ontology/openAccessContent	open access content
+http://dbpedia.org/ontology/era	era
+http://dbpedia.org/ontology/subsystem	subsystem
+http://dbpedia.org/ontology/budgetYear	budget year
+http://dbpedia.org/ontology/format	format (object)
+http://dbpedia.org/ontology/automobileModel	automobile model
+http://dbpedia.org/ontology/collection	collection
+http://dbpedia.org/ontology/cinematography	cinematography
+http://dbpedia.org/ontology/mainCharacter	main character
+http://dbpedia.org/ontology/budget	budget ($)
+http://dbpedia.org/ontology/bloodGroup	blood group
+http://dbpedia.org/ontology/architecturalMovement	architectural movement
+http://dbpedia.org/ontology/stadium	Stadium
+http://dbpedia.org/ontology/starRating	star rating
+http://dbpedia.org/ontology/demonym	demonym
+http://dbpedia.org/ontology/nationalChampionship	national championship
+http://dbpedia.org/ontology/ageRange	age range
+http://dbpedia.org/ontology/notes	notes
+http://dbpedia.org/ontology/eTeatrId	e-teatr.pl id
+http://dbpedia.org/ontology/numberOfMunicipalities	Number Of Municipalities
+http://dbpedia.org/ontology/circulation	circulation
+http://dbpedia.org/ontology/internationalPhonePrefixLabel	international phone prefix label
+http://dbpedia.org/ontology/fuelType	fuel type
+http://dbpedia.org/ontology/politicalPartyInLegislature	political party in legislature
+http://dbpedia.org/ontology/capitalMountain	capital mountain
+http://dbpedia.org/ontology/emmyAward	Emmy Award
+http://dbpedia.org/ontology/spacewalkEnd	spacewalk end
+http://dbpedia.org/ontology/monarch	monarch
+http://dbpedia.org/ontology/age	age
+http://dbpedia.org/ontology/appearancesInLeague	appearances in league
+http://dbpedia.org/ontology/sourceMountain	source mountain
+http://dbpedia.org/ontology/routeEnd	route end
+http://dbpedia.org/ontology/lowerAge	lower age
+http://dbpedia.org/ontology/bpnId	BPN Id
+http://dbpedia.org/ontology/musicComposer	music composer
+http://dbpedia.org/ontology/employer	employer
+http://dbpedia.org/ontology/oclc	OCLC
+http://dbpedia.org/ontology/engine	engine
+http://dbpedia.org/ontology/broadcastStationClass	broadcast station class
+http://dbpedia.org/ontology/numberOfClubs	number of clubs
+http://dbpedia.org/ontology/regionalLanguage	regional language
+http://dbpedia.org/ontology/Planet/meanTemperature	mean temperature (K)
+http://dbpedia.org/ontology/prefect	prefect
+http://dbpedia.org/ontology/musicFormat	musicFormat
+http://dbpedia.org/ontology/layingDown	laying down
+http://dbpedia.org/ontology/climate	climate
+http://dbpedia.org/ontology/purchasingPowerParityYear	purchasing power parity year
+http://dbpedia.org/ontology/output	output
+http://dbpedia.org/ontology/classis	classis
+http://dbpedia.org/ontology/free	free
+http://dbpedia.org/ontology/jockey	jockey
+http://dbpedia.org/ontology/connectsReferencedTo	connects referenced to
+http://dbpedia.org/ontology/formerHighschool	former highschool
+http://dbpedia.org/ontology/contractor	contractor
+http://dbpedia.org/ontology/flagSize	flagSize
+http://dbpedia.org/ontology/amateurKo	amateur ko
+http://dbpedia.org/ontology/languageFamily	family
+http://dbpedia.org/ontology/polishFilmAward	Polish Film Award
+http://dbpedia.org/ontology/elevationQuote	elevation quote
+http://dbpedia.org/ontology/religiousOrder	religious order
+http://dbpedia.org/ontology/flagLink	flag Link
+http://dbpedia.org/ontology/numberOfLawyers	number of lawyers
+http://dbpedia.org/ontology/targetAirport	target airport
+http://dbpedia.org/ontology/parliamentType	parliament type
+http://dbpedia.org/ontology/viafId	VIAF Id
+http://dbpedia.org/ontology/observatory	observatory
+http://dbpedia.org/ontology/dateCompleted	date completed
+http://dbpedia.org/ontology/piercing	piercing
+http://dbpedia.org/ontology/parish	parish
+http://dbpedia.org/ontology/shipDisplacement	displacement (g)
+http://dbpedia.org/ontology/collegeHof	college hof
+http://dbpedia.org/ontology/primate	Primite
+http://dbpedia.org/ontology/broadcastArea	broadcast area
+http://dbpedia.org/ontology/board	board
+http://dbpedia.org/ontology/politicalPartyOfLeader	political party of leader
+http://dbpedia.org/ontology/gnisCode	gnis code
+http://dbpedia.org/ontology/cousurper	cousurper
+http://dbpedia.org/ontology/administrator	administrator
+http://dbpedia.org/ontology/minorityLeader	minority leader
+http://dbpedia.org/ontology/provCode	prove code
+http://dbpedia.org/ontology/band	band
+http://dbpedia.org/ontology/PopulatedPlace/areaTotal	area total (km2)
+http://dbpedia.org/ontology/generationUnits	generation units
+http://dbpedia.org/ontology/flyingHours	flying hours (s)
+http://dbpedia.org/ontology/picturesCommonsCategory	pictures Commons category
+http://dbpedia.org/ontology/GrandPrix/distance	distance (km)
+http://dbpedia.org/ontology/collectivityMinority	collectivity minority
+http://dbpedia.org/ontology/floorCount	floor count
+http://dbpedia.org/ontology/formerChoreographer	former choreographer
+http://dbpedia.org/ontology/subPrefecture	subprefecture
+http://dbpedia.org/ontology/secretaryGeneral	secretary
+http://dbpedia.org/ontology/width	width (μ)
+http://dbpedia.org/ontology/numberOfRun	number of run
+http://dbpedia.org/ontology/documentDesignation	String designation of the WrittenWork describing the resource
+http://dbpedia.org/ontology/orbitalFlights	orbital flights
