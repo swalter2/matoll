@@ -57,25 +57,25 @@ public class TestVerySimpleLexiconEvaluation {
         getTransitiveVerb(lex, "cross1", subj,obj, "http://dbpedia.org/ontology/crossing", EN);
         getTransitiveVerb(lex, "cross2", subj,obj, "http://dbpedia.org/ontology/crossing", EN);
         
-        List<Double> result = LemmaBasedEvaluation.evaluate(lex, gold,true,true);
-        System.out.println("----------");
-        System.out.println("Macro  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
-        System.out.println("----------");
-        
-        result = LemmaBasedEvaluation.evaluate(lex, gold,true,false);
-        System.out.println("----------");
-        System.out.println("Micro  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
-        System.out.println("----------");
-        
-        result = LemmaBasedEvaluation.evaluate(lex, gold,true,uris,true);
-        System.out.println("----------");
-        System.out.println("Macro  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
-        System.out.println("----------");
-        
-        result = LemmaBasedEvaluation.evaluate(lex, gold,true,uris,false);
-        System.out.println("----------");
-        System.out.println("Micro  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
-        System.out.println("----------");
+//        List<Double> result = LemmaBasedEvaluation.evaluate(lex, gold,true,true);
+//        System.out.println("----------");
+//        System.out.println("Macro  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
+//        System.out.println("----------");
+//        
+//        result = LemmaBasedEvaluation.evaluate(lex, gold,true,false);
+//        System.out.println("----------");
+//        System.out.println("Micro  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
+//        System.out.println("----------");
+//        
+//        result = LemmaBasedEvaluation.evaluate(lex, gold,true,uris,true);
+//        System.out.println("----------");
+//        System.out.println("Macro  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
+//        System.out.println("----------");
+//        
+//        result = LemmaBasedEvaluation.evaluate(lex, gold,true,uris,false);
+//        System.out.println("----------");
+//        System.out.println("Micro  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
+//        System.out.println("----------");
         
         
         
@@ -96,17 +96,17 @@ public class TestVerySimpleLexiconEvaluation {
 //        }
 //        for(String x: uris_tmp)uris.add(x);
 //        uris.clear();
-        uris.add("http://dbpedia.org/ontology/spouse");
-        result = LemmaBasedEvaluation.evaluate(lexicon_automatic, lexicon_gold,true,uris,true);
-        System.out.println("----------");
-        System.out.println("Macro  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
-        System.out.println("----------");
-        
-        result = LemmaBasedEvaluation.evaluate(lexicon_automatic, lexicon_gold,true,uris,false);
-        System.out.println("----------");
-        System.out.println("Micro  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
-        System.out.println("----------");
-        
+//        uris.add("http://dbpedia.org/ontology/spouse");
+//        result = LemmaBasedEvaluation.evaluate(lexicon_automatic, lexicon_gold,true,uris,true);
+//        System.out.println("----------");
+//        System.out.println("Macro  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
+//        System.out.println("----------");
+//        
+//        result = LemmaBasedEvaluation.evaluate(lexicon_automatic, lexicon_gold,true,uris,false);
+//        System.out.println("----------");
+//        System.out.println("Micro  P:"+result.get(0)+", R:"+result.get(1)+", F:"+result.get(2));
+//        System.out.println("----------");
+//        
         
 //        result = LemmaBasedEvaluation.evaluate(lexicon_automatic, lexicon_gold,false,true);
 //        System.out.println("----------");

@@ -68,7 +68,7 @@ public class AdjectiveObject {
 	}
 	
 	public String toString(){
-		return adjectiveTerm+" "+object+" "+uri+" "+pattern+" "+pos_Pattern;
+		return adjectiveTerm+"\t"+object+"\t"+uri+"\t"+pattern+"\t"+pos_Pattern;
 	}
 	public double getRatio() {
 		return ratio;

@@ -14,26 +14,26 @@ public class LemmaBasedEvaluation {
     
 
 
-	public static List<Double> evaluate(Lexicon automatic, Lexicon gold, boolean onlyProperties,boolean macro_averaged) {
-            
-            Map<String,List<List<String>>> hm_automatic = new HashMap<>();
-            Map<String,List<List<String>>> hm_gold = new HashMap<>();
-            
-            /*
-            First create map with reference as key and an array with pos,form and ref for each sese/ref in each entry
-            */
-            createMap(automatic,hm_automatic,onlyProperties);
-            createMap(gold,hm_gold,onlyProperties);
-            /*
-            Then do evaluation based on the map
-            */
-            if (macro_averaged)
-                return macro_averagedEvaluation(hm_automatic,hm_gold);
-            else
-                return micro_averagedEvaluation(hm_automatic,hm_gold);
-
-            
-        }
+//	public static List<Double> evaluate(Lexicon automatic, Lexicon gold, boolean onlyProperties,boolean macro_averaged) {
+//            
+//            Map<String,List<List<String>>> hm_automatic = new HashMap<>();
+//            Map<String,List<List<String>>> hm_gold = new HashMap<>();
+//            
+//            /*
+//            First create map with reference as key and an array with pos,form and ref for each sese/ref in each entry
+//            */
+//            createMap(automatic,hm_automatic,onlyProperties);
+//            createMap(gold,hm_gold,onlyProperties);
+//            /*
+//            Then do evaluation based on the map
+//            */
+//            if (macro_averaged)
+//                return macro_averagedEvaluation(hm_automatic,hm_gold);
+//            else
+//                return micro_averagedEvaluation(hm_automatic,hm_gold);
+//
+//            
+//        }
         
         
        public static List<Double> evaluate(Lexicon automatic, Lexicon gold, boolean onlyProperties, List<String> uris, boolean macro_averaged) {

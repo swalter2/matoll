@@ -98,7 +98,8 @@ public class Process {
 		String path_weka_model = path_to_write_arff.replace(".arff", ".model");
 		String path_to_wordnet = "/Users/swalter/Backup/Software/WordNet-3.0";
 		String path_to_objects = "/Users/swalter/Downloads/tmp_extractPropertiesWithData/results/ontology/";
-		
+                Map<String,String> label_property_mapping = new HashMap<>();
+		label_property_mapping = loadMappingList("resources/property_labels.txt");
                 Set<String> feature_list = new HashSet<String>();
                 feature_list.add("NAF");
                 feature_list.add("Trigrams");
@@ -135,8 +136,8 @@ public class Process {
                 
                 final StanfordLemmatizer sl = new StanfordLemmatizer(EN);
 	
-//                String path_to_input_file = "../dbpedia_2014.owl";
-                String path_to_input_file = "test.txt";
+                String path_to_input_file = "../dbpedia_2014.owl";
+                //String path_to_input_file = "test.txt";
                 Set<String> properties = new HashSet<>();
                 Set<String> classes = new HashSet<>();
                 if(path_to_input_file.endsWith(".txt")){
@@ -217,10 +218,10 @@ public class Process {
 
                
 
-                runWornetPropertyApproach(properties,lexicon,wordnet,sl);
-		runAdjectiveApproach(properties,adjectiveExtractor,posAdj,pos,label_3,label_2, prediction,tagger, lexicon, mp,path_to_objects,label_feature);
+                runWornetPropertyApproach(properties,lexicon,wordnet,sl,label_property_mapping);
+		//runAdjectiveApproach(properties,adjectiveExtractor,posAdj,pos,label_3,label_2, prediction,tagger, lexicon, mp,path_to_objects,label_feature);
                 
-		runWornetClassApproach(classes,lexicon,wordnet,"/Users/swalter/Downloads/EnglishIndexReduced");
+		//runWornetClassApproach(classes,lexicon,wordnet,"/Users/swalter/Downloads/EnglishIndexReduced");
 		
 		Model model = ModelFactory.createDefaultModel();
 		
@@ -657,24 +658,38 @@ public class Process {
         
     }
 
-    private static void runWornetPropertyApproach(Set<String> properties, Lexicon lexicon, Wordnet wordnet, StanfordLemmatizer sl) {
+    private static void runWornetPropertyApproach(Set<String> properties, Lexicon lexicon, Wordnet wordnet, StanfordLemmatizer sl, Map<String,String> label_property_mapping ) {
+        boolean added_entry = false;
         for(String uri : properties){
-            String queryString = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?label WHERE{<"+uri+"> rdfs:label ?label. FILTER (lang(?label) = 'en') }";
-            Query query = QueryFactory.create(queryString);
-            QueryExecution qexec = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query);
-            ResultSet results = qexec.execSelect();
-            Set<String> labels = new HashSet<>();
-            while ( results.hasNext() ) {
-                QuerySolution qs = results.next();
-                String label = (qs.get("?label").toString());
-                label = label.replace("@en","");
-                label = label.replace("\"", "");
+            String label = "";
+            if(!label_property_mapping.containsKey(uri)){
+                String queryString = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?label WHERE{<"+uri+"> rdfs:label ?label. FILTER (lang(?label) = 'en') }";
+                Query query = QueryFactory.create(queryString);
+                QueryExecution qexec = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query);
+                ResultSet results = qexec.execSelect();
+                //Set<String> labels = new HashSet<>();
+                while ( results.hasNext() ) {
+                    QuerySolution qs = results.next();
+                    label = (qs.get("?label").toString());
+                    label = label.replace("@en","");
+                    label = label.replace("\"", "");
+                    if(!label.equals("")){
+                        System.out.println("had to add new label");
+                        label_property_mapping.put(uri, label);
+                        added_entry = true;
+                    }
+                }
+            }
+            if(!label.equals("")){
+                System.out.println("uri:"+uri);
+                System.out.println("label:"+label+"Done");
+                System.out.println();
                 String lemma = sl.getLemma(label);
                 boolean b_nouns = false;
                 boolean b_adverbs = false;
                 boolean b_verbs = false;
                 boolean b_adjectives = false;
-            
+
                 Set<String> canonicalForms = new HashSet<>();
                 canonicalForms.addAll(wordnet.getNounSynonyms(lemma));
                 if(!canonicalForms.isEmpty()){
@@ -725,13 +740,24 @@ public class Process {
                      createWordnetVerbEntry(lemma,lexicon,uri);
                      createWordnetAdjectiveEntry(label,lexicon,uri);
                      createWordnetNounEntry(lemma,lexicon,uri);
-                     System.out.println("created general entries");
                 }
-                
             }
-            
-            
         }
+        if(added_entry){
+            PrintWriter writer;
+            try {
+                writer = new PrintWriter("resources/property_labels.txt");
+                for(String uri:label_property_mapping.keySet()){
+                    writer.write(uri+"\t"+label_property_mapping.get(uri)+"\n");
+                }
+                writer.close();
+            } catch (FileNotFoundException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+        
+
     }
     
     
@@ -817,6 +843,30 @@ public class Process {
 
 
     
+        private static Map<String,String> loadMappingList(String pathToList) throws IOException {
+            Map<String,String> results = new HashMap<>();
+            String properties_raw = "";
+            /*
+             * each line contains one property
+             */
+            FileInputStream inputStream = new FileInputStream(pathToList);
+	    try {
+	        properties_raw = IOUtils.toString(inputStream);
+	    } finally {
+	        inputStream.close();
+	    }
+	    
+	    for(String p: properties_raw.split("\n")){
+                if(p.contains("\t")){
+                    String[] tmp = p.split("\t");
+                    //first uri, then label
+                    results.put(tmp[0], tmp[1]);
+                }
+	    }
+            
+            return results;
+		
+	}
     
     	private static Set<String> loadPropertyList(String pathToProperties) throws IOException {
             Set<String> properties = new HashSet<>();

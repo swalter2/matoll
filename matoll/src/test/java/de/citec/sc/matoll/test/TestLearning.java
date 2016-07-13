@@ -113,27 +113,27 @@ public class TestLearning {
 //        eval.evaluate(learned,new_gold);
 //        System.out.println("Learned => P:"+eval.getPrecision("lemma")+"\tR:"+eval.getRecall("lemma")+"\tF:"+eval.getFMeasure("lemma"));
         
-        
-        
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println("VerySimpleLexiconEvaluation:");
-        System.out.println("With gold:");
-        List<Double> result = LemmaBasedEvaluation.evaluate(automatic,gold,true,true);
-        System.out.println("Automatic => P:"+result.get(0)+"\tR:"+result.get(1)+"\tF:"+result.get(2));
-        
-        result = LemmaBasedEvaluation.evaluate(learned,gold,true,true);
-        System.out.println("Learned => P:"+result.get(0)+"\tR:"+result.get(1)+"\tF:"+result.get(2));
-        
-        System.out.println();
-        System.out.println("With reduced gold:");
-        result = LemmaBasedEvaluation.evaluate(automatic,new_gold,true,true);
-        System.out.println("Automatic => P:"+result.get(0)+"\tR:"+result.get(1)+"\tF:"+result.get(2));
-        
-        result = LemmaBasedEvaluation.evaluate(learned,new_gold,true,true);
-        System.out.println("Learned => P:"+result.get(0)+"\tR:"+result.get(1)+"\tF:"+result.get(2));
-        
+//        
+//        
+//        System.out.println();
+//        System.out.println();
+//        System.out.println();
+//        System.out.println("VerySimpleLexiconEvaluation:");
+//        System.out.println("With gold:");
+//        List<Double> result = LemmaBasedEvaluation.evaluate(automatic,gold,true,true);
+//        System.out.println("Automatic => P:"+result.get(0)+"\tR:"+result.get(1)+"\tF:"+result.get(2));
+//        
+//        result = LemmaBasedEvaluation.evaluate(learned,gold,true,true);
+//        System.out.println("Learned => P:"+result.get(0)+"\tR:"+result.get(1)+"\tF:"+result.get(2));
+//        
+//        System.out.println();
+//        System.out.println("With reduced gold:");
+//        result = LemmaBasedEvaluation.evaluate(automatic,new_gold,true,true);
+//        System.out.println("Automatic => P:"+result.get(0)+"\tR:"+result.get(1)+"\tF:"+result.get(2));
+//        
+//        result = LemmaBasedEvaluation.evaluate(learned,new_gold,true,true);
+//        System.out.println("Learned => P:"+result.get(0)+"\tR:"+result.get(1)+"\tF:"+result.get(2));
+//        
 
 
     }
