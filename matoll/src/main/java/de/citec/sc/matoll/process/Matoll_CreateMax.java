@@ -14,8 +14,10 @@ import de.citec.sc.matoll.core.Sentence;
 import de.citec.sc.matoll.io.Config;
 import de.citec.sc.matoll.io.LexiconLoader;
 import de.citec.sc.matoll.utils.Stopwords;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -150,6 +152,14 @@ public class Matoll_CreateMax {
                     sentence_counter += 1;
                     Set<String> words = getBagOfWords(sentence);
                     String parsed_sentence = getParsedSentence(sentence);
+                    try(FileWriter fw = new FileWriter("mapping_sentences_to_ids_goldstandard.tsv", true);
+                        BufferedWriter bw = new BufferedWriter(fw);
+                        PrintWriter out = new PrintWriter(bw))
+                        {
+                            out.println(sentence_counter+"\t"+parsed_sentence);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     sentence_list.put(sentence_counter, parsed_sentence);
                     for(String word : words){
                         if(!stopwords.isStopword(word, EN)){
@@ -203,16 +213,16 @@ public class Matoll_CreateMax {
         writer.write(string_builder.toString());
         writer.close();
         
-        writer = new PrintWriter("mapping_sentences_to_ids_goldstandard.tsv");
-        string_builder = new StringBuilder();
-        for(int i:sentence_list.keySet()) {
-            string_builder.append(i);
-            string_builder.append("\t");
-            string_builder.append(sentence_list.get(i));
-            string_builder.append("\n");
-            }
-        writer.write(string_builder.toString());
-        writer.close();
+//        writer = new PrintWriter("mapping_sentences_to_ids_goldstandard.tsv");
+//        string_builder = new StringBuilder();
+//        for(int i:sentence_list.keySet()) {
+//            string_builder.append(i);
+//            string_builder.append("\t");
+//            string_builder.append(sentence_list.get(i));
+//            string_builder.append("\n");
+//            }
+//        writer.write(string_builder.toString());
+//        writer.close();
         
         writer = new PrintWriter("mapping_words_to_sentenceids_goldstandard.tsv");
         string_builder = new StringBuilder();
