@@ -6,13 +6,13 @@
 package de.citec.sc.matoll.process;
 
 import de.citec.sc.matoll.core.Language;
+import static de.citec.sc.matoll.core.Language.EN;
 import de.citec.sc.matoll.core.LexicalEntry;
 import de.citec.sc.matoll.core.Lexicon;
 import de.citec.sc.matoll.core.Sense;
 import de.citec.sc.matoll.core.Sentence;
 import de.citec.sc.matoll.io.Config;
 import de.citec.sc.matoll.io.LexiconLoader;
-import de.citec.sc.matoll.utils.RelationshipEdge;
 import de.citec.sc.matoll.utils.Stopwords;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -25,6 +25,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import javax.xml.parsers.ParserConfigurationException;
+import org.apache.commons.lang.StringUtils;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.QuerySolution;
@@ -94,6 +95,8 @@ public class Matoll_CreateMax {
 
         Set<String> gold_entries = new HashSet<>();
         Set<String> uris = new HashSet<>();
+        Map<Integer,String> sentence_list = new HashMap<>();
+        Map<String,Set<Integer>> mapping_words_sentences = new HashMap<>();
         
         //consider only properties
         for(LexicalEntry entry: gold.getEntries()){
@@ -134,7 +137,7 @@ public class Matoll_CreateMax {
         }
 
 
-
+        int sentence_counter = 0;
         Map<String,Set<String>> bag_words = new HashMap<>();
         for(File file:list_files){
             Model model = RDFDataMgr.loadModel(file.toString());
@@ -142,20 +145,51 @@ public class Matoll_CreateMax {
             sentences = getSentences(model);
             for(Model sentence: sentences){
                 reference = getReference(sentence);
-                Set words = getBagOfWords(sentence);
-                if(bag_words.containsKey(reference)){
-                    Set<String> tmp = bag_words.get(reference);
-                    tmp.addAll(words);
-                    bag_words.put(reference, tmp);
+                if(uris.contains(reference)){
+                    sentence_counter += 1;
+                    Set<String> words = getBagOfWords(sentence);
+                    String parsed_sentence = getParsedSentence(sentence);
+                    sentence_list.put(sentence_counter, parsed_sentence);
+                    for(String word : words){
+                        if(!stopwords.isStopword(word, EN)){
+                            if(mapping_words_sentences.containsKey(word)){
+                                Set<Integer> tmp_set = mapping_words_sentences.get(word);
+                                tmp_set.add(sentence_counter);
+                                mapping_words_sentences.put(word, tmp_set);
+                            }
+                            else{
+                                Set<Integer> tmp_set = new HashSet<>();
+                                tmp_set.add(sentence_counter);
+                                mapping_words_sentences.put(word, tmp_set);    
+                            }
+                        }
+                    }
+                    if(bag_words.containsKey(reference)){
+                        Set<String> tmp = bag_words.get(reference);
+                        for(String s: words){
+                            if(!stopwords.isStopword(s, EN)){
+                                tmp.add(s);
+                            }
+                        }
+                        
+                        bag_words.put(reference, tmp);
+                    }
+                    else{
+                        Set<String> tmp = new HashSet<>();
+                        for(String s: words){
+                            if(!stopwords.isStopword(s, EN)){
+                                tmp.add(s);
+                            }
+                        }
+                        bag_words.put(reference, tmp);
+                    }
                 }
-                else{
-                    bag_words.put(reference, words);
-                }
+                
             }      
             model.close();
         }
         
-       PrintWriter writer = new PrintWriter("bag_of_words.tsv");
+       PrintWriter writer = new PrintWriter("bag_of_words_only_goldstandard.tsv");
        StringBuilder string_builder = new StringBuilder();
         for(String r:bag_words.keySet()) {
             string_builder.append(r);
@@ -167,7 +201,57 @@ public class Matoll_CreateMax {
             }
         writer.write(string_builder.toString());
         writer.close();
+        
+        writer = new PrintWriter("mapping_sentences_to_ids_goldstandard.tsv");
+        string_builder = new StringBuilder();
+        for(int i:sentence_list.keySet()) {
+            string_builder.append(i);
+            string_builder.append("\t");
+            string_builder.append(sentence_list.get(i));
+            string_builder.append("\n");
+            }
+        writer.write(string_builder.toString());
+        writer.close();
+        
+        writer = new PrintWriter("mapping_words_to_sentenceids_goldstandard.tsv");
+        string_builder = new StringBuilder();
+        for(String w:mapping_words_sentences.keySet()) {
+            string_builder.append(w);
+            for(int i : mapping_words_sentences.get(w)){
+                string_builder.append("\t");
+                string_builder.append(i);
+            }
+            string_builder.append("\n");
+            }
+        writer.write(string_builder.toString());
+        writer.close();
 
+    }
+    
+    private static String getParsedSentence(Model sentence) {
+        String query = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "
+                + "SELECT ?number ?form ?pos ?deprel ?head WHERE {"
+                + "?sentence <conll:wordnumber> ?number . "
+                + "?sentence <conll:form> ?form ."
+                + "?sentence <conll:cpostag> ?pos ."
+                + "?sentence <conll:deprel> ?deprel ."
+                + "?sentence <conll:head> ?head ."
+                + "} ORDER BY ASC(xsd:integer(?number))";
+        QueryExecution qExec = QueryExecutionFactory.create(query, sentence) ;
+        ResultSet rs = qExec.execSelect() ;
+        String result = "";
+        while ( rs.hasNext() ) {
+            QuerySolution qs = rs.next();
+            try{
+                    result+= qs.get("?number").toString()+"_"+qs.get("?form").toString()+"_"+qs.get("?pos").toString()+"_"+qs.get("?deprel").toString()+"_"+qs.get("?head").toString()+" ";
+
+             }
+            catch(Exception e){
+           e.printStackTrace();
+           }
+        }
+        qExec.close() ;
+       return result;
     }
     
     private static Sentence returnSentence(Model model) {
@@ -294,13 +378,13 @@ public class Matoll_CreateMax {
                 + "} ORDER BY ASC(xsd:integer(?number))";
         QueryExecution qExec = QueryExecutionFactory.create(query, sentence) ;
         ResultSet rs = qExec.execSelect() ;
-        String result = "";
-        Map<Integer,String> bla = new HashMap<>();
         Set<String> words = new HashSet<>();
         while ( rs.hasNext() ) {
                 QuerySolution qs = rs.next();
                 try{
-                        words.add(qs.get("?form").toString());
+                        String term = qs.get("?form").toString();
+                        if(StringUtils.isAlpha(term)) words.add(term);
+                        
                  }
                 catch(Exception e){
                e.printStackTrace();
