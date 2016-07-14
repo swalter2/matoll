@@ -145,6 +145,7 @@ public class Matoll_CreateMax {
             sentences = getSentences(model);
             for(Model sentence: sentences){
                 reference = getReference(sentence);
+                reference = reference.replace("http://dbpedia/","http://dbpedia.org/");
                 if(uris.contains(reference)){
                     sentence_counter += 1;
                     Set<String> words = getBagOfWords(sentence);
