@@ -97,7 +97,7 @@ public class Matoll_CreateMax {
 
         Set<String> gold_entries = new HashSet<>();
         Set<String> uris = new HashSet<>();
-        Map<Integer,String> sentence_list = new HashMap<>();
+//        Map<Integer,String> sentence_list = new HashMap<>();
         Map<String,Set<Integer>> mapping_words_sentences = new HashMap<>();
         
         //consider only properties
@@ -160,7 +160,7 @@ public class Matoll_CreateMax {
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-                    sentence_list.put(sentence_counter, parsed_sentence);
+//                    sentence_list.put(sentence_counter, parsed_sentence);
                     for(String word : words){
                         if(!stopwords.isStopword(word, EN)){
                             if(mapping_words_sentences.containsKey(word)){
