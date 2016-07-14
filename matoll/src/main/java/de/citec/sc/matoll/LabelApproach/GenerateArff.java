@@ -36,6 +36,22 @@ public class GenerateArff {
 		createArrf(subLabelList,subLabelList_2,posPatternList,posAdjPatternList,adjectives,path_to_write,tagger,label_feature);
 		
 	}
+        
+        
+        public static void run_experimentator2(String path_input, String path_to_write,
+			HashSet<String> subLabelList,HashSet<String> subLabelList_2,HashSet<String> posPatternList,HashSet<String> posAdjPatternList,MaxentTagger tagger,LabelFeature label_feature) throws FileNotFoundException, IOException{
+		
+		
+		List<AdjectiveObject> adjectives = readSingleCSV(new File(path_input));
+		
+		generateSubLabelList(adjectives,subLabelList,subLabelList_2);
+		generatePosPatternList(adjectives,posPatternList);
+		generatePosAdjPatternList(adjectives,posAdjPatternList);
+		
+		
+		createArrf(subLabelList,subLabelList_2,posPatternList,posAdjPatternList,adjectives,path_to_write,tagger,label_feature);
+		
+	}
 	
 	
 	
@@ -363,6 +379,51 @@ public class GenerateArff {
 		
 		return adj_list;
 	}
+        
+        private static List<AdjectiveObject> readSingleCSV(File file) throws IOException {
+		List<AdjectiveObject> adj_list = new ArrayList<AdjectiveObject>();
+		String everything = "";
+		FileInputStream inputStream = new FileInputStream(file);
+		try {
+		       everything = IOUtils.toString(inputStream);
+		} finally {
+		    inputStream.close();
+		}
+		    
+		String[] adjectives = everything.split("\n");
+                int counter = 0;
+		for(String line: adjectives){
+                    String[] tmp = line.split("\t");
+                    AdjectiveObject adjectiveobject = new AdjectiveObject();
+                    adjectiveobject.setAnnotation(tmp[0]);
+                    adjectiveobject.setAdjectiveTerm(tmp[1]);
+                    adjectiveobject.setUri(tmp[2]);
+                    adjectiveobject.setObject(tmp[3]);
+                    adjectiveobject.setFrequency(Integer.valueOf(tmp[4]));
+                    adjectiveobject.setPattern(tmp[5]);
+                    adjectiveobject.setPos_Pattern(tmp[6]);
+                    adjectiveobject.setPos_adj_Pattern(tmp[7]);
+                    adjectiveobject.setRatio(Double.valueOf(tmp[8]));
+                    adjectiveobject.setRatio_pattern(Double.valueOf(tmp[9]));
+                    adjectiveobject.setRatio_pos_pattern(Double.valueOf(tmp[10]));
+                    adjectiveobject.setNormalizedFrequency(Double.valueOf(tmp[11]));
+                    adjectiveobject.setNormalizedObjectFrequency(Double.valueOf(tmp[12]));
+                    adjectiveobject.setNormalizedObjectOccurrences(Double.valueOf(tmp[13]));
+                    adjectiveobject.setSublabel(tmp[14]);
+                    adjectiveobject.setNld(Double.valueOf(tmp[15]));
+                    if(tmp[16].contains("1")) adjectiveobject.setFirstPosition(true);
+                    else adjectiveobject.setFirstPosition(false);
+                    if(tmp[17].contains("1")) adjectiveobject.setLastPosition(true);
+                    else adjectiveobject.setLastPosition(false);
+                    adjectiveobject.setPosition(Integer.valueOf(tmp[18]));
+                    adj_list.add(adjectiveobject);
+
+                    }
+			
+		
+		return adj_list;
+	}
+        
 	
 	
 	public static List<File> listFilesForFolder(final File folder) {
