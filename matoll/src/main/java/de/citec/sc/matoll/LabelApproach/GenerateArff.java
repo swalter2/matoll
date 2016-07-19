@@ -52,6 +52,11 @@ public class GenerateArff {
 		createArrf(subLabelList,subLabelList_2,posPatternList,posAdjPatternList,adjectives,path_to_write,tagger,label_feature);
 		
 	}
+        
+        public static List<AdjectiveObject> load_adjectives_for_experimentator3(String path_input, MaxentTagger tagger) throws FileNotFoundException, IOException{
+            List<AdjectiveObject> adjectives = readSingleCSV(new File(path_input));
+            return adjectives;
+	}
 	
 	
 	
