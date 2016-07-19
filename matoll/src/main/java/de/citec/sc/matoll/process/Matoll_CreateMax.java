@@ -98,7 +98,7 @@ public class Matoll_CreateMax {
         Set<String> gold_entries = new HashSet<>();
         Set<String> uris = new HashSet<>();
 //        Map<Integer,String> sentence_list = new HashMap<>();
-        Map<String,Set<Integer>> mapping_words_sentences = new HashMap<>();
+        Map<Integer,Set<Integer>> mapping_words_sentences = new HashMap<>();
         
         //consider only properties
         for(LexicalEntry entry: gold.getEntries()){
@@ -137,10 +137,11 @@ public class Matoll_CreateMax {
         else{
             list_files.addAll(config.getFiles());
         }
-
+        System.out.println(list_files.size());
 
         int sentence_counter = 0;
-        Map<String,Set<String>> bag_words = new HashMap<>();
+        Map<String,Set<Integer>> bag_words_uri = new HashMap<>();
+        Map<String,Integer> mapping_word_id = new HashMap<>();
         for(File file:list_files){
             Model model = RDFDataMgr.loadModel(file.toString());
             sentences.clear();
@@ -160,39 +161,53 @@ public class Matoll_CreateMax {
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-//                    sentence_list.put(sentence_counter, parsed_sentence);
+                    for(String word : words){
+                        if(!mapping_word_id.containsKey(word)){
+                            int value = mapping_word_id.size();
+                            value +=1;
+                            mapping_word_id.put(word, value);
+                            try(FileWriter fw = new FileWriter("mapping_words_to_ids_goldstandard.tsv", true);
+                            BufferedWriter bw = new BufferedWriter(fw);
+                            PrintWriter out = new PrintWriter(bw))
+                            {
+                                out.println(word+"\t"+value);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
                     for(String word : words){
                         if(!stopwords.isStopword(word, EN)){
-                            if(mapping_words_sentences.containsKey(word)){
-                                Set<Integer> tmp_set = mapping_words_sentences.get(word);
+                            if(mapping_words_sentences.containsKey(mapping_word_id.get(word))){
+                                Set<Integer> tmp_set = mapping_words_sentences.get(mapping_word_id.get(word));
                                 tmp_set.add(sentence_counter);
-                                mapping_words_sentences.put(word, tmp_set);
+                                mapping_words_sentences.put(mapping_word_id.get(word), tmp_set);
+                                
                             }
                             else{
                                 Set<Integer> tmp_set = new HashSet<>();
-                                tmp_set.add(sentence_counter);
-                                mapping_words_sentences.put(word, tmp_set);    
+                                tmp_set.add(sentence_counter); 
+                                mapping_words_sentences.put(mapping_word_id.get(word), tmp_set);    
                             }
                         }
                     }
-                    if(bag_words.containsKey(reference)){
-                        Set<String> tmp = bag_words.get(reference);
+                    if(bag_words_uri.containsKey(reference)){
+                        Set<Integer> tmp = bag_words_uri.get(reference);
                         for(String s: words){
                             if(!stopwords.isStopword(s, EN)){
-                                tmp.add(s);
+                                tmp.add(mapping_word_id.get(s));
                             }
                         }
-                        
-                        bag_words.put(reference, tmp);
+                        bag_words_uri.put(reference, tmp);
                     }
                     else{
-                        Set<String> tmp = new HashSet<>();
+                        Set<Integer> tmp = new HashSet<>();
                         for(String s: words){
                             if(!stopwords.isStopword(s, EN)){
-                                tmp.add(s);
+                                tmp.add(mapping_word_id.get(s));
                             }
                         }
-                        bag_words.put(reference, tmp);
+                        bag_words_uri.put(reference, tmp);
                     }
                 }
                 
@@ -202,31 +217,21 @@ public class Matoll_CreateMax {
         
        PrintWriter writer = new PrintWriter("bag_of_words_only_goldstandard.tsv");
        StringBuilder string_builder = new StringBuilder();
-        for(String r:bag_words.keySet()) {
+        for(String r:bag_words_uri.keySet()) {
             string_builder.append(r);
-            for(String s: bag_words.get(r)){
+            for(Integer i: bag_words_uri.get(r)){
                 string_builder.append("\t");
-                string_builder.append(s);
+                string_builder.append(i);
             }
             string_builder.append("\n");
             }
         writer.write(string_builder.toString());
         writer.close();
         
-//        writer = new PrintWriter("mapping_sentences_to_ids_goldstandard.tsv");
-//        string_builder = new StringBuilder();
-//        for(int i:sentence_list.keySet()) {
-//            string_builder.append(i);
-//            string_builder.append("\t");
-//            string_builder.append(sentence_list.get(i));
-//            string_builder.append("\n");
-//            }
-//        writer.write(string_builder.toString());
-//        writer.close();
         
         writer = new PrintWriter("mapping_words_to_sentenceids_goldstandard.tsv");
         string_builder = new StringBuilder();
-        for(String w:mapping_words_sentences.keySet()) {
+        for(Integer w:mapping_words_sentences.keySet()) {
             string_builder.append(w);
             for(int i : mapping_words_sentences.get(w)){
                 string_builder.append("\t");
