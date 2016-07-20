@@ -90,12 +90,10 @@ public class Matoll_CreateMax {
         language = config.getLanguage();
 
         LexiconLoader loader = new LexiconLoader();
-	
         Lexicon gold = loader.loadFromFile(gold_standard_lexicon);
 
 
 
-        Set<String> gold_entries = new HashSet<>();
         Set<String> uris = new HashSet<>();
 //        Map<Integer,String> sentence_list = new HashMap<>();
         Map<Integer,Set<Integer>> mapping_words_sentences = new HashMap<>();
@@ -106,24 +104,15 @@ public class Matoll_CreateMax {
                  for(Sense sense: entry.getSenseBehaviours().keySet()){
                      String tmp_uri = sense.getReference().getURI().replace("http://dbpedia.org/ontology/", "");
                      if(!Character.isUpperCase(tmp_uri.charAt(0))){
-                        gold_entries.add(entry.getCanonicalForm().toLowerCase()+" "+sense.getReference().getURI());
                         uris.add(sense.getReference().getURI());
                      }
                  }
             }
             catch(Exception e){};
         }
-//        for(String x: gold_entries) System.out.println(x);
-        Lexicon automatic_lexicon = new Lexicon();
-        automatic_lexicon.setBaseURI(config.getBaseUri());
 
 
-        String subj;
-        String obj;
-
-        String reference = null;
-
-        List<Model> sentences = new ArrayList<>();
+        
 
         List<File> list_files = new ArrayList<>();
 
@@ -144,14 +133,12 @@ public class Matoll_CreateMax {
         Map<String,Integer> mapping_word_id = new HashMap<>();
         for(File file:list_files){
             Model model = RDFDataMgr.loadModel(file.toString());
-            sentences.clear();
-            sentences = getSentences(model);
-            for(Model sentence: sentences){
-                reference = getReference(sentence);
+            for(Model sentence: getSentences(model)){
+                String reference = getReference(sentence);
                 reference = reference.replace("http://dbpedia/","http://dbpedia.org/");
                 if(uris.contains(reference)){
                     sentence_counter += 1;
-                    Set<String> words = getBagOfWords(sentence);
+                    Set<Integer> words_ids = getBagOfWords(sentence,stopwords,mapping_word_id);
                     String parsed_sentence = getParsedSentence(sentence);
                     try(FileWriter fw = new FileWriter("mapping_sentences_to_ids_goldstandard.tsv", true);
                         BufferedWriter bw = new BufferedWriter(fw);
@@ -161,51 +148,32 @@ public class Matoll_CreateMax {
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-                    for(String word : words){
-                        if(!mapping_word_id.containsKey(word)){
-                            int value = mapping_word_id.size();
-                            value +=1;
-                            mapping_word_id.put(word, value);
-                            try(FileWriter fw = new FileWriter("mapping_words_to_ids_goldstandard.tsv", true);
-                            BufferedWriter bw = new BufferedWriter(fw);
-                            PrintWriter out = new PrintWriter(bw))
-                            {
-                                out.println(word+"\t"+value);
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
+                    for(Integer word_id : words_ids){
+                        if(mapping_words_sentences.containsKey(word_id)){
+                            Set<Integer> tmp_set = mapping_words_sentences.get(word_id);
+                            tmp_set.add(sentence_counter);
+                            mapping_words_sentences.put(word_id, tmp_set);
+
                         }
-                    }
-                    for(String word : words){
-                        if(!stopwords.isStopword(word, EN)){
-                            if(mapping_words_sentences.containsKey(mapping_word_id.get(word))){
-                                Set<Integer> tmp_set = mapping_words_sentences.get(mapping_word_id.get(word));
-                                tmp_set.add(sentence_counter);
-                                mapping_words_sentences.put(mapping_word_id.get(word), tmp_set);
-                                
-                            }
-                            else{
-                                Set<Integer> tmp_set = new HashSet<>();
-                                tmp_set.add(sentence_counter); 
-                                mapping_words_sentences.put(mapping_word_id.get(word), tmp_set);    
-                            }
+                        else{
+                            Set<Integer> tmp_set = new HashSet<>();
+                            tmp_set.add(sentence_counter); 
+                            mapping_words_sentences.put(word_id, tmp_set);    
                         }
+                        
                     }
                     if(bag_words_uri.containsKey(reference)){
                         Set<Integer> tmp = bag_words_uri.get(reference);
-                        for(String s: words){
-                            if(!stopwords.isStopword(s, EN)){
-                                tmp.add(mapping_word_id.get(s));
-                            }
+                        for(Integer w: words_ids){
+                            tmp.add(w);
+                            
                         }
                         bag_words_uri.put(reference, tmp);
                     }
                     else{
                         Set<Integer> tmp = new HashSet<>();
-                        for(String s: words){
-                            if(!stopwords.isStopword(s, EN)){
-                                tmp.add(mapping_word_id.get(s));
-                            }
+                        for(Integer w: words_ids){
+                            tmp.add(w);
                         }
                         bag_words_uri.put(reference, tmp);
                     }
@@ -213,6 +181,7 @@ public class Matoll_CreateMax {
                 
             }      
             model.close();
+            
         }
         
        PrintWriter writer = new PrintWriter("bag_of_words_only_goldstandard.tsv");
@@ -386,7 +355,7 @@ public class Matoll_CreateMax {
 
  
 
-    private static Set getBagOfWords(Model sentence) {
+    private static Set<Integer> getBagOfWords(Model sentence, Stopwords stopwords, Map<String,Integer> mapping_word_id) {
         String query = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "
                 + "SELECT ?number ?form WHERE {"
                 + "?sentence <conll:wordnumber> ?number . "
@@ -394,12 +363,29 @@ public class Matoll_CreateMax {
                 + "} ORDER BY ASC(xsd:integer(?number))";
         QueryExecution qExec = QueryExecutionFactory.create(query, sentence) ;
         ResultSet rs = qExec.execSelect() ;
-        Set<String> words = new HashSet<>();
+        Set<Integer> words = new HashSet<>();
         while ( rs.hasNext() ) {
                 QuerySolution qs = rs.next();
                 try{
-                        String term = qs.get("?form").toString();
-                        if(StringUtils.isAlpha(term)) words.add(term);
+                    String term = qs.get("?form").toString();
+                    if(StringUtils.isAlpha(term) && !stopwords.isStopword(term, EN)) {
+                        //words.add(term);
+                        if(!mapping_word_id.containsKey(term)){
+                            int value = mapping_word_id.size();
+                            value +=1;
+                            mapping_word_id.put(term, value);
+                            words.add(value);
+                            try(FileWriter fw = new FileWriter("mapping_words_to_ids_goldstandard.tsv", true);
+                            BufferedWriter bw = new BufferedWriter(fw);
+                            PrintWriter out = new PrintWriter(bw))
+                            {
+                                out.println(term+"\t"+value);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                        else words.add(mapping_word_id.get(term));
+                    }
                         
                  }
                 catch(Exception e){
