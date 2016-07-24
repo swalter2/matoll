@@ -13,6 +13,7 @@ import de.citec.sc.matoll.core.Sense;
 import de.citec.sc.matoll.core.Sentence;
 import de.citec.sc.matoll.io.Config;
 import de.citec.sc.matoll.io.LexiconLoader;
+import de.citec.sc.matoll.preprocessor.ModelPreprocessor;
 import de.citec.sc.matoll.utils.Stopwords;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -112,7 +113,16 @@ public class Matoll_CreateMax {
         }
 
 
-        
+        ModelPreprocessor preprocessor = new ModelPreprocessor(language);
+        preprocessor.setCoreferenceResolution(false);
+        Set<String> dep = new HashSet<>();
+        dep.add("prep");
+        dep.add("appos");
+        dep.add("nn");
+        dep.add("dobj");
+        dep.add("pobj");
+        dep.add("num");
+        preprocessor.setDEP(dep);
 
         List<File> list_files = new ArrayList<>();
 
@@ -139,6 +149,11 @@ public class Matoll_CreateMax {
                 if(uris.contains(reference)){
                     sentence_counter += 1;
                     Set<Integer> words_ids = getBagOfWords(sentence,stopwords,mapping_word_id);
+                    //TODO: add sentence preprocessing
+                    String obj = getObject(sentence);
+                    String subj = getSubject(sentence);
+                    preprocessor.preprocess(sentence,subj,obj,language);
+                    //TODO: also return marker if object or subject of property (in SPARQL this has to be optional of course)
                     String parsed_sentence = getParsedSentence(sentence);
                     try(FileWriter fw = new FileWriter("mapping_sentences_to_ids_goldstandard.tsv", true);
                         BufferedWriter bw = new BufferedWriter(fw);
@@ -221,6 +236,9 @@ public class Matoll_CreateMax {
                 + "?sentence <conll:cpostag> ?pos ."
                 + "?sentence <conll:deprel> ?deprel ."
                 + "?sentence <conll:head> ?head ."
+                + "OPTIONAL{"
+                + "?sentence <own:senseArg> ?e1_arg. "
+                + "?sentence <own:senseArg> ?e2_arg. }"
                 + "} ORDER BY ASC(xsd:integer(?number))";
         QueryExecution qExec = QueryExecutionFactory.create(query, sentence) ;
         ResultSet rs = qExec.execSelect() ;
@@ -228,8 +246,23 @@ public class Matoll_CreateMax {
         while ( rs.hasNext() ) {
             QuerySolution qs = rs.next();
             try{
-                    result+= qs.get("?number").toString()+"_"+qs.get("?form").toString()+"_"+qs.get("?pos").toString()+"_"+qs.get("?deprel").toString()+"_"+qs.get("?head").toString()+" ";
-
+                    String e1_arg = "";
+                    String e2_arg = "";
+                    try{
+                        e1_arg = qs.get("?e1_arg").toString();
+                    }
+                    catch(Exception e){
+                    }
+                    try{
+                        e2_arg = qs.get("?e2_arg").toString();
+                    }
+                    catch(Exception e){
+                    }
+                    result+= qs.get("?number").toString()+"_"+qs.get("?form").toString()+"_"+qs.get("?pos").toString()+"_"+qs.get("?deprel").toString()+"_"+qs.get("?head").toString();
+                    if(!e1_arg.equals("") || ! e2_arg.equals("")){
+                        result+="_arg1:"+e1_arg+"_arg2:"+e2_arg;
+                    }
+                    result+=" ";
              }
             catch(Exception e){
            e.printStackTrace();
@@ -239,44 +272,6 @@ public class Matoll_CreateMax {
        return result;
     }
     
-    private static Sentence returnSentence(Model model) {
-        /* In the model is always only one plain_sentence*/
-		
-        String plain_sentence = "";
-        String subjOfProp = "";
-        String objOfProp = "";
-
-        StmtIterator iter = model.listStatements(null,model.createProperty("conll:sentence"), (RDFNode) null);
-        Statement stmt;
-        stmt = iter.next();
-        plain_sentence = stmt.getObject().toString();
-
-        iter = model.listStatements(null,model.createProperty("own:subj"), (RDFNode) null);
-        stmt = iter.next();
-        subjOfProp = stmt.getObject().toString();
-
-        iter = model.listStatements(null,model.createProperty("own:obj"), (RDFNode) null);
-        stmt = iter.next();
-        objOfProp = stmt.getObject().toString();
-
-        Sentence sentence = new Sentence(plain_sentence,subjOfProp,objOfProp);
-
-        try{
-            iter = model.listStatements(null,model.createProperty("own:subjuri"), (RDFNode) null);
-            stmt = iter.next();
-            sentence.setSubjOfProp_uri(stmt.getObject().toString());
-        }catch (Exception e){}
-
-
-        try{
-            iter = model.listStatements(null,model.createProperty("own:objuri"), (RDFNode) null);
-            stmt = iter.next();
-            sentence.setObjOfProp_uri(stmt.getObject().toString());
-        }catch (Exception e){}
-
-        return sentence;
-
-	}
     private static List<Model> getSentences(Model model) throws FileNotFoundException {
 		
         // get all ?res <conll:sentence> 
@@ -341,6 +336,41 @@ public class Matoll_CreateMax {
 		
 	}
     
+    private static String getSubject(Model model) {
+
+            StmtIterator iter = model.listStatements(null,model.getProperty("own:subj"), (RDFNode) null);
+
+            Statement stmt;
+
+            while (iter.hasNext()) {
+
+                    stmt = iter.next();
+
+            return stmt.getObject().toString();
+        }
+
+            return null;
+    }
+
+    /**
+     * 
+     * @param model
+     * @return 
+     */
+    private static String getObject(Model model) {
+            StmtIterator iter = model.listStatements(null,model.getProperty("own:obj"), (RDFNode) null);
+
+            Statement stmt;
+
+            while (iter.hasNext()) {
+
+                    stmt = iter.next();
+
+            return stmt.getObject().toString();
+        }
+
+            return null;
+    }
     
     private static String getReference(Model model) {
 		StmtIterator iter = model.listStatements(null,model.getProperty("conll:reference"), (RDFNode) null);
@@ -360,7 +390,7 @@ public class Matoll_CreateMax {
                 + "SELECT ?number ?form WHERE {"
                 + "?sentence <conll:wordnumber> ?number . "
                 + "?sentence <conll:form> ?form ."
-                + "} ORDER BY ASC(xsd:integer(?number))";
+                + "}";
         QueryExecution qExec = QueryExecutionFactory.create(query, sentence) ;
         ResultSet rs = qExec.execSelect() ;
         Set<Integer> words = new HashSet<>();
