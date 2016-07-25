@@ -230,7 +230,7 @@ public class Matoll_CreateMax {
     
     private static String getParsedSentence(Model sentence) {
         String query = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "
-                + "SELECT ?number ?form ?pos ?deprel ?head WHERE {"
+                + "SELECT ?number ?form ?pos ?e1_arg ?e2_arg ?deprel ?head WHERE {"
                 + "?sentence <conll:wordnumber> ?number . "
                 + "?sentence <conll:form> ?form ."
                 + "?sentence <conll:cpostag> ?pos ."
