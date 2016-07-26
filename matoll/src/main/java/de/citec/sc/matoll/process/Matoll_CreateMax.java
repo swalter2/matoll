@@ -237,7 +237,8 @@ public class Matoll_CreateMax {
                 + "?sentence <conll:deprel> ?deprel ."
                 + "?sentence <conll:head> ?head ."
                 + "OPTIONAL{"
-                + "?sentence <own:senseArg> ?e1_arg. "
+                + "?sentence <own:senseArg> ?e1_arg. }"
+                + "OPTIONAL{"
                 + "?sentence <own:senseArg> ?e2_arg. }"
                 + "} ORDER BY ASC(xsd:integer(?number))";
         QueryExecution qExec = QueryExecutionFactory.create(query, sentence) ;
@@ -250,17 +251,22 @@ public class Matoll_CreateMax {
                     String e2_arg = "";
                     try{
                         e1_arg = qs.get("?e1_arg").toString();
+                        e1_arg = e1_arg.replace("http://lemon-model.net/lemon#","");
                     }
                     catch(Exception e){
                     }
                     try{
                         e2_arg = qs.get("?e2_arg").toString();
+                        e2_arg = e2_arg.replace("http://lemon-model.net/lemon#","");
                     }
                     catch(Exception e){
                     }
                     result+= qs.get("?number").toString()+"_"+qs.get("?form").toString()+"_"+qs.get("?pos").toString()+"_"+qs.get("?deprel").toString()+"_"+qs.get("?head").toString();
-                    if(!e1_arg.equals("") || ! e2_arg.equals("")){
-                        result+="_arg1:"+e1_arg+"_arg2:"+e2_arg;
+                    if(!e1_arg.equals("")){
+                        result+="_arg1:"+e1_arg;
+                    }
+                    if(!e2_arg.equals("")){
+                        result+="_arg2:"+e2_arg;
                     }
                     result+=" ";
              }
