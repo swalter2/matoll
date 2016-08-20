@@ -107,7 +107,7 @@ sentence:Professor Janet Beer is the Vice-Chancellor of Oxford Brookes Universit
 		
 
         @Override
-	public int extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon,List<String> exported_entries) {
 
 		
 		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
@@ -134,11 +134,11 @@ sentence:Professor Janet Beer is the Vice-Chancellor of Oxford Brookes Universit
                                 if(noun!=null && e1_arg!=null && e2_arg!=null && preposition!=null) {
                                     Sentence sentence = this.returnSentence(model);
                                     if (!modifier.equals("")){
-                                        Templates.getNounWithPrep(model, lexicon, sentence, modifier +" "+noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+                                        Templates.getNounWithPrep(model, lexicon, sentence, modifier +" "+noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID(),exported_entries);
                                         updated_entry += 1;
                                     }
                                     else {
-                                        Templates.getNounWithPrep(model, lexicon, sentence, noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+                                        Templates.getNounWithPrep(model, lexicon, sentence, noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID(),exported_entries);
                                         updated_entry += 1;
                                     }
                                 }

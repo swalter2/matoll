@@ -14,6 +14,7 @@ import de.citec.sc.matoll.core.Lexicon;
 import de.citec.sc.matoll.core.Sentence;
 import de.citec.sc.matoll.patterns.SparqlPattern;
 import de.citec.sc.matoll.patterns.Templates;
+import java.util.List;
 
 public class SparqlPattern_ES_Transitive_Reciprocal extends SparqlPattern{
 
@@ -112,7 +113,7 @@ public class SparqlPattern_ES_Transitive_Reciprocal extends SparqlPattern{
 	}
 
 	@Override
-	public int extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon,List<String> exported_entries) {
 		
 		
 		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
@@ -130,7 +131,7 @@ public class SparqlPattern_ES_Transitive_Reciprocal extends SparqlPattern{
                              e2_arg = qs.get("?e2_arg").toString();
                              if(verb!=null && e1_arg!=null && e2_arg!=null) {
                                  Sentence sentence = this.returnSentence(model);
-                                 Templates.getReflexiveTransitiveVerbWihoutPrep(model, lexicon, sentence, verb+"+se", e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                                 Templates.getReflexiveTransitiveVerbWihoutPrep(model, lexicon, sentence, verb+"+se", e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID(),exported_entries);
                                  updated_entry += 1;
                              }
                      }

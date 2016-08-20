@@ -15,6 +15,7 @@ import de.citec.sc.matoll.core.Lexicon;
 import de.citec.sc.matoll.core.Sentence;
 import de.citec.sc.matoll.patterns.SparqlPattern;
 import de.citec.sc.matoll.patterns.Templates;
+import java.util.List;
 
 
 public class SparqlPattern_EN_Predicative_Participle_copulative extends SparqlPattern {
@@ -55,7 +56,7 @@ public class SparqlPattern_EN_Predicative_Participle_copulative extends SparqlPa
         }
 
         @Override
-	public int extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon,List<String> exported_entries) {
 
 		
 		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
@@ -83,11 +84,11 @@ public class SparqlPattern_EN_Predicative_Participle_copulative extends SparqlPa
                                  if(adjective!=null && e1_arg!=null && e2_arg!=null && preposition!=null) {
                                      Sentence sentence = this.returnSentence(model);
                                      if(!lemma_addition.equals("")){
-                                         Templates.getAdjective(model, lexicon, sentence, lemma_addition+" "+adjective, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+                                         Templates.getAdjective(model, lexicon, sentence, lemma_addition+" "+adjective, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID(),exported_entries);
                                          updated_entry += 1;
                                      }
                                      else {
-                                         Templates.getAdjective(model, lexicon, sentence, adjective, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+                                         Templates.getAdjective(model, lexicon, sentence, adjective, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID(),exported_entries);
                                          updated_entry += 1;
                                      }
                                  }

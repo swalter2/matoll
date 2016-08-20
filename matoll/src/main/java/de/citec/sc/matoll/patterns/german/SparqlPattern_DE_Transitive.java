@@ -14,6 +14,7 @@ import de.citec.sc.matoll.core.Lexicon;
 import de.citec.sc.matoll.core.Sentence;
 import de.citec.sc.matoll.patterns.SparqlPattern;
 import de.citec.sc.matoll.patterns.Templates;
+import java.util.List;
 
 public class SparqlPattern_DE_Transitive extends SparqlPattern{
 
@@ -76,7 +77,7 @@ sentence::
 	}
 
 	@Override
-	public int extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon,List<String> exported_entries) {
 
 		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
                 ResultSet rs = qExec.execSelect() ;
@@ -107,16 +108,16 @@ sentence::
                             if(verb!=null && e1_arg!=null && e2_arg!=null) {
                                 Sentence sentence = this.returnSentence(model);
                                 if(additional_lemma!=null){
-                                    Templates.getTransitiveVerb(model, lexicon, sentence, additional_lemma +" "+verb, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.DE,getID());
+                                    Templates.getTransitiveVerb(model, lexicon, sentence, additional_lemma +" "+verb, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.DE,getID(),exported_entries);
                                     updated_entry += 1;
                                 }
                                 if(avz!=null){
-                                    Templates.getTransitiveVerb(model, lexicon, sentence, avz+verb, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.DE,getID());
+                                    Templates.getTransitiveVerb(model, lexicon, sentence, avz+verb, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.DE,getID(),exported_entries);
                                     updated_entry += 1;
                                 }
 
                                 if(avz==null && additional_lemma==null)
-                                    Templates.getTransitiveVerb(model, lexicon, sentence,verb, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.DE,getID());
+                                    Templates.getTransitiveVerb(model, lexicon, sentence,verb, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.DE,getID(),exported_entries);
                                     updated_entry += 1;
                             }
                     }

@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 
 import de.citec.sc.matoll.core.Lexicon;
 import de.citec.sc.matoll.patterns.SparqlPattern;
+import java.util.List;
 
 
 public class SparqlPattern_DE_Transitive_Passive_optional extends SparqlPattern{
@@ -45,7 +46,7 @@ public class SparqlPattern_DE_Transitive_Passive_optional extends SparqlPattern{
 	}
 
 	@Override
-	public int extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon, List<String> exported_entries) {
 
 //                model.enterCriticalSection(Lock.READ) ;
 //		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;

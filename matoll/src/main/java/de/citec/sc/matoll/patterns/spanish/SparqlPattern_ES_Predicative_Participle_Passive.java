@@ -14,6 +14,7 @@ import de.citec.sc.matoll.core.Lexicon;
 import de.citec.sc.matoll.core.Sentence;
 import de.citec.sc.matoll.patterns.SparqlPattern;
 import de.citec.sc.matoll.patterns.Templates;
+import java.util.List;
 
 public class SparqlPattern_ES_Predicative_Participle_Passive extends SparqlPattern{
 
@@ -214,7 +215,7 @@ public class SparqlPattern_ES_Predicative_Participle_Passive extends SparqlPatte
 	}
 
 	@Override
-	public int extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon,List<String> exported_entries) {
 		
 		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
                 ResultSet rs = qExec.execSelect() ;
@@ -238,12 +239,12 @@ public class SparqlPattern_ES_Predicative_Participle_Passive extends SparqlPatte
 
                             if (preposition!=null)
                             {   if(preposition.equals("por")){
-                                    Templates.getTransitiveVerb(model, lexicon, sentence, lemma, e2_arg, e1_arg, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                                    Templates.getTransitiveVerb(model, lexicon, sentence, lemma, e2_arg, e1_arg, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID(),exported_entries);
                                     updated_entry += 1;
                                 }
                             }
                             else{
-                                Templates.getAdjective(model, lexicon, sentence, participle, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                                Templates.getAdjective(model, lexicon, sentence, participle, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID(),exported_entries);
                                 updated_entry += 1;
                             }
                         }

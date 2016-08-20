@@ -14,6 +14,7 @@ import de.citec.sc.matoll.core.Lexicon;
 import de.citec.sc.matoll.core.Sentence;
 import de.citec.sc.matoll.patterns.SparqlPattern;
 import de.citec.sc.matoll.patterns.Templates;
+import java.util.List;
 
 public class SparqlPattern_DE_Noun_PP_appos extends SparqlPattern{
 
@@ -49,7 +50,7 @@ public class SparqlPattern_DE_Noun_PP_appos extends SparqlPattern{
 	}
 
 	@Override
-	public int extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon,List<String> exported_entries) {
             
 		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
                 ResultSet rs = qExec.execSelect() ;
@@ -69,7 +70,7 @@ public class SparqlPattern_DE_Noun_PP_appos extends SparqlPattern{
                             prep = qs.get("?prep").toString();
                             if(noun!=null && e1_arg!=null && e2_arg!=null && prep!=null) {
                                 Sentence sentence = this.returnSentence(model);
-                                Templates.getNounWithPrep(model, lexicon, sentence,noun, e1_arg, e2_arg,prep, this.getReference(model), logger, this.getLemmatizer(),Language.DE,getID());
+                                Templates.getNounWithPrep(model, lexicon, sentence,noun, e1_arg, e2_arg,prep, this.getReference(model), logger, this.getLemmatizer(),Language.DE,getID(),exported_entries);
                                 updated_entry += 1;
                             }
                     }

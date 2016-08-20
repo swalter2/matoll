@@ -14,6 +14,7 @@ import de.citec.sc.matoll.core.Lexicon;
 import de.citec.sc.matoll.core.Sentence;
 import de.citec.sc.matoll.patterns.SparqlPattern;
 import de.citec.sc.matoll.patterns.Templates;
+import java.util.List;
 
 public class SparqlPattern_ES_Reflexive_Transitive_PP extends SparqlPattern{
 
@@ -137,7 +138,7 @@ sentence::
 	}
 
 	@Override
-	public int extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon,List<String> exported_entries) {
 		
 		
 		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
@@ -163,7 +164,7 @@ sentence::
                         if(verb!=null && e1_arg!=null && e2_arg!=null && preposition!=null) {
                             Sentence sentence = this.returnSentence(model);
                             if(se_form!=null){
-                                Templates.getReflexiveTransitiveVerb(model, lexicon, sentence, verb+"+"+se_form, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                                Templates.getReflexiveTransitiveVerb(model, lexicon, sentence, verb+"+"+se_form, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID(),exported_entries);
                                 updated_entry += 1;
                             }
                         }

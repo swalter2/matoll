@@ -118,7 +118,7 @@ sentence:Steve Jobs attempted management coups twice at Apple Inc. ; first in 19
         }
 	
         @Override
-	public int extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon,List<String> exported_entries) {
   
                 QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
                 ResultSet rs = qExec.execSelect() ;
@@ -160,7 +160,7 @@ sentence:Steve Jobs attempted management coups twice at Apple Inc. ; first in 19
                                      else{
                                          cannonicalform = verb;
                                      }
-                                     Templates.getIntransitiveVerb(model, lexicon, sentence, cannonicalform, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+                                     Templates.getIntransitiveVerb(model, lexicon, sentence, cannonicalform, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID(),exported_entries);
                                      updated_entry += 1;
                                  }
                          }

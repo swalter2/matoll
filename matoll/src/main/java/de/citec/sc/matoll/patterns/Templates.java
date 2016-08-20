@@ -22,10 +22,11 @@ import de.citec.sc.matoll.utils.Lemmatizer;
 public class Templates {
 	
    
-	public static void getNounPossessive(Model model, Lexicon lexicon, Sentence sentence, String noun, String e1_arg, String e2_arg, String reference,Logger logger,Lemmatizer Lemmatizer, Language language, String pattern_name) {
+	public static void getNounPossessive(Model model, Lexicon lexicon, Sentence sentence, String noun, String e1_arg, String e2_arg, String reference,Logger logger,Lemmatizer Lemmatizer, Language language, String pattern_name, List<String> exported_entries) {
 	        		 
             LexicalEntry entry = new LexicalEntry(language);
 
+            
             Sense sense = new Sense();
             Reference ref = new SimpleReference(reference);
             sense.setReference(ref);
@@ -47,11 +48,15 @@ public class Templates {
                     //logger.debug("Lemmatized cannonical form:"+term+"/n");
                     entry.setCanonicalForm(term);
                     entry.setURI(lexicon.getBaseURI()+"LexicalEntry_"+cleanTerm(term)+"_as_PossessiveNoun");
+                    exported_entries.add(term+"\t\tcommonNoun\tNounPossessiveFrame\t"+reference+"\t"+e1_arg+"\t"+e2_arg+"\t1\t"+pattern_name+"\t"+sentence.getSentence()+"\n");
+
+
             }
             else
             {
                     entry.setCanonicalForm(noun);
                     entry.setURI(lexicon.getBaseURI()+"LexicalEntry_"+cleanTerm(noun)+"_as_PossessiveNoun");
+                    exported_entries.add(noun+"\t\tcommonNoun\tNounPossessiveFrame\t"+reference+"\t"+e1_arg+"\t"+e2_arg+"\t1\t"+pattern_name+"\t"+sentence.getSentence()+"\n");
             }
             
             
@@ -120,7 +125,7 @@ public class Templates {
 	
 	
 	
-	public static void getNounWithPrep(Model model, Lexicon lexicon, Sentence sentence, String noun, String e1_arg, String e2_arg, String preposition, String reference,Logger logger,Lemmatizer Lemmatizer, Language language, String pattern_name) {
+	public static void getNounWithPrep(Model model, Lexicon lexicon, Sentence sentence, String noun, String e1_arg, String e2_arg, String preposition, String reference,Logger logger,Lemmatizer Lemmatizer, Language language, String pattern_name,List<String> exported_entries) {
 	        		 
             LexicalEntry entry = new LexicalEntry(language);
             Sense sense = new Sense();
@@ -144,11 +149,15 @@ public class Templates {
                     //logger.debug("Lemmatized cannonical form:"+term+"/n");
                     entry.setCanonicalForm(term);
                     entry.setURI(lexicon.getBaseURI()+"LexicalEntry_"+cleanTerm(term)+"_as_Noun_withPrep_"+preposition);
+                    exported_entries.add(term+"\t"+preposition+"\tcommonNoun\tNounPPFrame\t"+reference+"\t"+e1_arg+"\t"+e2_arg+"\t1\t"+pattern_name+"\t"+sentence.getSentence()+"\n");
+
             }
             else
             {
                     entry.setCanonicalForm(noun);
                     entry.setURI(lexicon.getBaseURI()+"LexicalEntry_"+cleanTerm(noun)+"_as_Noun_withPrep_"+preposition);
+                    exported_entries.add(noun+"\t"+preposition+"\tcommonNoun\tNounPPFrame\t"+reference+"\t"+e1_arg+"\t"+e2_arg+"\t1\t"+pattern_name+"\t"+sentence.getSentence()+"\n");
+
             }
 
             entry.setPOS("http://www.lexinfo.net/ontology/2.0/lexinfo#commonNoun");
@@ -209,7 +218,7 @@ public class Templates {
 	}
 	
 	
-	public static void getAdjective(Model model, Lexicon lexicon, Sentence sentence, String adjective, String e1_arg, String e2_arg, String preposition, String reference,Logger logger,Lemmatizer Lemmatizer, Language language, String pattern_name) {
+	public static void getAdjective(Model model, Lexicon lexicon, Sentence sentence, String adjective, String e1_arg, String e2_arg, String preposition, String reference,Logger logger,Lemmatizer Lemmatizer, Language language, String pattern_name,List<String> exported_entries) {
 	        		 
             LexicalEntry entry = new LexicalEntry(language);
             entry.setURI(lexicon.getBaseURI()+"LexicalEntry_"+cleanTerm(adjective)+"_as_Adjective_withPrep_"+preposition);
@@ -225,6 +234,7 @@ public class Templates {
             provenance.addSentence(sentence);
 
             SyntacticBehaviour behaviour = new SyntacticBehaviour();
+            exported_entries.add(adjective+"\t"+preposition+"\tadjective\tAdjectivePredicativeFrame\t"+reference+"\t"+e1_arg+"\t"+e2_arg+"\t"+"1"+"\t"+pattern_name+"\t"+sentence.getSentence()+"\n");
 
 
             /*
@@ -296,7 +306,7 @@ public class Templates {
 	
 	
 	
-	public static void getTransitiveVerb(Model model, Lexicon lexicon, Sentence sentence, String verb, String e1_arg, String e2_arg, String reference,Logger logger,Lemmatizer Lemmatizer, Language language,String pattern_name) {
+	public static void getTransitiveVerb(Model model, Lexicon lexicon, Sentence sentence, String verb, String e1_arg, String e2_arg, String reference,Logger logger,Lemmatizer Lemmatizer, Language language,String pattern_name,List<String> exported_entries) {
             LexicalEntry entry = new LexicalEntry(language);
 
             
@@ -322,11 +332,15 @@ public class Templates {
                     //logger.debug("Lemmatized cannonical form:"+term+"/n");
                     entry.setCanonicalForm(term);
                     entry.setURI(lexicon.getBaseURI()+"LexicalEntry_"+cleanTerm(term)+"_as_TransitiveVerb");
+                    exported_entries.add(term+"\t"+""+"\tverb\tTransitivePPFrame\t"+reference+"\t"+e1_arg+"\t"+e2_arg+"\t1\t"+pattern_name+"\t"+sentence.getSentence()+"\n");
+
             }
             else
             {
                     entry.setCanonicalForm(verb);
                     entry.setURI(lexicon.getBaseURI()+"LexicalEntry_"+cleanTerm(verb)+"_as_TransitiveVerb");
+                    exported_entries.add(verb+"\t"+""+"\tverb\tTransitivePPFrame\t"+reference+"\t"+e1_arg+"\t"+e2_arg+"\t1\t"+pattern_name+"\t"+sentence.getSentence()+"\n");
+
             }
             
             entry.setPOS("http://www.lexinfo.net/ontology/2.0/lexinfo#verb");
@@ -388,7 +402,7 @@ public class Templates {
 
 	}
 	
-        public static void getReflexiveTransitiveVerb(Model model, Lexicon lexicon,  Sentence sentence, String verb, String e1_arg, String e2_arg, String preposition, String reference,Logger logger,Lemmatizer Lemmatizer, Language language,String pattern_name) {
+        public static void getReflexiveTransitiveVerb(Model model, Lexicon lexicon,  Sentence sentence, String verb, String e1_arg, String e2_arg, String preposition, String reference,Logger logger,Lemmatizer Lemmatizer, Language language,String pattern_name,List<String> exported_entries) {
 
             LexicalEntry entry = new LexicalEntry(language);
             entry.setPreposition(new Preposition(language,preposition));
@@ -412,11 +426,15 @@ public class Templates {
                     //logger.debug("Lemmatized cannonical form:"+term+"/n");
                     entry.setCanonicalForm(term);
                     entry.setURI(lexicon.getBaseURI()+"LexicalEntry_"+cleanTerm(term)+"_as_ReflexiveTransitiveVerb_withPrep_"+preposition);
+                    exported_entries.add(term+"\t"+preposition+"\tverb\tReflexiveTransitivePPFrame\t"+reference+"\t"+e1_arg+"\t"+e2_arg+"\t1\t"+pattern_name+"\t"+sentence.getSentence()+"\n");
+
             }
             else
             {
                     entry.setCanonicalForm(verb);
                     entry.setURI(lexicon.getBaseURI()+"LexicalEntry_"+cleanTerm(verb)+"_as_ReflexiveTransitiveVerb_withPrep_"+preposition);
+                    exported_entries.add(verb+"\t"+preposition+"\tverb\tReflexiveTransitivePPFrame\t"+reference+"\t"+e1_arg+"\t"+e2_arg+"\t1\t"+pattern_name+"\t"+sentence.getSentence()+"\n");
+
             }
              
              
@@ -479,7 +497,7 @@ public class Templates {
 
 	}
                 
-    public static void getReflexiveTransitiveVerbWihoutPrep(Model model, Lexicon lexicon,  Sentence sentence, String verb, String e1_arg, String e2_arg, String reference,Logger logger,Lemmatizer Lemmatizer, Language language,String pattern_name) {
+    public static void getReflexiveTransitiveVerbWihoutPrep(Model model, Lexicon lexicon,  Sentence sentence, String verb, String e1_arg, String e2_arg, String reference,Logger logger,Lemmatizer Lemmatizer, Language language,String pattern_name,List<String> exported_entries) {
 
             LexicalEntry entry = new LexicalEntry(language);
             Sense sense = new Sense();
@@ -502,11 +520,15 @@ public class Templates {
                     //logger.debug("Lemmatized cannonical form:"+term+"/n");
                     entry.setCanonicalForm(term);
                     entry.setURI(lexicon.getBaseURI()+"LexicalEntry_"+cleanTerm(term)+"_as_ReflexiveTransitiveVerb_withoutPrep");
+                    exported_entries.add(term+"\t"+""+"\tverb\tReflexiveTransitivePPFrame\t"+reference+"\t"+e1_arg+"\t"+e2_arg+"\t1\t"+pattern_name+"\t"+sentence.getSentence()+"\n");
+
             }
             else
             {
                     entry.setCanonicalForm(verb);
                     entry.setURI(lexicon.getBaseURI()+"LexicalEntry_"+cleanTerm(verb)+"_as_ReflexiveTransitiveVerb_withoutPrep");
+                    exported_entries.add(verb+"\t"+""+"\tverb\tReflexiveTransitivePPFrame\t"+reference+"\t"+e1_arg+"\t"+e2_arg+"\t1\t"+pattern_name+"\t"+sentence.getSentence()+"\n");
+
             }
              
              
@@ -569,7 +591,7 @@ public class Templates {
 
 	}
                         
-	public static void getIntransitiveVerb(Model model, Lexicon lexicon,  Sentence sentence, String verb, String e1_arg, String e2_arg, String preposition, String reference,Logger logger,Lemmatizer Lemmatizer, Language language,String pattern_name) {
+	public static void getIntransitiveVerb(Model model, Lexicon lexicon,  Sentence sentence, String verb, String e1_arg, String e2_arg, String preposition, String reference,Logger logger,Lemmatizer Lemmatizer, Language language,String pattern_name,List<String> exported_entries) {
 
             LexicalEntry entry = new LexicalEntry(language);
             entry.setPreposition(new Preposition(language,preposition));
@@ -593,11 +615,15 @@ public class Templates {
                     //logger.debug("Lemmatized cannonical form:"+term+"/n");
                     entry.setCanonicalForm(term);
                     entry.setURI(lexicon.getBaseURI()+"LexicalEntry_"+cleanTerm(term)+"_as_IntransitiveVerb_withPrep_"+preposition);
+                    exported_entries.add(term+"\t"+preposition+"\tverb\tIntransitivePPFrame\t"+reference+"\t"+e1_arg+"\t"+e2_arg+"\t"+"1"+"\t"+pattern_name+"\t"+sentence.getSentence()+"\n");
+
             }
             else
             {
                     entry.setCanonicalForm(verb);
                     entry.setURI(lexicon.getBaseURI()+"LexicalEntry_"+cleanTerm(verb)+"_as_IntransitiveVerb_withPrep_"+preposition);
+                    exported_entries.add(verb+"\t"+preposition+"\tverb\tIntransitivePPFrame\t"+reference+"\t"+e1_arg+"\t"+e2_arg+"\t"+"1"+"\t"+pattern_name+"\t"+sentence.getSentence()+"\n");
+
             }
              
              

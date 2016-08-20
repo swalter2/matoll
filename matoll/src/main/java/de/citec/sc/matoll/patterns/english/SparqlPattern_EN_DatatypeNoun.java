@@ -10,6 +10,7 @@ import de.citec.sc.matoll.core.Lexicon;
 import de.citec.sc.matoll.core.Sentence;
 import de.citec.sc.matoll.patterns.SparqlPattern;
 import de.citec.sc.matoll.patterns.Templates;
+import java.util.List;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.QuerySolution;
@@ -93,7 +94,7 @@ sentence::
     }
 
     @Override
-    public int extractLexicalEntries(Model model, Lexicon lexicon) {
+    public int extractLexicalEntries(Model model, Lexicon lexicon,List<String> exported_entries) {
         QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
         ResultSet rs = qExec.execSelect() ;
         String noun = null;
@@ -118,7 +119,7 @@ sentence::
 
         if(noun!=null && e1_arg!=null && e2_arg!=null) {
             Sentence sentence = this.returnSentence(model);
-            Templates.getNounPossessive(model, lexicon, sentence, noun, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+            Templates.getNounPossessive(model, lexicon, sentence, noun, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID(),exported_entries);
             updated_entry += 1;
         }
         return updated_entry;

@@ -14,6 +14,7 @@ import de.citec.sc.matoll.core.Lexicon;
 import de.citec.sc.matoll.core.Sentence;
 import de.citec.sc.matoll.patterns.SparqlPattern;
 import de.citec.sc.matoll.patterns.Templates;
+import java.util.List;
 
 public class SparqlPattern_ES_Noun_PP_appos_b extends SparqlPattern{
 
@@ -79,7 +80,7 @@ public class SparqlPattern_ES_Noun_PP_appos_b extends SparqlPattern{
 	}
 
 	@Override
-	public int extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon,List<String> exported_entries) {
 		
 		
 		QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
@@ -112,19 +113,19 @@ public class SparqlPattern_ES_Noun_PP_appos_b extends SparqlPattern{
                                  if(adjective_lemma!=null){
                                      if(lemma_wordnumber<adjective_wordnumber)
                                      {
-                                         Templates.getNounWithPrep(model, lexicon, sentence, noun+" "+adjective_lemma, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                                         Templates.getNounWithPrep(model, lexicon, sentence, noun+" "+adjective_lemma, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID(),exported_entries);
                                          updated_entry += 1;
                                      }
                                      else
                                      {
-                                         Templates.getNounWithPrep(model, lexicon, sentence, adjective_lemma+" "+noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                                         Templates.getNounWithPrep(model, lexicon, sentence, adjective_lemma+" "+noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID(),exported_entries);
                                          updated_entry += 1;
                                      }
 
                                  }
                                  else
                                  {
-                                     Templates.getNounWithPrep(model, lexicon, sentence, noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID());
+                                     Templates.getNounWithPrep(model, lexicon, sentence, noun, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.ES,getID(),exported_entries);
                                      updated_entry += 1;
                                  }
                              }

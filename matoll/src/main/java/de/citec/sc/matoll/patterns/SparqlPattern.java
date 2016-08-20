@@ -8,6 +8,7 @@ import org.apache.jena.rdf.model.StmtIterator;
 import de.citec.sc.matoll.core.Lexicon;
 import de.citec.sc.matoll.core.Sentence;
 import de.citec.sc.matoll.utils.Lemmatizer;
+import java.util.List;
 import org.apache.jena.rdf.model.Statement;
 
 public abstract class SparqlPattern {
@@ -19,7 +20,7 @@ public abstract class SparqlPattern {
         
         public abstract String getQuery();
 	
-	public abstract int extractLexicalEntries(Model model, Lexicon lexicon); 
+	public abstract int extractLexicalEntries(Model model, Lexicon lexicon, List<String> exported_entries); 
 
 	public void setLemmatizer(Lemmatizer lemmatizer) {
 		

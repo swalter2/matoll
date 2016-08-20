@@ -14,6 +14,7 @@ import de.citec.sc.matoll.core.Lexicon;
 import de.citec.sc.matoll.core.Sentence;
 import de.citec.sc.matoll.patterns.SparqlPattern;
 import de.citec.sc.matoll.patterns.Templates;
+import java.util.List;
 
 
 public class SparqlPattern_EN_Transitive_Passive extends SparqlPattern {
@@ -86,7 +87,7 @@ public class SparqlPattern_EN_Transitive_Passive extends SparqlPattern {
         }
 	
         @Override
-	public int extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon, List<String> exported_entries) {
 
                 
                 QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
@@ -115,11 +116,11 @@ public class SparqlPattern_EN_Transitive_Passive extends SparqlPattern {
                                 if(adjective!=null && e1_arg!=null && e2_arg!=null && preposition!=null && preposition.equals("by")) {
                                     Sentence sentence = this.returnSentence(model);
                                     if(!lemma_addition.equals("")){
-                                        Templates.getTransitiveVerb(model, lexicon, sentence, lemma_addition+" "+adjective, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+                                        Templates.getTransitiveVerb(model, lexicon, sentence, lemma_addition+" "+adjective, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID(),exported_entries);
                                         updated_entry += 1;
                                     }
                                     else {
-                                        Templates.getTransitiveVerb(model, lexicon, sentence, adjective, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+                                        Templates.getTransitiveVerb(model, lexicon, sentence, adjective, e1_arg, e2_arg, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID(), exported_entries);
                                         updated_entry += 1;
                                     }
                                 } 

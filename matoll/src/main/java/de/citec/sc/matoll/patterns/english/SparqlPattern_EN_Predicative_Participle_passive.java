@@ -105,7 +105,7 @@ sentence::
         }
 	
         @Override
-	public int extractLexicalEntries(Model model, Lexicon lexicon) {
+	public int extractLexicalEntries(Model model, Lexicon lexicon,List<String> exported_entries) {
 
                 
                 QueryExecution qExec = QueryExecutionFactory.create(getQuery(), model) ;
@@ -135,11 +135,11 @@ sentence::
                                 if(adjective!=null && e1_arg!=null && e2_arg!=null && preposition!=null && !preposition.equals("by")) {
                                     Sentence sentence = this.returnSentence(model);
                                     if(!lemma_addition.equals("")){
-                                        Templates.getAdjective(model, lexicon, sentence, lemma_addition+" "+adjective, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+                                        Templates.getAdjective(model, lexicon, sentence, lemma_addition+" "+adjective, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID(),exported_entries);
                                         updated_entry += 1;
                                     }
                                     else {
-                                        Templates.getAdjective(model, lexicon, sentence, adjective, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID());
+                                        Templates.getAdjective(model, lexicon, sentence, adjective, e1_arg, e2_arg, preposition, this.getReference(model), logger, this.getLemmatizer(),Language.EN,getID(),exported_entries);
                                         updated_entry += 1;
                                     }
                                 }

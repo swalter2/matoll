@@ -1,2 +1,10 @@
 uri	#entries	#numberSentences
-http://dbpedia.org/ontology/spouse	470	472
+http://dbpedia.org/ontology/previousWork	173	174
+http://dbpedia.org/ontology/causalties	3	3
+http://dbpedia.org/ontology/successor	521	524
+http://dbpedia.org/ontology/child	323	323
+http://dbpedia.org/ontology/capacity	1	1
+http://dbpedia.org/ontology/seatingCapacity	1	1
+http://dbpedia.org/ontology/mascot	6	7
+http://dbpedia.org/ontology/cinematography	13	13
+http://dbpedia.org/ontology/relative	135	137

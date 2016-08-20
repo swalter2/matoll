@@ -245,6 +245,7 @@ public class Matoll {
                 int sentence_counter = 0;
                 int sentence_counter_input = 0;
                 Map<String,Integer> pattern_counter = new HashMap<>();
+                List<String> exported_entries = new ArrayList<String>();
                 
                 TObjectIntHashMap<String> freq = new TObjectIntHashMap<String>();
                 
@@ -267,7 +268,7 @@ public class Matoll {
                                 preprocessor.preprocess(sentence,subj,obj,language);
                                 
                                 sentence_counter+=1;
-                                boolean result = library.extractLexicalEntries(sentence, automatic_lexicon,pattern_counter);
+                                boolean result = library.extractLexicalEntries(sentence, automatic_lexicon,pattern_counter,exported_entries);
                                 if(result){
                                     freq.adjustOrPutValue(reference, 1, 1);
                                 }
@@ -277,6 +278,18 @@ public class Matoll {
                     model.close();
                 }
             
+                PrintWriter writer;
+                try {
+                        writer = new PrintWriter("extracted_entries_raw.tsv");
+                        for(String x : exported_entries){
+                            writer.write(x);
+                        }
+                        writer.close();
+                } catch (FileNotFoundException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                }
+        
                 System.out.println("Extracted entries");
                 if(config.doStatistics()){
                     System.out.println("do some statistics now");
