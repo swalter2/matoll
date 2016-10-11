@@ -181,6 +181,17 @@ public class Matoll {
                         preprocessor.setDEP(dep);
                         break;
                         
+                    case EN_1: 
+                        dep = new HashSet<>();
+                        dep.add("prep");
+                        dep.add("appos");
+                        dep.add("nn");
+                        dep.add("dobj");
+                        dep.add("pobj");
+                        dep.add("num");
+                        preprocessor.setDEP(dep);
+                        break;
+                        
                     case DE: 
                         dep = new HashSet<>();
                         dep.add("pp");

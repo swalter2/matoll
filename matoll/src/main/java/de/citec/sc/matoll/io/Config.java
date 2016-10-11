@@ -4,6 +4,7 @@ package de.citec.sc.matoll.io;
 import de.citec.sc.matoll.core.Language;
 import static de.citec.sc.matoll.core.Language.DE;
 import static de.citec.sc.matoll.core.Language.EN;
+import static de.citec.sc.matoll.core.Language.EN_1;
 import static de.citec.sc.matoll.core.Language.ES;
 import static de.citec.sc.matoll.core.Language.JA;
 import java.io.File;
@@ -58,6 +59,7 @@ import de.citec.sc.matoll.patterns.spanish.SparqlPattern_ES_Predicative_Particip
 import de.citec.sc.matoll.patterns.spanish.SparqlPattern_ES_Reflexive_Transitive_PP;
 import de.citec.sc.matoll.patterns.spanish.SparqlPattern_ES_Transitive_Reciprocal;
 import de.citec.sc.matoll.patterns.spanish.SparqlPattern_ES_Transitive_passive;
+import de.citec.sc.matoll.patterns.english_modified.Modified_SparqlPattern_EN_Intransitive_PP;
 
 public class Config {
 
@@ -133,6 +135,13 @@ public class Config {
 //					Patterns.add(new SparqlPattern_EN_DatatypeNoun_2());
 //                                        Patterns.add((new SparqlPattern_EN_Noun_PP_player()));
 					logger.info("Adding patterns 1-9 (EN) to pattern library \n");
+				}
+                                if (Language.equals(EN_1))
+				{
+					Patterns = new ArrayList<SparqlPattern>();
+					
+					Patterns.add(new Modified_SparqlPattern_EN_Intransitive_PP());
+					logger.info("Adding patterns 1(EN_1) to pattern library \n");
 				}
 				if (Language.equals(DE))
 				{
@@ -280,6 +289,7 @@ public class Config {
         private Language mapToLanguage(String s) throws Exception {
             
             if      (s.toLowerCase().equals("en") || s.toLowerCase().equals("eng")) return EN;
+            else if (s.toLowerCase().equals("en_1") || s.toLowerCase().equals("eng_1")) return EN_1;
             else if (s.toLowerCase().equals("de") || s.toLowerCase().equals("ger")) return DE;
             else if (s.toLowerCase().equals("es") || s.toLowerCase().equals("spa")) return ES;
             else if (s.toLowerCase().equals("ja") || s.toLowerCase().equals("jpn")) return JA;

@@ -6,5 +6,5 @@ package de.citec.sc.matoll.core;
  */
 public enum Language {
     
-    EN, DE, ES, JA
+    EN,EN_1, DE, ES, JA
 }
